@@ -19,21 +19,29 @@
 {% block content %}
 <main role="main" class="article container">
     <article>
+
         <header>
+            <div class="btn-group">
+                    <button id ="mytoc" style="position: fixed; right:2px;" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Contents
+                    </button>
+                    
+                    {{ article.toc }}
+                
+            </div> 
+
+            <h1 style="color: rgb(53, 53, 144); font-size:30px;">{{ article.title }}</h1>
             <section class="post-meta">
                 <time datetime="article.date.isoformat()" pubdate>{{ article.locale_date }}</time>
-                <span class="date-divider">/</span>
-                {% for tag in article.tags[:1] %}
+                {% for tag in article.tags[:2] %}
+                    <span class="date-divider">/</span>
                     <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
                 {% endfor %}
-            </section>
-            <h1>{{ article.title }}</h1>
+            </section>            
         </header>
 
-        <div class="content">
-            {{ article.content }}
-        </div>
-
+        {{ article.content }}
+        
         <div class="metabox">
             <hr class="post-divider">
             <div class="tags">
@@ -45,3 +53,4 @@
     </article>
 </main>
 {% endblock %}
+

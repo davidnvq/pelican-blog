@@ -19,14 +19,14 @@ pre code {
 }
 
 .text_cell {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0px !important;
+  padding: 2px !important;
   border: none !important;
 }
 
 .text_cell_render {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0px !important;
+  padding: 2px !important;
   border: none !important;
 }
 
@@ -45,7 +45,7 @@ pre code {
 }
 
 div.input_area > div.highlight {
-  margin: 0.25em 0.4em !important;
+  margin: 0.0em 0.4em !important;
 }
 
 .code_cell pre {
@@ -59,6 +59,6 @@ div.input_area > div.highlight {
 }
 
 .output_html table.dataframe th, td {
-  padding: 4px;
-  text-align: left;
+  padding: 10px;
+  text-align: center;
 }

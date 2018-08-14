@@ -4,37 +4,328 @@
 
 {% block content %}
 <main id="index" class="index container">
-    <form class="filter d-flex align-items-center">
-        <span style="position: relative; display: inline-block; direction: ltr;">
-            <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
-        </span>
-    </form>
-    
-    <nav>
-        <ul class="double-list">
-            <li v-for="item in filteredItems">
-                <a :href="item.url">{{ "{{ item.title }}" }}</a>
-                <span class="date">{{ "{{ item.date }}" }}</span>
+    <br>
+    <div class="container">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#all">All Posts</a>
             </li>
-        </ul>
-    </nav>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#paper">Paper Notes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tutorial">Tech Tutorials</a>
+            </li>
 
-    <div class="tags">
-        {% for tag, articles in tags %}
-            <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag }} ({{ articles | length }})</a>
-        {% endfor %}
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#book">Book Notes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#other">Travel and Others</a>
+            </li>
+
+        </ul>
+            
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="all" class="container tab-pane active"><br>
+                <h3>All of My Posts</h3>
+
+                <!--input box for searching and filtering posts by titles and tags-->
+                <form class="filter d-flex align-items-center">
+                    <span style="position: relative; display: inline-block; direction: ltr;">
+                        <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
+                    </span>
+                </form>
+
+                <!--Few words to readers and myself-->
+                <div class="row">
+                        <div class="hidden-md-down col-sm-6">
+                            <div class="alert alert-info" style="text-align: center" onclick="displaytomyself()" role="alert" data-toggle="collapse" data-target="#readers" aria-expanded="false" aria-controls="myself">
+                                Dear my future self,
+                            </div>
+                        </div>
+                        <div class="hidden-md-down col-sm-6">
+                            <div class="alert alert-warning" style="text-align: center"  onclick="displaytoreaders()" role="alert" data-toggle="collapse" data-target="#readers" aria-expanded="true" aria-controls="readers">
+                                Dear my potential readers,
+                            </div>
+                                        
+                        </div>    
+                </div>
+                <!-- Text to readers-->
+                <div class="collapse" id="readers">
+                    <div class="card card-body" id="text2you">
+                    </div>
+                </div>
+                
+                    
+                <nav>
+                    <ul class="double-list">
+                        <li v-for="item in filteredItems">
+                            <a :href="item.url">{{ "{{ item.title }}" }}</a>
+                            <span class="date">{{ "{{ item.date }}" }}</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--Paper Notes pane-->
+            <div id="paper" class="container tab-pane fade"><br>
+                <h3>Paper Notes</h3>
+                <!--search input for filtering-->
+                <form class="filter d-flex align-items-center">
+                    <span style="position: relative; display: inline-block; direction: ltr;">
+                        <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
+                    </span>
+                </form>
+    
+                
+                <!--Introduction and A list of top post-->
+                <div class="row">
+                        <div class="hidden-md-down col-sm-4">
+                            <div class="alert alert-info" style="text-align: center" role="alert" data-toggle="collapse" data-target="#paper_introduction" aria-expanded="false" aria-controls="myself">
+                                Introduction
+                            </div>
+                        </div>
+                        <div class="hidden-md-down col-sm-8">
+                            <div class="alert alert-warning" style="text-align: center" role="alert" data-toggle="collapse" data-target="#top_paper_posts" aria-expanded="true" aria-controls="readers">
+                                Top Posts in Tutorial Notes
+                            </div>
+                                        
+                        </div>    
+                </div>
+                <!-- Text to readers-->
+                <div class="collapse" id="paper_introduction">
+                    <div class="card card-body" id="introduction">
+                        <p>Here are several learning notes during my reading on papers from Computer Vision, Deep Learning, Machine Learning, 
+                            Artificial Intelligence to the other interdisciplinary fields. If you find any errors and papers or sources 
+                            I forget to cite in the References part, please feel free to leave me a message. I'll also be happy to hear some ideas,
+                            comments and other things related to the topics.
+                        </p>
+                    </div>
+                </div>                
+                <!-- Top posts -->
+                <div class="collapse" id="top_paper_posts">
+                    <div class="card card-body">
+                        <ul class="double-list" style="padding: 0px">
+                            <li v-for="item in filteredItems" style="padding: 0px">
+                                <span v-if="item.category == 'paper'" style="padding: 0px">
+                                    <span v-if="item.toppost == 'yes'" style="padding: 0px">
+                                        <a :href="item.url">{{ "{{ item.title }}" }}</a>
+                                        <span class="date">{{ "{{ item.date }}" }}</span>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+
+                <!-- List of filtered posts -->
+                <nav>
+                    <ul class="double-list">
+                        <li v-for="item in filteredItems">
+                            <span v-if="item.category == 'paper'">
+                                <a :href="item.url">{{ "{{ item.title }}" }}</a>
+                                <span class="date">{{ "{{ item.date }}" }}</span>
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!--Tutorial Notes pane-->
+            <div id="tutorial" class="container tab-pane fade"><br>
+                <h3>Tutorial Notes</h3>
+
+                <!--search input for filtering-->
+                <form class="filter d-flex align-items-center">
+                    <span style="position: relative; display: inline-block; direction: ltr;">
+                        <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
+                    </span>
+                </form>
+    
+                
+                <!--Introduction and A list of top post-->
+                <div class="row">
+                        <div class="hidden-md-down col-sm-4">
+                            <div class="alert alert-info" style="text-align: center" role="alert" data-toggle="collapse" data-target="#tutorial_introduction" aria-expanded="false" aria-controls="myself">
+                                Introduction
+                            </div>
+                        </div>
+                        <div class="hidden-md-down col-sm-8">
+                            <div class="alert alert-warning" style="text-align: center"  role="alert" data-toggle="collapse" data-target="#top_tutorial_posts" aria-expanded="true" aria-controls="readers">
+                                Top Posts in Tutorial Notes
+                            </div>
+                                        
+                        </div>    
+                </div>
+                <!-- Text to readers-->
+                <div class="collapse" id="tutorial_introduction">
+                    <div class="card card-body" id="introduction">
+                        <p>In this corner, I make a collection of tutorial notes which are generated by myself. 
+                            There are also several tutorials from the other sources on the Internet that I find interesting to note here.
+                        </p>
+                    </div>
+                </div>                
+                <!-- Top posts -->
+                <div class="collapse" id="top_tutorial_posts">
+                    <div class="card card-body">
+                        <p>Envelope icon: <span style="color:black" class="glyphicon glyphicon-envelope"></span></p> 
+                        <p>Search icon: <span class="glyphicon glyphicon-search"></span></p>
+                        <p>Print icon: <span class="glyphicon glyphicon-print"></span></p>
+                        <ul class="double-list" style="padding: 0px">
+                            <li v-for="item in filteredItems" style="padding: 0px">
+                                <span v-if="item.category == 'tutorial'" style="padding: 0px">
+                                    <span v-if="item.toppost == 'yes'" style="padding: 0px">
+                                        <span class="glyphicon glyphicon-bookmark"></span>
+                                        <a :href="item.url">{{ "{{ item.title }}" }}</a>
+                                        <span class="date">{{ "{{ item.date }}" }}</span>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>          
+
+                <!--Filter posts-->
+                <nav>
+                    <ul class="double-list">
+                        <li v-for="item in filteredItems">
+                            <span v-if="item.category == 'tutorial'">
+                                <a :href="item.url">{{ "{{ item.title }}" }}</a>
+                                <span class="date">{{ "{{ item.date }}" }}</span>
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--Book Notes pane-->
+            <div id="book" class="container tab-pane fade"><br>
+                <h3>Book Notes</h3>
+                <!--search input for filtering-->
+                <form class="filter d-flex align-items-center">
+                    <span style="position: relative; display: inline-block; direction: ltr;">
+                        <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
+                    </span>
+                </form>
+    
+                
+                <!--Introduction and A list of top post-->
+                <div class="row">
+                        <div class="hidden-md-down col-sm-4">
+                            <div class="alert alert-info" style="text-align: center" role="alert" data-toggle="collapse" data-target="#book_introduction" aria-expanded="false" aria-controls="myself">
+                                Introduction
+                            </div>
+                        </div>
+                        <div class="hidden-md-down col-sm-8">
+                            <div class="alert alert-warning" style="text-align: center" role="alert" data-toggle="collapse" data-target="#top_book_posts" aria-expanded="true" aria-controls="readers">
+                                Top Posts in Tutorial Notes
+                            </div>
+                                        
+                        </div>    
+                </div>
+                <!-- Text to readers-->
+                <div class="collapse" id="book_introduction">
+                    <div class="card card-body" id="introduction">
+                        <p>This pane is dedicated to the thought notes I create during my reading. 
+                            I'm really pleased if you can introduce me some good books.
+                        </p>
+                    </div>
+                </div>                
+                <!-- Top posts -->
+                <div class="collapse" id="top_book_posts">
+                    <div class="card card-body">
+                        <ul class="double-list" style="padding: 0px">
+                            <li v-for="item in filteredItems" style="padding: 0px">
+                                <span v-if="item.category == 'book'" style="padding: 0px">
+                                    <span v-if="item.toppost == 'yes'" style="padding: 0px">
+                                        <a :href="item.url">{{ "{{ item.title }}" }}</a>
+                                        <span class="date">{{ "{{ item.date }}" }}</span>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+
+                <!-- List of filtered posts -->
+                <nav>
+                    <ul class="double-list">
+                        <li v-for="item in filteredItems">
+                            <span v-if="item.category == 'book'">
+                                <a :href="item.url">{{ "{{ item.title }}" }}</a>
+                                <span class="date">{{ "{{ item.date }}" }}</span>
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--Personal corners pane-->
+            <div id="other" class="container tab-pane fade"><br>
+                <h3>Traveling and Other Hobbies</h3>
+                <p> I write some posts here for my future self about the memories that I go through.
+                </p>
+
+                <form class="filter d-flex align-items-center">
+                    <span style="position: relative; display: inline-block; direction: ltr;">
+                        <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
+                    </span>
+                </form>
+                    
+                <nav>
+                    <ul class="double-list">
+                        <li v-for="item in filteredItems">
+                            <span v-if="item.category == 'other'">
+                                <a :href="item.url">{{ "{{ item.title }}" }}</a>
+                                <span class="date">{{ "{{ item.date }}" }}</span>
+                            </span>
+                        </li>
+                    </ul>
+                </nav>  
+            </div>                
+        </div>
+
+        <!--cloud of Tags here-->
+        <div class="tags">
+            {% for tag, articles in tags %}
+                <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag }} ({{ articles | length }})</a>
+            {% endfor %}
+        </div>
+
     </div>
+    
+
 </main>
 {% endblock %}
 
 {% block end_doc %}
-<script>
 
+<!--Few words to readers and myself-->
+<script>
+    function displaytomyself() {
+        document.getElementById("text2you").innerHTML = "<span><strong>Dear my future self</strong>,<br></span>When you are reading these notes, you will be amazed at how far you are. Please keep writing while enjoying life.";
+    }
+    function displaytoreaders() {
+        document.getElementById("text2you").innerHTML = "<span><strong>Dear my potential readers</strong>, <br> </span> Welcome to my blog where I share part of what I see, learn and understand about our world. I hope that you will find some interesting. Enjoy your time and text me if you can."    
+    }
+</script>
+
+<!--Filter the posts with title and tags-->
+
+
+<script>
 items = [
     {% for article in articles %}
-    { title: "{{ article.title }}", url: "/{{ article.url }}", date: "{{ article.date.strftime('%d.%m.%Y') }}", tags: [{% for tag in article.tags %}"{{ tag }}",{% endfor %}] },
+    { title: "{{ article.title }}", url: "/{{ article.url }}",
+        category: "{{ article.category }}",
+        toppost: "{{ article.toppost }}",
+    date: "{{ article.date.strftime('%d.%m.%Y') }}", tags: [{% for tag in article.tags %}"{{ tag }}",{% endfor %}]},
     {% endfor %}
 ]
+mycategories = ['paper', 'book', 'tutorial', 'other']
 
 function contains(text, filter) {
     return text.toLowerCase().indexOf(filter.toLowerCase()) > -1
@@ -44,15 +335,14 @@ var index = new Vue({
     el: '#index',
     data: {
         filter: '',
-        items: items
+        items: items,
+        mycategories: mycategories
     },
-
     methods: {
         toogle_nav: function(event) {
             this.show = !this.show;
         }
     },
-
     computed: {
         filteredItems() {
             return this.items.filter(item => {
@@ -63,7 +353,6 @@ var index = new Vue({
         }
     }
 })
-
 </script>
 
 {% endblock %}

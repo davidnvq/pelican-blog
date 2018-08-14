@@ -66,3 +66,14 @@
  .highlight .vi { color: teal; }
  .highlight .il { color: #009999; }
  .highlight .gc { color: #999; background-color: #EAF2F5; }
+
+ /* For use with the code_line-number_word-wrap_switcher_jquery.js Pelican plugin */
+code {
+    overflow: auto;
+    /* This uses `white-space: pre-wrap` to get elements within <pre> tags to wrap. Python, for code chunks within three backticks (```), doesn't wordwrap code lines by default, because they're within <pre> tags, which don't wrap by default. See https://github.com/github/markup/issues/168 , which is specifically about this parsing issue, even though that link's discussion is talking about GitHub. */
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}

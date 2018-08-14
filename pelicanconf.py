@@ -1,8 +1,8 @@
 from __future__ import unicode_literals
 
 SITEURL = ""
-AUTHOR = u"Daniel Rodriguez"
-SITENAME = u"Daniel Rodriguez"
+AUTHOR = "Quang Nguyen"
+SITENAME = "Quang Nguyen"
 TIMEZONE = "UTC"
 DEFAULT_DATE_FORMAT = "%B %d, %Y"
 
@@ -15,16 +15,18 @@ THEME = "theme"
 
 OUTPUT_PATH = "output/"
 ARTICLE_PATHS = ["content"]
-USE_FOLDER_AS_CATEGORY = False
+USE_FOLDER_AS_CATEGORY = True
 DEFAULT_CATEGORY = "misc"
 PAGE_PATHS = ["content/pages"]
 CACHE_PATH = "cache/"
-CACHE_CONTENT = True
+CACHE_CONTENT = False
 LOAD_CONTENT_CACHE = False
 DELETE_OUTPUT_DIRECTORY = True
+PYGMENTS_RST_OPTIONS = {'classprefix': 'pgcss', 'linenos': 'table'}
 
-ARTICLE_URL = "blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/"
-ARTICLE_SAVE_AS = "blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html"
+
+ARTICLE_URL = "blog/{category}/{date:%Y}/{slug}/"
+ARTICLE_SAVE_AS = "blog/{category}/{date:%Y}/{slug}/index.html"
 PAGE_URL = "{category}/{slug}/"
 PAGE_SAVE_AS = "{category}/{slug}/index.html"
 FEED_ALL_ATOM = "feeds/all.atom.xml"
@@ -42,11 +44,33 @@ MARKDOWN = {
 # Paths are relative to `content`
 STATIC_PATHS = ["images", "favicon.ico", "404.html", "robots.txt", "CNAME"]
 
+EXTRA_PATH_METADATA = {
+    'robots.txt': {'path': 'robots.txt'},
+    'favicon.ico': {'path': 'favicon.ico'}
+}
+
+
+
 # PLUGINS SETTINGS
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["sitemap", "ipynb.liquid", "liquid_tags.youtube", "liquid_tags.b64img"]
+PLUGINS = ["sitemap", "ipynb.liquid", "liquid_tags.youtube", "liquid_tags.b64img", "pelican-toc", "render_math"]
 # PLUGINS = ["sitemap", "ipynb.markup", "ipynb.liquid", "liquid_tags.youtube", "liquid_tags.b64img"]
 
 SITEMAP = {
     "format": "xml"
 }
+
+TOC = {
+    'TOC_HEADERS'       : '^h[2-3]', # What headers should be included in
+                                     # the generated toc
+                                     # Expected format is a regular expression
+
+    'TOC_RUN'           : 'true',    # Default value for toc generation,
+                                     # if it does not evaluate
+                                     # to 'true' no toc will be generated
+
+    'TOC_INCLUDE_TITLE': 'false',     # If 'true' include title in toc
+}
+
+MATH_JAX = {'align': 'left', 'linebreak_automatic' : True, 'responsive':True, 'responsive_align' : True}
+
