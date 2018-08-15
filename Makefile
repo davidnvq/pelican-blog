@@ -79,8 +79,8 @@ publish:  ## Generate output ready for publish
 	git add .
 	git commit -m "Some notes added to pelican-blog"
 	git push -u origin master
-	cp $(OUTPUTDIR)/* $(BASEDIR)/quangdtsc.github.io/
-	cd $(OUTPUTDIR)/quangdtsc.github.io/ 
+	cp $(OUTPUTDIR)/* ../quangdtsc.github.io/
+	cd ../quangdtsc.github.io/ 
 	git add .
 	git commit -m "Some notes added to quangdtsc.github.io"
 	git push -u origin master
