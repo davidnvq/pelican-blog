@@ -4,7 +4,7 @@ Date: 2018-08-15 22:48:34
 Tags: Maxout, ICML, Dropout, 2013, PAPER
 Author: Quang Nguyen
 Category: paper
-TopPost: no
+TopPost: yes
 
 
 

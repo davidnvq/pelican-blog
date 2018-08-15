@@ -73,6 +73,8 @@ stopserver:  ## Stop the live-reload webserver
 .PHONY: publish
 publish:  ## Generate output ready for publish
 	$(PELICAN) -s $(PUBLISHCONF) $(PELICANOPTS)
+	cp $(INPUTDIR)/favicon.ico $(OUTPUTDIR)
+	cp $(INPUTDIR)/robots.txt $(OUTPUTDIR)
 	git add .
 	git commit -m "Some notes added to pelican-blog"
 	git push -u origin master
