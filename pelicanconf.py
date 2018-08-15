@@ -21,7 +21,7 @@ PAGE_PATHS = ["content/pages"]
 CACHE_PATH = "cache/"
 CACHE_CONTENT = False
 LOAD_CONTENT_CACHE = False
-DELETE_OUTPUT_DIRECTORY = True
+DELETE_OUTPUT_DIRECTORY = False
 PYGMENTS_RST_OPTIONS = {'classprefix': 'pgcss', 'linenos': 'table'}
 
 

@@ -73,7 +73,7 @@ The maxout model is simply uses a new type of activation function: the maxout un
 
 Given the input $x \in R^d$ (x may be a vector v, or may be a hidden layer’s state), a maxout hidden layer implements the function:
 
-$$h_i(x) = max_{j \in [1,k]}z_{i,j}$$  
+$h_i(x) = max_{j \in [1,k]}z_{i,j}$
 
 where $z_{ij} = x^TW_{..ij} + b_{ij}$ and $W \in R^{d \times m\times k}$ and $b\in R^{m \times k}$.
 

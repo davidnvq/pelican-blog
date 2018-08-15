@@ -73,6 +73,13 @@ stopserver:  ## Stop the live-reload webserver
 .PHONY: publish
 publish:  ## Generate output ready for publish
 	$(PELICAN) -s $(PUBLISHCONF) $(PELICANOPTS)
+	git add .
+	git commit -m "Some notes added to pelican-blog"
+	git push -u origin master
+	cd $(OUTPUTDIR) 
+	git add .
+	git commit -m "Some notes added to quangdtsc.github.io"
+	git push -u origin master
 
 .PHONY: bootstrap
 bootstrap:  ## Create the dev environment
