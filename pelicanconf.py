@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-SITEURL = ""
+SITEURL = "/"
 AUTHOR = "Quang Nguyen"
 SITENAME = "Quang Nguyen"
 TIMEZONE = "UTC"
@@ -61,7 +61,7 @@ SITEMAP = {
 }
 
 TOC = {
-    'TOC_HEADERS'       : '^h[2-3]', # What headers should be included in
+    'TOC_HEADERS'       : '^h[1-3]', # What headers should be included in
                                      # the generated toc
                                      # Expected format is a regular expression
 
@@ -69,7 +69,7 @@ TOC = {
                                      # if it does not evaluate
                                      # to 'true' no toc will be generated
 
-    'TOC_INCLUDE_TITLE': 'false',     # If 'true' include title in toc
+    'TOC_INCLUDE_TITLE': 'true',     # If 'true' include title in toc
 }
 
 MATH_JAX = {'align': 'left', 'linebreak_automatic' : True, 'responsive':True, 'responsive_align' : True}

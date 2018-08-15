@@ -171,14 +171,10 @@
                 <!-- Top posts -->
                 <div class="collapse" id="top_tutorial_posts">
                     <div class="card card-body">
-                        <p>Envelope icon: <span style="color:black" class="glyphicon glyphicon-envelope"></span></p> 
-                        <p>Search icon: <span class="glyphicon glyphicon-search"></span></p>
-                        <p>Print icon: <span class="glyphicon glyphicon-print"></span></p>
                         <ul class="double-list" style="padding: 0px">
                             <li v-for="item in filteredItems" style="padding: 0px">
                                 <span v-if="item.category == 'tutorial'" style="padding: 0px">
                                     <span v-if="item.toppost == 'yes'" style="padding: 0px">
-                                        <span class="glyphicon glyphicon-bookmark"></span>
                                         <a :href="item.url">{{ "{{ item.title }}" }}</a>
                                         <span class="date">{{ "{{ item.date }}" }}</span>
                                     </span>
@@ -187,7 +183,7 @@
                         </ul>
                     </div>
                 </div>          
-
+                
                 <!--Filter posts-->
                 <nav>
                     <ul class="double-list">
@@ -289,7 +285,7 @@
         </div>
 
         <!--cloud of Tags here-->
-        <div class="tags">
+        <div class="tags" style="text-align: center">
             {% for tag, articles in tags %}
                 <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag }} ({{ articles | length }})</a>
             {% endfor %}

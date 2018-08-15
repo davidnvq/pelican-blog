@@ -232,75 +232,68 @@ article header h1 {
   white-space: pre-wrap;
 }
 
-article h1 {
-  font-weight: 600;
-  font-size: 4vw;
-  line-height: 1.0;
-  color: #000;
-  margin: .5em 0;
-  white-space: pre-wrap;
-}
 
-article h2 {
+article h1 {
   margin: 1em 0 .4em;
-  font-size: calc(10px + 2.0vw);
+  font-size: calc(16px + 1.5vw);
   text-indent: -30px;
   margin-left: 30px
 }
 
-article h3, article h4 {
-  margin: .5em 0 .2em;
-  color: #000;
-  font-size: calc(12px + 1.5vw);
-  font-weight:bold;
-}
 
-article h3 {
+article h2 {
   font-weight: 400;
-  font-size: calc(12px + 1.5vw);
+  font-size: calc(14px + 1.2vw);
   text-indent: -32px;
   margin-left: 30px
   
 }
 
-article h4 {
+article h3 {
   font-size: 20px;
   font-weight: 400;
-  font-size: calc(12px + 1.5vw);
+  font-size: calc(12px + 1.2vw);
 }
 
 @media all and (min-width: 740px) {
-  article h2{
-      font-size: 28px;
+  article h1{
+      font-size: 26px;
     };
   }
 
 @media all and (min-width: 740px) {
-article h3{
-    font-size: 20px;
+article h2{
+    font-size: 24px;
   };
 }  
 
 @media all and (min-width: 740px) {
-  article h4{
-      font-size: 20px;
+  article h3{
+      font-size: 22px;
     };
 }  
+article header h1:before {
+  content: "";
+  font-weight: bold;
+  color: #DDD;
+}
 
-article h2:before {
+article h1:before {
   content: "# ";
   font-weight: bold;
   color: #DDD;
 }
 
-article h3:before {
-  content: "## ";
+article h2:before {
+  content: "$ ";
+  padding-right: 5px;
   font-weight: bold;
   color: #DDD;
 }
 
-article h4:before {
-  content: "### ";
+article h3:before {
+  content: "*   ";
+  padding-right: 8px;
   font-weight: bold;
   color: #DDD;
 }
@@ -337,7 +330,7 @@ article i, article cite, article em, article var, article address, article dfn {
 
 article ul, article ol {
   margin-top: 0px;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
 }
 
 article li {

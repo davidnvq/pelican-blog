@@ -25,26 +25,54 @@
                     <button id ="mytoc" style="position: fixed; right:2px;" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Contents
                     </button>
+                    <div class="dropdown-menu" aria-labelledby="mytoc">
+                        <div id='toc' style="min-width:300px; max-width:450px;min-height:200px;max-height:450px; overflow: scroll; white-space:nowrap;"> 
+
+                            <a href="#" style="margin:20px">
+                                <strong>{{ article.title }}</strong> 
+                            </a>                   
+                            <div class="dropdown-divider"></div>
+
+                            {{ article.toc }}
+                        </div>
+                    </div>
                     
-                    {{ article.toc }}
-                
             </div> 
 
-            <h1 style="color: rgb(53, 53, 144); font-size:30px;">{{ article.title }}</h1>
+            <h1 class="article header h1" style="color: rgb(53, 53, 144); font-size:30px;">{{ article.title }}</h1>
             <section class="post-meta">
                 <time datetime="article.date.isoformat()" pubdate>{{ article.locale_date }}</time>
-                {% for tag in article.tags[:2] %}
-                    <span class="date-divider">/</span>
-                    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-                {% endfor %}
+                <span class="date-divider">/</span>
+                <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>                    
             </section>            
         </header>
 
+        <hr class="post-divider">
+
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <div style="font-size:20px;">Table of contents</div>
+                    </button>
+                    </h5>
+                </div>
+            
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        {{ article.toc }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
         {{ article.content }}
         
         <div class="metabox">
             <hr class="post-divider">
-            <div class="tags">
+            <div class="tags" style='text-align: center'>
                 {% for tag in article.tags %}
                     <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag }}</a>
                 {% endfor %}
