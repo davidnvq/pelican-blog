@@ -75,10 +75,12 @@ publish:  ## Generate output ready for publish
 	$(PELICAN) -s $(PUBLISHCONF) $(PELICANOPTS)
 	cp $(INPUTDIR)/favicon.ico $(OUTPUTDIR)
 	cp $(INPUTDIR)/robots.txt $(OUTPUTDIR)
+
 	git add .
 	git commit -m "Some notes added to pelican-blog"
 	git push -u origin master
-	cd $(OUTPUTDIR) 
+	cp $(OUTPUTDIR)/* $(BASEDIR)/quangdtsc.github.io/
+	cd $(OUTPUTDIR)/quangdtsc.github.io/ 
 	git add .
 	git commit -m "Some notes added to quangdtsc.github.io"
 	git push -u origin master
