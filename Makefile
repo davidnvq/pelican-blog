@@ -83,10 +83,7 @@ publish:  ## Generate output ready for publish
 	git push -u origin master
 	rm -rf ../quangdtsc.github.io/*
 	mv $(OUTPUTDIR)/* ../quangdtsc.github.io/
-	cd ../quangdtsc.github.io/ && pwd
-	git add .
-	git commit -m "Some notes added to quangdtsc.github.io"
-	git push -u origin master
+	cd ../quangdtsc.github.io/ && pwd && git add . && git commit -m "Some notes added to quangdtsc.github.io" && git push -u origin master
 
 .PHONY: bootstrap
 bootstrap:  ## Create the dev environment
