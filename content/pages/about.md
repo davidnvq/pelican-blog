@@ -10,3 +10,8 @@ Hi, my name is Quang. Currently, I'm a master student of [Data Sciences Program]
 # Publications
 Below are the list of publication papers.
 
+# Hobby
+ * Football
+ * Reading Books
+ * Traveling
+ * Watching Movies
