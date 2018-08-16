@@ -84,6 +84,7 @@ publish:  ## Generate output ready for publish
 	rm -rf ../quangdtsc.github.io/*
 	mv $(OUTPUTDIR)/* ../quangdtsc.github.io/
 	cd ../quangdtsc.github.io/
+	pwd
 	git remote -v
 	git add .
 	git commit -m "Some notes added to quangdtsc.github.io"
