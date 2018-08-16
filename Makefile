@@ -35,6 +35,9 @@ all: build
 .PHONY: build
 build:  ## Generate the output
 	$(PELICAN) -s $(CONFFILE) $(PELICANOPTS)
+	cp $(INPUTDIR)/favicon.ico $(OUTPUTDIR)
+	cp $(INPUTDIR)/robots.txt $(OUTPUTDIR)
+
 
 .PHONY: clean
 clean:  ## Remove the generated output
@@ -172,4 +175,3 @@ else
 	@echo 'Variable name is not defined.'
 	@echo 'Do make other name='"'"'Post name'"'"
 endif
-	
