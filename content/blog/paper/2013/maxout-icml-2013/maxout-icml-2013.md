@@ -13,7 +13,7 @@ Abstract
 1. Link to paper, which appears on ICML 2013.
 2. Maxout network (maxout - its output is the max of a set of inputs)
 3. Design to both facilitate optimization by dropout and improve the accuracy.
-4. SOTA on MNIST, CIFAR-10, CIFAR-100, SVHN.
+4. The SOTA results on MNIST, CIFAR-10, CIFAR-100, SVHN.
 
 
 Introduction
