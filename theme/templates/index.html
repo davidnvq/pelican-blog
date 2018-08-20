@@ -315,12 +315,17 @@
 <script>
 items = [
     {% for article in articles %}
-    { title: "{{ article.title }}", url: "/{{ article.url }}",
+        { title: "{{ article.title }}", url: "/{{ article.url }}",
         category: "{{ article.category }}",
         toppost: "{{ article.toppost }}",
-    date: "{{ article.date.strftime('%d.%m.%Y') }}", tags: [{% for tag in article.tags %}"{{ tag }}",{% endfor %}]},
+        date: "{{ article.date.strftime('%d.%m.%Y') }}", 
+        tags: [{% for tag in article.tags %}"{{ tag }}",{% endfor %}],
+        headers: "{{ article.headers }}",
+        },
+        
     {% endfor %}
 ]
+
 mycategories = ['paper', 'book', 'tutorial', 'other']
 
 function contains(text, filter) {
@@ -342,7 +347,7 @@ var index = new Vue({
     computed: {
         filteredItems() {
             return this.items.filter(item => {
-                searches = [item.title].concat(item.tags);
+                searches = [item.title].concat(item.tags).concat([item.headers]);
                 query = searches.map(x => contains(x, this.filter));
                 return query.some(x => x == true);
             })

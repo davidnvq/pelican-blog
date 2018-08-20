@@ -235,7 +235,7 @@ article header h1 {
 
 article h1 {
   margin: 1em 0 .4em;
-  font-size: calc(16px + 1.5vw);
+  font-size: calc(18px + 1.2vw);
   text-indent: -30px;
   margin-left: 30px
 }
@@ -243,16 +243,15 @@ article h1 {
 
 article h2 {
   font-weight: 400;
-  font-size: calc(14px + 1.2vw);
+  font-size: calc(16px + 1vw);
   text-indent: -32px;
   margin-left: 30px
   
 }
 
 article h3 {
-  font-size: 20px;
   font-weight: 400;
-  font-size: calc(12px + 1.2vw);
+  font-size: calc(14px + 1vw);
 }
 
 @media all and (min-width: 740px) {
@@ -269,7 +268,7 @@ article h2{
 
 @media all and (min-width: 740px) {
   article h3{
-      font-size: 22px;
+      font-size: 20px;
     };
 }  
 article header h1:before {
