@@ -7,7 +7,6 @@ Category: paper
 TopPost: no
 Persional: yes
 
-
 In this blog post, we will talk about the evolution of image classification from a high-level perspective. The goal here is to try to understand the key changes that were brought along the years, and why they succeeded in solving our problems.
 
 # Introduction

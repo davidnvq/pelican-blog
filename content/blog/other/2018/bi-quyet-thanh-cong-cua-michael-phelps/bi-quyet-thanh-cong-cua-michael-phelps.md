@@ -1,7 +1,7 @@
-Title: Bí quyết thành công của Michael Phelps - nhà vô địch sở hữu 21 huy chương vàng Olympics
+Title: Bí quyết thành công của Michael Phelps
 Slug: bi-quyet-thanh-cong-cua-michael-phelps
 Date: 2018-08-21 11:34:51
-Tags: , OTHER
+Tags: Inspiration, OTHER
 Author: Quang Nguyen
 Category: other
 TopPost: no

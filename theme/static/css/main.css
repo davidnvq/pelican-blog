@@ -340,7 +340,7 @@ article li {
 article a {
   color: #0056b3;
   text-decoration: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
 }
 
 article a:hover {
@@ -352,7 +352,7 @@ article a:hover {
 article blockquote {
   font-size: inherit;
   border-left: 2px solid #c7c7cc;
-  color: rgb(204, 47, 47);
+  color: rgb(183, 46, 46);
   margin: 30px 0;
   padding: 0 0 0 25px;
 }
@@ -377,12 +377,36 @@ article .videobox {
 }
 
 article code {
-  color: #333;
-  background-color: #EEE;
+  color: rgb(186, 31, 31);
   border-radius: 0;
-  font-size: 13px;
-  padding: 5px 3px 3px 3px;
 }
+
+article table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+}
+
+article table td, article table th {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+article table tr:nth-child(even){background-color: #f2f2f2;}
+
+article table tr:hover {background-color: #ddd;}
+
+article table th {
+  padding-left: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(65, 120, 67);
+  color: white;
+}
+
 
 article .highlight pre {
   border-radius: 0;

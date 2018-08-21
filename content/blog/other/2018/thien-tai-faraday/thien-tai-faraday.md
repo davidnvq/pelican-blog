@@ -1,7 +1,7 @@
 Title: Thiên tài không bằng cấp Michael Faraday
 Slug: thien-tai-faraday
 Date: 2018-08-21 13:09:50
-Tags: , OTHER
+Tags: Inspiration, OTHER
 Author: Quang Nguyen
 Category: other
 TopPost: no

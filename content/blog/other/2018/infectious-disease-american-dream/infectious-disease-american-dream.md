@@ -1,7 +1,7 @@
 Title: Nigerian immigrant dreams of finding cures for infectious diseases
 Slug: infectious-disease-american-dream
 Date: 2018-08-21 12:10:13
-Tags: , OTHER
+Tags: Inspiration, OTHER
 Author: Quang Nguyen
 Category: other
 TopPost: no
