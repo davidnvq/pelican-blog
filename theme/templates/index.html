@@ -63,10 +63,8 @@
                 <nav>
                     <ul class="double-list">
                         <li v-for="item in filteredItems">
-                            <span v-if="item.category != 'other'" style="padding: 0px">
-                                <a :href="item.url">{{ "{{ item.title }}" }}</a>
-                                <span class="date">{{ "{{ item.date }}" }}</span>
-                            </span>
+                            <a :href="item.url">{{ "{{ item.title }}" }}</a>
+                            <span class="date">{{ "{{ item.date }}" }}</span>
                         </li>
                     </ul>
                 </nav>

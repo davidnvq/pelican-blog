@@ -5,6 +5,7 @@ Tags: Đắc Nhân Tâm, OTHER
 Author: Quang Nguyen
 Category: other
 TopPost: no
+
 Cuộc sống là vậy dẫu xô bồ vào vòng mưu sinh - làm giàu - khẳng định mình - ước mơ thì bạn cũng hãy nhìn lại và giữ cho mình những giá trị sống tốt đẹp và cao cả - giữ lương tâm sáng suốt để tiến xa hơn nữa.
 
 # Nguyên tắc 1 : Không chỉ trích oán thán than phiền
