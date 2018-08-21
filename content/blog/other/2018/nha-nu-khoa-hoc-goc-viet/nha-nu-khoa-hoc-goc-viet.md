@@ -69,6 +69,6 @@ Chị cho biết, thời gian 21 năm sống ở Việt Nam, chị nhớ món ă
 Khi hỏi ý định về Việt Nam sinh sống, chị nói: "Có lẽ khi nào về hưu tôi mới về nước, vì quê hương vẫn chưa có đủ cơ sở vật chất điều kiện tốt để tôi có thể nghiên cứu", chị nói và cho biết 7 phòng thí nghiệm riêng của chị trị giá khoảng 4 triệu đôla.
 
 
-    Bên cạnh giải thưởng là một trong những nhà khoa học ảnh hưởng nhất thế giới ngành khoa học vật liệu, chị còn nhận nhiều giải thưởng khác như: Giải thưởng Nghiên cứu khoa học Alexander von Humboldt-Foundation của Đức năm 2015; Giải thưởng Nghiên cứu khoa học của Quỹ Khoa học Quốc gia Mỹ 2010, Giải thưởng Nghiên cứu khoa học của Alfred P. Sloan Foundation 2009; Giải thưởng Nghiên cứu khoa học của Camille Dreyfus Foundation 2008; Giải thưởng Nghiên cứu khoa học Harold J. Plous Memorial Award and Lectureship 2007.
+> Bên cạnh giải thưởng là một trong những nhà khoa học ảnh hưởng nhất thế giới ngành khoa học vật liệu, chị còn nhận nhiều giải thưởng khác như: Giải thưởng Nghiên cứu khoa học Alexander von Humboldt-Foundation của Đức năm 2015; Giải thưởng Nghiên cứu khoa học của Quỹ Khoa học Quốc gia Mỹ 2010, Giải thưởng Nghiên cứu khoa học của Alfred P. Sloan Foundation 2009; Giải thưởng Nghiên cứu khoa học của Camille Dreyfus Foundation 2008; Giải thưởng Nghiên cứu khoa học Harold J. Plous Memorial Award and Lectureship 2007.
 
 Nguồn: [Vnexpress.net](https://vnexpress.net/tin-tuc/khoa-hoc/trong-nuoc/nha-khoa-hoc-nu-goc-viet-trong-top-anh-huong-nhat-the-gioi-3352788.html)
