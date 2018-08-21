@@ -86,13 +86,13 @@ The backdrop here is to do all this while navigating a completely new society or
 
 ![Li graduating from Princeton](https://i2.cdn.turner.com/money/dam/assets/160711111940-fei-fei-li-princeton-780x439.jpg)
 
-## What helped you to keep it together?
+# What helped you to keep it together?
 
 I'm a go-getter. It's in my DNA. If I spend a lot of time lamenting on the difficulties then it could be distracting. There were always people who have wanted to support me - my parents, my teachers.
 
 It doesn't take 500 people. It just takes a couple and that makes a huge difference.
 
-## What do you hope to leave for your children?
+# What do you hope to leave for your children?
 
 That's a very cosmic question. I would rather do the best job to make a better world and our children will live in that world.
 
