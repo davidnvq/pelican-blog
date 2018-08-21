@@ -9,7 +9,7 @@ TopPost: no
 
 > Michael Faraday là nhà bác học được cả thế giới biết đến bởi ông chính là người có công lớn nhất trong việc biến từ thành điện - nguồn năng lượng sạch và phổ biến nhất ngày nay.
 
-# Thời niên thiếu
+# Từ cậu bé đóng sách nghèo ham học
 Michael Faraday sinh ngày 22/9/1791 ở Newington Butts, ngoại ô Luân Đôn, trong một gia đình nghèo có bố làm nghề thợ rèn. Từ nhỏ, Faraday đã tỏ ra thông minh và hiếu học, nhưng phải sớm nghỉ học để phụ giúp gia đình.
 
 Khi đời sống của gia đình càng khó khăn, năm 1804, khi mới 13 tuổi, Faraday đến xin việc tại “Hiệu bán sách và đóng sách Ritô” ở Luân Đôn. Faraday vừa học nghề đóng sách, vừa tự học qua việc đọc sách. Ông đặc biệt chú ý đến các quyển sách về khoa học và còn tự làm thí nghiệm đơn giản để kiểm nghiệm lại những điều khẳng định trong sách. Cứ thế trong thời gian rảnh rỗi, Faraday lại say mê cùng những điều lý thú của khoa học, nhất là lĩnh vực điện năng. Cho đến một ngày, anh thợ đóng sách trẻ Faraday háo hức dự các lớp học buổi tối do Hội Triết học tổ chức để trau dồi kiến thức, bù lại khoảng thời gian không được cắp sách đến trường. Faraday ham học đến nỗi đêm nào cũng đọc sách tới khuya khiến cho nhiều lần ngủ gật trong giờ làm việc.
@@ -31,7 +31,7 @@ Năm 1824, Faraday được bầu làm hội viên Hội Khoa học Hoàng gia L
 
 Năm 1825, Faraday bắt tay vào việc nghiên cứu loại khí thể dùng để chiếu sáng cho thành phố Luân Đôn. Loại khí này được đặt tên là khí Clo. Cũng trong năm này, Faraday được giao trách nhiệm chỉ đạo phòng thí nghiệm.
 
-# Thăng hoa trong thành tựu khoa học
+# Đến nhà bác học thiên tài không bằng cấp
 Giai đoạn năm 1830-1839 là thời kỳ mà Faraday đạt được nhiều thành quả khoa học nhất. Ông bắt tay vào việc nghiên cứu vật lý mà cơ bản là phần điện học hiện đại.
 
 Ngày 24/11/1831, Faraday báo cáo trước Học viện Hoàng gia về vấn đề phát hiện cảm ứng của điện từ. Ông vinh dự được mời giữ chức chủ tịch Hội Khoa học Hoàng gia nhưng đã từ chối để chuyên tâm theo đuổi các nghiên cứu khoa học.
@@ -53,9 +53,7 @@ Năm 1846, ông khám phá ra rằng năng lượng tĩnh điện được đị
 
 Ngoài thời gian dành cho khoa học, Faraday còn là người thầy xuất sắc. Ông có trách nhiệm cao và rất quan tâm đến phương pháp giảng dạy phải thực nghiệm để xây dựng hình tượng trực quan. Cho tới tận ngày nay, Học viện Hoàng gia Anh vẫn duy trì những nguyên tắc giảng dạy mà Faraday đã đề ra bằng kinh nghiệm và lòng tận tâm với công việc của ông.
 
-
-
-Faraday giảng dạy tại Học viện Hoàng gia 1856 - Ảnh: en.wikipedia.org
+# Những năm cuối cuộc đời
 
 Ngày 20/3/1862 là ngày cuối cùng đánh dấu công việc nghiên cứu của Michael Faraday. Trong cuốn sổ ghi kết quả nghiên cứu của ông người ta đọc được con số thí nghiệm cuối cùng của ông: 16041.
 
