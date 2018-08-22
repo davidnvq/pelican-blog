@@ -10,6 +10,7 @@ TopPost: no
 Below are some most popular commands in Linux Command Line (CLI).
 
 # Terminal Navigation Commands 
+
 ## cd: Change the directory
 Change/move the directory to current path:
 ```bash
@@ -31,6 +32,11 @@ ls -h
 Print the path to current directory
 ```bash
 pwd
+```
+## && 
+This one is so basic that it’s not even technically a command. If you ever want to run multiple commands in sequential order, just stick this in between each one. For example, [command1] && [command2] will first run [command1] then immediately follow it with [command2]. You can chain as many commands as you want.
+```bash
+[comand1] && [command2]
 ```
 
 ## clear: Clear the screen
@@ -60,6 +66,19 @@ history N
 ```
 
 # File Management Commands
+## find: Search files
+Search a specific directory to find files that match given set of criteria including filename, filetype, filesize, permissions, owners, date created, date modified, etc.
+```bash
+find file_name
+```
+## grep: Search where is the text in files
+Searches a specific file or set of files to see if a given string of text exists, and if it does, tells you where the text exists in those files. This command is extremely flexible (e.g. use wildcards to search all files of a given type) and particularly useful for programmers (to find specific lines of code).
+```bash
+grep 
+```
+
+## rename 
+https://ss64.com/bash/rename.html
 
 ## mkdir: Create a directory
 The `mkdir` - make directory - command allows the user to make a new directory:
