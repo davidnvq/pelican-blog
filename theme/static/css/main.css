@@ -338,15 +338,14 @@ article li {
 }
 
 article a {
-  color: #0056b3;
+  color: #007aff;
   text-decoration: none;
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
 }
 
 article a:hover {
-  color: #0056b3;
+  color: #007aff;
   text-decoration: none;
-  border-bottom: 1px solid #0056b3;
+  border-bottom: 1px solid #007aff;
 }
 
 article blockquote {

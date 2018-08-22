@@ -34,6 +34,13 @@ mv
 mv
 ```
 
+## man: The manual command
+The man command is used to show the manual of the inputted command.
+Example:
+```bash
+man cd
+```
+
 ## cp: Copy files and folders
 ```bash
 cp
@@ -75,7 +82,8 @@ cat file
 ```
 
 ## touch: Create a file in terminal
-Create a file with `touch`.
+Create a file with `touch`. The touch command - a.k.a. the make file command - allows users to make files using the Linux CLI. Just as the mkdir command makes directories, the touch command makes files. Just as you would make a .doc or a .txt using a PC desktop, the touch command makes empty files. An example of the touch command:
+
 ```bash
 touch file
 ```
@@ -96,6 +104,24 @@ watch -1 nvidia-smi
 ```bash
 kill pid
 ```
+
+## clear: Clear the screen
+```bash
+clear
+```
+
+
+# Commands with git
+If the current directory or files are under `git` repository, it is useful to use `mv` and `rm` with `git` command for further tracking:
+
+```bash
+git mv old_file_name new_file_name
+# Change the name of a file or dir
+
+git rm file
+# Remove a file
+```
+
 # Shortcuts
 
 
@@ -130,9 +156,9 @@ ps -u ubuntu
 htop
 ```
 
-## kill a process with a specific port
+## kill a process on a specific port
 ```bash
-# find the pid running with the port 
+# find the pid running on the port 
 lsof -i :port_number
 # kill the process with this port
 kill pid
