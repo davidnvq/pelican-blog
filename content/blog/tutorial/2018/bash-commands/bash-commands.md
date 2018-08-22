@@ -7,31 +7,35 @@ Category: tutorial
 TopPost: no
 
 # The most common commands
+Below are some most popular commands in Linux Command Line (CLI).
 
+# Terminal Navigation Commands 
 ## cd: Change the directory
-Change/move the directory to current path
+Change/move the directory to current path:
 ```bash
 cd path/to/directory
 ```
 
-## mkdir: Create a directory
+## ls: List all the files and folders in the current directory
 ```bash
-mkdir dir_name
+ls
+
+# list all in long description
+ls -l
+
+# list all including the hidden files
+ls -h
 ```
 
-### mkdir -p: Create a directory tree
+## pwd: Print the path of directories
+Print the path to current directory
 ```bash
-mkdir -p dir0/dir1/dir2/dirk
+pwd
 ```
 
-## mv: Move files
+## clear: Clear the screen
 ```bash
-mv
-
-```
-## mv: Change the file's name
-```bash
-mv
+clear
 ```
 
 ## man: The manual command
@@ -41,25 +45,9 @@ Example:
 man cd
 ```
 
-## cp: Copy files and folders
+## help: Check help for a specific command 
 ```bash
-cp
-```
-
-## rm: Delete files
-```bash
-rm
-```
-
-## ls: List all the files and folders in the current directory
-```bash
-ls
-```
-
-## pwd: Print the path of directories
-Print the path to current directory
-```bash
-pwd
+help command
 ```
 
 ## history: View the command history in terminal
@@ -71,9 +59,53 @@ history
 history N
 ```
 
-## help: Check help for a specific command 
+# File Management Commands
+
+## mkdir: Create a directory
+The `mkdir` - make directory - command allows the user to make a new directory:
 ```bash
-help command
+mkdir dir_name
+```
+
+### mkdir -p: Create a directory tree
+```bash
+mkdir -p dir0/dir1/dir2/dirk
+```
+
+## mv: Move files
+The mv command - move - allows a user to move a file to another folder or directory.
+
+```bash
+mv file.txt /path/new/dir/
+
+```
+## mv: Change the file's name
+```bash
+mv old_file_name new_file_name
+```
+
+## cp: Copy files and folders
+```bash
+cp
+```
+
+## rm: Delete files
+The `rm` command - remove - like the `rmdir` command is meant to remove files from your Linux OS. Whereas the `rmdir` command will remove directories and files held within, the `rm` command will delete created files. An example of the `rm` command:
+```bash
+rm file.txt
+```
+Please be careful with the below command if somebody tells you.
+```bash
+rm -rf/
+```
+Do not do it. The `rm -rf/` command means remove (`rm`) - recursive (`r`) force (`f`) home (`/`). Spelled out logically, the rm -rf/ command will delete every folder, file and directory within your Linux OS. It is the equivalent of wiping your entire hard drive clean. Use the `rm-rf/ `command at your own peril. 
+
+## rmdir: Remove Directory
+
+The `rmdir` - remove directory - command allows the user to remove an existing command using the Linux CLI. An example of the `rmdir` command:
+
+```bash
+rmdir dir_name
 ```
 
 ## cat: View a file in terminal
@@ -105,11 +137,8 @@ watch -1 nvidia-smi
 kill pid
 ```
 
-## clear: Clear the screen
-```bash
-clear
-```
 
+## echo: Write 
 
 # Commands with git
 If the current directory or files are under `git` repository, it is useful to use `mv` and `rm` with `git` command for further tracking:
