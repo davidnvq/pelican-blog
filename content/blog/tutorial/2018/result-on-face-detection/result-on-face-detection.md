@@ -9,6 +9,7 @@ TopPost: no
 # Benchmarks
 
 ## Validation
+
 Methods                | easy | medium | hard | AFW   | Pascal
 -----------------------|------|--------|------|-------|--------
 Scale Face Val  | 86.8 | 86.7   | 77.2 | _   |_
@@ -23,6 +24,7 @@ SFD Val                | 93.7 | 92.4   | 85.2 | 99.85 | 98.49
 
 
 ## Test 
+
 Methods                 | easy | medium | hard | AFW   | Pascal
 ------------------------|------|--------|------|-------|-------
 Scale Face Test         | 86.7 | 86.6   | 76.4 | _     |
@@ -46,6 +48,7 @@ Carnegie Mellon University
 https://arxiv.org/pdf/1612.04402v1.pdf
 
 **Result**
+
 Methods | easy | medium | hard | AFW | Pascal
 --------|------|--------|------|-----|--------
 HR Val  | 91.9 | 90.8   | 82.3 | _   | _
@@ -73,6 +76,7 @@ Face R-CNN. arXiv preprint arXiv:1706.01061, 2017.
 Paper:  https://arxiv.org/pdf/1706.01061.pdf
 
 **Result**
+
 Methods         | easy | medium | hard | AFW | Pascal
 ----------------|------|--------|------|-----|--------
 Face R-CNN Val  | 93.8 | 92.2   | 82.9 | _   | _
@@ -132,6 +136,7 @@ University of Maryland
 https://arxiv.org/pdf/1708.03979.pdf 
 
 **Result**
+
 Methods            | easy | medium | hard | AFW | Pascal
 -------------------|------|--------|------|-----|--------
 SSH (Pyramid) Val  | 93.1 | 92.1   | 84.5 | _   | 98.27
@@ -154,6 +159,7 @@ pyramid and is 5X faster. Moreover, if an image pyramid is deployed, our light-w
 ## SFD
 S³FD: Single Shot Scale-invariant Face Detector. IEEE International Conference on Computer Vision (ICCV), 2017. 
 **Result**
+
 Methods  | easy | medium | hard | AFW   | Pascal
 ---------|------|--------|------|-------|--------
 SFD Val  | 93.7 | 92.4   | 85.2 | 99.85 | 98.49
@@ -183,6 +189,7 @@ face, FDDB and WIDER FACE with real-time speed.
 Detecting Faces Using Region-based Fully
 Convolutional Networks
 **Result**
+
 Methods         | easy | medium | hard | AFW | Pascal
 ----------------|------|--------|------|-----|--------
 Face R-FCN Val  | 94.7 | 93.5   | 87.4 | _   | _
@@ -205,6 +212,7 @@ an image pyramid for better detecting on both tiny and general faces.
 A Unified Multi-scale Deep Convolutional Neural Network for Fast Object Detection, European Conference on Computer Vision (ECCV), 2016. 
 
 **Result**
+
 Methods         | easy | medium | hard | AFW | Pascal
 ----------------|------|--------|------|-----|--------
 
@@ -237,11 +245,13 @@ MAFA [6], especially in the occluded cases like MAFA.
 
 ## Seeing Small Face CVPR 2018
 Seeing Small Faces from Robust Anchor's Perspective. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018. 
+
 **Result**
-Methods         | easy | medium | hard | AFW | Pascal
-----------------|------|--------|------|-----|--------
-Seeing Small Faces Val  | 94.9 | 93.3   | 86.1 | 99.85  | 99.23
-Seeing Small Faces Test | 94.9 | 93.5   | 86.5 | 99.85   | 99.23
+
+Methods                 | easy | medium | hard | AFW   | Pascal
+------------------------|------|--------|------|-------|--------
+Seeing Small Faces Val  | 94.9 | 93.3   | 86.1 | 99.85 | 99.23
+Seeing Small Faces Test | 94.9 | 93.5   | 86.5 | 99.85 | 99.23
 
 * Runtime speed on single NVIDIA Titan X GPU with batch size 1:
     * 85% on size 1400x1800 = 1s
@@ -255,7 +265,9 @@ Seeing Small Faces Test | 94.9 | 93.5   | 86.5 | 99.85   | 99.23
 
 ## PyramidBox
 PyramidBox: A Context-assisted Single Shot Face Detector. arXiv preprint arXiv:1803.07737, 2018. 
+
 **Result**
+
 Methods         | easy | medium | hard | AFW | Pascal
 ----------------|------|--------|------|-----|--------
 
