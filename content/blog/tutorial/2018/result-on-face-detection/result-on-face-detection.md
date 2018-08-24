@@ -9,17 +9,29 @@ TopPost: no
 # Benchmarks
 
 ## Validation
-Methods     | easy | medium | hard | AFW | Pascal
-------------|------|--------|------|-----|--------
-SSH(VGG-16) | 93.1 | 92.1   | 84.5 | _   | 98.27
-HR (Tiny Faces)| 
+Methods                | easy | medium | hard | AFW   | Pascal
+-----------------------|------|--------|------|-------|--------
+Scale Face Val  | 86.8 | 86.7   | 77.2 | _   |_
+SSH (Pyramid) Val      | 93.1 | 92.1   | 84.5 | _     | 98.27
+HR Val                 | 91.9 | 90.8   | 82.3 | _     | _
+Face R-CNN Val         | 93.8 | 92.2   | 82.9 | _     | _
+Face R-FCN Val         | 94.7 | 93.5   | 87.4 | _     | _
+FAN Val                | 95.3 | 94.2   | 88.8 | _     | _
+Seeing Small Faces Val | 94.9 | 93.3   | 86.1 | 99.85 | 99.23
+SFD Val                | 93.7 | 92.4   | 85.2 | 99.85 | 98.49
+
 
 
 ## Test 
-Methods     | easy | medium | hard | AFW | Pascal
-------------|------|--------|------|-----|--------
-SSH(VGG-16) | 93.1 | 92.1   | 84.5 | _   | 98.27
-HR (Tiny Faces)| 
+Methods                 | easy | medium | hard | AFW   | Pascal
+------------------------|------|--------|------|-------|-------
+Scale Face Test         | 86.7 | 86.6   | 76.4 | _     |
+HR Test                 | 91.5 | 90.2   | 81.3 | _     | _
+Face R-CNN Test         | 93.2 | 91.6   | 82.7 | _     | _
+SSH (Pyramid) Test      | 92.7 | 91.5   | 84.4 | _     | _
+SFD Test                | 92.8 | 91.3   | 84.0 | _     | _
+Face R-FCN Test         | 94.3 | 93.1   | 87.6 | _     | _
+Seeing Small Faces Test | 94.9 | 93.5   | 86.5 | 99.85 | 99.23
 
 
 # Methods
@@ -96,8 +108,8 @@ Face Detection through Scale-Friendly Deep Convolutional Networks. arXiv preprin
 
 Methods         | easy | medium | hard | AFW | Pascal
 ----------------|------|--------|------|-----|-------
-Face R-CNN Val  | 86.8 | 86.7   | 77.2 | _   |
-Face R-CNN Test | 86.7 | 86.6   | 76.4 | _   |
+Scale Face Val  | 86.8 | 86.7   | 77.2 | _   |
+Scale Face Test | 86.7 | 86.6   | 76.4 | _   |
 ![](Scale_Face_result.png)
 
 **Implementation**
@@ -246,8 +258,7 @@ PyramidBox: A Context-assisted Single Shot Face Detector. arXiv preprint arXiv:1
 **Result**
 Methods         | easy | medium | hard | AFW | Pascal
 ----------------|------|--------|------|-----|--------
-Face R-CNN Val  | 93.8 | 92.2   | 82.9 | _   | 98.27
-Face R-CNN Test | 93.2 | 91.6   | 82.7 | _   | 98.27
+
 
 **Implementation**
 
