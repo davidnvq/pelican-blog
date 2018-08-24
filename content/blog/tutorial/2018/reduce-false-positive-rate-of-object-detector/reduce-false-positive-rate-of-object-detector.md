@@ -6,6 +6,29 @@ Author: Quang Nguyen
 Category: tutorial
 TopPost: no
 
+# Lecture for Object Detection
+https://zsc.github.io/megvii-pku-dl-course/slides/Lecture6(Object%20Detection).pdf
+
+# Lessons from object detection models 
+## Region-based models
+https://medium.com/@jonathan_hui/what-do-we-learn-from-region-based-object-detectors-faster-r-cnn-r-fcn-fpn-7e354377a7c9
+## Single shot object detectors
+https://medium.com/@jonathan_hui/what-do-we-learn-from-single-shot-object-detectors-ssd-yolo-fpn-focal-loss-3888677c5f4d
+
+Learn a lot from this guy:
+https://jhui.github.io/
+
+# Train Tensorflow Object Detection on own dataset
+After spending a couple days trying to achieve this task, I would like to share my experience of how I went about answering the question:
+
+How do I use TS Object Detection to train using my own dataset?
+https://stackoverflow.com/questions/44973184/train-tensorflow-object-detection-on-own-dataset
+
+# Best strategy to reduce false positives: Google's new Object Detection API on Satellite Imagery
+https://stackoverflow.com/questions/45666499/best-strategy-to-reduce-false-positives-googles-new-object-detection-api-on-sa
+
+ # FPN 
+https://medium.com/@jonathan_hui/understanding-feature-pyramid-networks-for-object-detection-fpn-45b227b9106c
 
 # What are the best methods for reducing false positives using tensorflow's object detection framework?
 
