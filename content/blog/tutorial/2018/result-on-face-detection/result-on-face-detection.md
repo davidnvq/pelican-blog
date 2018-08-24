@@ -22,7 +22,6 @@ Seeing Small Faces Val | 94.9 | 93.3   | 86.1 | 99.85 | 99.23
 SFD Val                | 93.7 | 92.4   | 85.2 | 99.85 | 98.49
 
 
-
 ## Test 
 
 Methods                 | easy | medium | hard | AFW   | Pascal

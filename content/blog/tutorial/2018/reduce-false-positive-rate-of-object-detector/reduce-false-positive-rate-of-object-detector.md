@@ -1,7 +1,7 @@
 Title: Reduce false positive rate of Object Detector
 Slug: reduce-false-positive-rate-of-object-detector
 Date: 2018-08-23 00:52:57
-Tags: Ojbect Detection, TUTORIAL
+Tags: Face Detection, Ojbect Detection, TUTORIAL
 Author: Quang Nguyen
 Category: tutorial
 TopPost: no
