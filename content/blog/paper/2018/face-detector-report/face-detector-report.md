@@ -8,6 +8,7 @@ TopPost: no
 
 # To-do list
 ## Data analysis
+Done
 * Data analysis on WiderFace Validation, Test
     
     * Make a ipython notebook file for Validation and Test:
@@ -21,13 +22,21 @@ TopPost: no
 * Data analysis on Pascal Face
 
 ## Test with different scales
+Done
 * Make a python script to run on AFW Face.
 * Go to school to run it? May be.
+
 ## Train with lower anchors
+Not yet
 
 ## Train with lower connection
+Not yet 
+
+## Train with focal_loss
+Not yet
 
 ## Train with lower topN
+Not yet
 * topN = 4
 
 
