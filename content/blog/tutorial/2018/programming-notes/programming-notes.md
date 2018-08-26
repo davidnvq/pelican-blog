@@ -29,6 +29,12 @@ $ sudo killall -u YOURUSER -r sshd
 $ sudo killall -u ubuntu -r sshd
 ```
 
+## scp: Copy files from remote server to local
+```bash
+scp -i /path/to/private_key/ username@ip:/path/to/file/on/server /path/to/location/on/local
+```
+
+
 ##  Exit the ssh session in bash/shell script
 Normally, we can use exit statement in terminal prompt to terminate the ssh session. However, this way doesn’t work properly when we perform exit in bash script file.sh.
 
