@@ -6,16 +6,68 @@ Author: Quang Nguyen
 Category: paper
 TopPost: no
 
+## Combined Result
+### Methods
+**SSH**: Like HR, a four level image pyramid is deployed. To form the pyramid, the image is first scaled
+to have a shortest side of up to 800 pixels and the longest side less than 1200 pixels. Then, we scale the image to have min sizes of 500, 800, 1200, and 1600 pixels in the pyramid. All modules detect faces on all pyramid levels, except M3
+which is not applied to the largest level.
+
+Methods                | easy  | medium | hard  | AFW   | Pascal
+-----------------------|-------|--------|-------|-------|--------
+Scale Face Val         | 86.8  | 86.7   | 77.2  | _     | _
+SSH (Pyramid) Val      | 93.1  | 92.1   | 84.5  | _     | 98.27
+HR Val                 | 91.9  | 90.8   | 82.3  | _     | _
+Face R-CNN Val         | 93.8  | 92.2   | 82.9  | _     | _
+Face R-FCN Val         | 94.7  | 93.5   | 87.4  | _     | _
+Seeing Small Faces Val | 94.9  | 93.3   | 86.1  | 99.85 | 99.23
+SFD Val                | 93.7  | 92.4   | 85.2  | 99.85 | 98.49
+OURS Val               | 93.7  | 92.2   | 84.6  | 99.91 | 99.16
+OURS Val               | 93.7  | 92.2   | 84.6  | 99.89 | 99.37
+remove_low_iou < 0.5 (b)| 95.0% | 93.5%  | 85.1% | 99.89 | 99.37
+
+## Post Processing
+Methods                  | easy  | medium | hard  | AFW   | Pascal
+-------------------------|-------|--------|-------|-------|--------
+Scale Face Val           | 86.8  | 86.7   | 77.2  | _     | _
+SSH (Pyramid) Val        | 93.1  | 92.1   | 84.5  | _     | 98.27
+HR Val                   | 91.9  | 90.8   | 82.3  | _     | _
+Face R-CNN Val           | 93.8  | 92.2   | 82.9  | _     | _
+Face R-FCN Val           | 94.7  | 93.5   | 87.4  | _     | _
+Seeing Small Faces Val   | 94.9  | 93.3   | 86.1  | 99.85 | 99.23
+SFD Val                  | 93.7  | 92.4   | 85.2  | 99.85 | 98.49
+OURS Val                 | 93.7  | 92.2   | 84.6  | 99.89 | 99.37
+remove_low_iou < 0.5 (a) | 81.9% | 86.1%  | 82.3% | 99.89 | 99.37
+remove_low_iou < 0.5 (b) | 81.8% | 86.0%  | 82.1% | 99.89 | 99.37
+remove_low_iou < 0.5 (c) | 81.7% | 86.0%  | 82.3% | 99.89 | 99.37
+remove_low_iou < 0.5 (d) | _% | _%  | _% | 99.89 | 99.37
+
+(a) set iou > 0.5 = 1, iou < 0.5 = np.sqrt(01.*score)
+(b) set iou > 0.5 = 1, iou < 0.5 = 0.0
+(c) set iou > 0.5 = 1, iou < 0.5 = score
+(d) set iou > 0.5 = score, iou < 0.5 = 0.1
+
+(b) Set iou > 0.5 -> np.sqrt(0.99*score), iou < 0.5 -> np.sqrt(0.01*score)
+
+Model           | Num_layers | Notes
+----------------|------------|-------------------------
+Resnet101       | 4          | Loss ratio (4:1), IoU Thresholds: 0.3, 0.1, topN = 5
+Resnet101_New   | 2          | Loss ratio (4:1), IoU Thresholds: 0.5, 0.3, topN = 4
+Resnet101_Newer | 3          | Loss ratio (4:1), IoU Thresholds: 0.5, 0.3, topN = 4
+Resnet101_Neweest | 4          | Loss ratio (4:1), IoU Thresholds: 0.5, 0.1, topN = 4
+
 # To-do list
 ## Data analysis
+
+
 Done
+
+
 * Data analysis on WiderFace Validation, Test
-    
     * Make a ipython notebook file for Validation and Test:
-        * Height, width of dataset
-        * Size of bounding boxes
-        * Number of bboxes
-        * Number per images
+    * Height, width of dataset
+    * Size of bounding boxes
+    * Number of bboxes
+    * Number per images
 
 * Data analysis on AFW Face
 
@@ -23,6 +75,7 @@ Done
 
 ## Test with different scales
 Done
+
 * Make a python script to run on AFW Face.
 * Go to school to run it? May be.
 
@@ -37,17 +90,26 @@ Not yet
 
 ## Train with lower topN
 Not yet
+
 * topN = 4
 
+## Build Tensorflow
 
+## NOTES
+In order to use previous DeepResnet101, just change the number of CNN layers in prediction block to `4`.
 
 # Result on Face Dataset
 ## WiderFace Dataset
 
-### Methods
-**SSH**: Like HR, a four level image pyramid is deployed. To form the pyramid, the image is first scaled
-to have a shortest side of up to 800 pixels and the longest side less than 1200 pixels. Then, we scale the image to have min sizes of 500, 800, 1200, and 1600 pixels in the pyramid. All modules detect faces on all pyramid levels, except M3
-which is not applied to the largest level.
+* Việc cần làm:
+
+1. Retrain lại model with better accuracy!
+    * IOU Threshold <0.3, 0.1>
+
+2. Build CNN 
+
+4. Write the paper.
+
 
 
 ### Table of results
@@ -58,9 +120,12 @@ min_640  | 91.1% | 88.1%  | 75.0%
 min_500  | 89.9% | 87.4%  | 64.2%
 min_800  | 91.0% | 89.1%  | 79.6%
 min_1200 | 89.9% | 88.8%  | 82.4%
+min_1600 | 89.9% | 87.4%  | 81.7%
 original | 92.1% | 89.6%  | 78.6%
 mix1     | 93.4% | 91.8%  | 84.1%
 mix2     | 93.7% | 92.2%  | 80.1%
+remove_low_iou < 0.3|93.8% | 92.4% | 83.9%
+remove_low_iou < 0.5|95.0% | 93.3% | 84.4%
 
 1. min_640
     just rescale the smaller size to 640 and keep the ratio unchanged
@@ -70,6 +135,18 @@ mix2     | 93.7% | 92.2%  | 80.1%
     all the sizes with
 4. mix2
     the same as mix1, but remove the tiny boxes < 8
+
+## Resnet_newer
+File     | Easy  | Medium | Hard
+---------|-------|--------|-------
+min_400  | 87.9% | 80.7%  | 52.9%
+min_640  | 90.3% | 87.0%  | 72.0%
+min_1280 | 89.9% | 87.5%  | 81.2%
+min_1600 | 86.4% | 86.0%  | 80.3%
+min_1920 | 82.0% | 83.0%  | 77.6%
+original | 82.6% | 83.0%  | 77.6%
+mix1     | 93.4% | 91.8%  | 84.1%
+mix2     | 93.7% | 92.2%  | 80.1%
 
 
 ## AFW Dataset
@@ -153,6 +230,8 @@ original_deepresnet101 | 98.25      | -
 * min_640_deepresnet101: resize the smaller size to 640, and keep the ratios w:h unchanged.
 * original_deepresnet101: keep the original size.
 
+
+    File not in dataset 2008_000210.jpg 1.0 139 94 325 267
 
 
 # Charts and Graphs
