@@ -12,18 +12,21 @@ TopPost: no
 to have a shortest side of up to 800 pixels and the longest side less than 1200 pixels. Then, we scale the image to have min sizes of 500, 800, 1200, and 1600 pixels in the pyramid. All modules detect faces on all pyramid levels, except M3
 which is not applied to the largest level.
 
-Methods                | easy  | medium | hard  | AFW   | Pascal
------------------------|-------|--------|-------|-------|--------
-Scale Face Val         | 86.8  | 86.7   | 77.2  | _     | _
-SSH (Pyramid) Val      | 93.1  | 92.1   | 84.5  | _     | 98.27
-HR Val                 | 91.9  | 90.8   | 82.3  | _     | _
-Face R-CNN Val         | 93.8  | 92.2   | 82.9  | _     | _
-Face R-FCN Val         | 94.7  | 93.5   | 87.4  | _     | _
-Seeing Small Faces Val | 94.9  | 93.3   | 86.1  | 99.85 | 99.23
-SFD Val                | 93.7  | 92.4   | 85.2  | 99.85 | 98.49
-OURS Val               | 93.7  | 92.2   | 84.6  | 99.91 | 99.16
-OURS Val               | 93.7  | 92.2   | 84.6  | 99.89 | 99.37
-remove_low_iou < 0.5 (b)| 95.0% | 93.5%  | 85.1% | 99.89 | 99.37
+Methods                   | easy | medium | hard | AFW   | Pascal | FDDB
+--------------------------|------|--------|------|-------|--------|------
+Scale Face Val            | 86.8 | 86.7   | 77.2 | _     | _      | 96.0
+SSH (Pyramid) Val         | 93.1 | 92.1   | 84.5 | _     | 98.27  | 98.1
+HR Val(Tiny Face Detector)| 91.9 | 90.8   | 82.3 | _     | _      |
+Face R-CNN Val            | 93.8 | 92.2   | 82.9 | _     | _      |
+Face R-FCN Val            | 94.7 | 93.5   | 87.4 | _     | _      |
+Seeing Small Faces Val    | 94.9 | 93.3   | 86.1 | 99.85 | 99.23  | 97.5
+SFD Val                   | 93.7 | 92.4   | 85.2 | 99.85 | 98.49  | 98.3
+OURS Val without  FPC     | 93.7 | 92.2   | 84.6 | 99.91 | 99.28  | 98.4
+Our Val with FPC          | 94.3 | 93.2   | 84.8 | 99.89 | 99.28  | 98.4
+Retinanet with Correction | 95.2 | 93.6   | 85.9 | 99.91 | 99.37  | 98.8
+
+Retinanet with Correction CNN
+
 
 ## Post Processing
 Methods                  | easy  | medium | hard  | AFW   | Pascal
@@ -36,6 +39,7 @@ Face R-FCN Val           | 94.7  | 93.5   | 87.4  | _     | _
 Seeing Small Faces Val   | 94.9  | 93.3   | 86.1  | 99.85 | 99.23
 SFD Val                  | 93.7  | 92.4   | 85.2  | 99.85 | 98.49
 OURS Val                 | 93.7  | 92.2   | 84.6  | 99.89 | 99.37
+OURS Val               | 93.7  | 92.2   | 84.6  | 99.91 | 99.37
 remove_low_iou < 0.5 (a) | 81.9% | 86.1%  | 82.3% | 99.89 | 99.37
 remove_low_iou < 0.5 (b) | 81.8% | 86.0%  | 82.1% | 99.89 | 99.37
 remove_low_iou < 0.5 (c) | 81.7% | 86.0%  | 82.3% | 99.89 | 99.37
@@ -148,6 +152,16 @@ original | 82.6% | 83.0%  | 77.6%
 mix1     | 93.4% | 91.8%  | 84.1%
 mix2     | 93.7% | 92.2%  | 80.1%
 
+## FDDB Dataset
+
+File     | Easy  
+---------|-------
+min_640  | 96.6%
+original | 93.5%
+SFD      | 98.3%
+CVPR2018 | 97.5%
+max_640  | 97.5%
+Deepresnet max_640 | 97.9%
 
 ## AFW Dataset
 
