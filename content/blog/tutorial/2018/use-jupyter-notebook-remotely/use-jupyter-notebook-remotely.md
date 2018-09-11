@@ -28,7 +28,8 @@ In your local computer, open MS-DOS cmd (if using Windows) or Unix terminal, the
 ssh -i path/to/public-key -N -f -L localhost:8888:localhost:8889 username@your_remote_host_name
 # make sure to change `username` to your real username in remote host
 # change `your_remote_host_name` to your address of your working station
-# Example: ssh -N -f -L localhost:8888:localhost:8889 laura@cs.rutgers.edu
+# Example: 
+ssh -i ~/.ssh/.quang\@ -N -f -L localhost:8888:localhost:8889 ubuntu@10.0.6.236
 ```
 
 Now open web browser (google chrome, firefox, ...) and type:
