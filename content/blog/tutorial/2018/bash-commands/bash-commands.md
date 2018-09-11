@@ -212,7 +212,70 @@ lsof -i :port_number
 kill pid
 ```
 
-## 
-```bash
+## List all the process running GPUs and kill it.
+
+Apart from nvidia-smi, on Linux you can check which processes might be using the GPU using the command
 
 ```
+sudo fuser -v /dev/nvidia*
+kill pid
+```
+
+## Install pillow-simd for fast augmentation
+```
+pip uninstall pillow
+pip install pillow-simd
+```
+##  Warning: remote port forwarding failed for listen port 52698
+This bug happens when rmate from server can’t forward to Visual Code in client machine. The reason is some sshd sessions aren’t dettached correctly.
+
+Solution
+```bash
+$ ps -u username
+$ kill `PID_of_sshd`
+```
+Or we can do it as below: First, we need to install killall from psmisc package
+```bash
+$ sudo apt-get install psmisc
+```
+And then, start killing all sshd connection.
+```bash
+$ sudo killall -u YOURUSER -r sshd
+$ sudo killall -u ubuntu -r sshd
+```
+
+## scp: Copy files from remote server to local
+```bash
+scp -i /path/to/private_key/ username@ip:/path/to/file/on/server /path/to/location/on/local
+
+# Example
+scp -i ~/.ssh/.quang ubuntu@ip:/home/ubuntu/ .
+```
+##  Exit the ssh session in bash/shell script
+Normally, we can use exit statement in terminal prompt to terminate the ssh session. However, this way doesn’t work properly when we perform exit in bash script file.sh.
+
+Solution
+
+In order to execute the bash script file.sh and terminate the ssh session later: Just put exit outside the script file.
+```bash
+$ bash `file.sh`; exit
+```
+
+##  Fail to load the interpreter of Python for virtual environment
+Instead of running python from virtual environment, it calls python of base environment. We can check which version of python is running by using:
+```bash
+$ source activate VIRTUAL_ENV
+$ which python
+```
+Solution
+
+Don’t need to run source activate `VIRTUAL_ENV`, call directly `python` from that `VIRTUAL_ENV`
+```bash
+$ /path/to/anaconda/envs/VIRTUAL_ENV/bin/python filename.py
+```
+
+## zip and unzip files and folders.
+```bash
+zip -r myfiles.zip mydir
+```
+
