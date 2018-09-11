@@ -176,16 +176,6 @@ https://spiderum.com/bai-dang/Cong-nghe-14-AI-Super-Powers-Kai-Fu-Lee-Trung-Quoc
 
 vnhacker.blogspot.com
 
-
-
-
-
-35. Convert a scalar number to tensorflow float 
-
-```
-tf.to_float(num)
-```
-
 ## other contents from the other blogs and websites
 
 * Chapter 2 about Linear Algebra Deep Learning Book with a PhD student from ENS, France, Hadrienj
@@ -209,3 +199,13 @@ tf.to_float(num)
 * Lil blog -  a young researcher the Robotics team @ OpenAI.
 
 * Doctor Thesis from Andrej Karpathy.
+
+# Make a web notebook like Pytorch tutorials
+
+https://sphinx-gallery.readthedocs.io/en/latest/tutorials/plot_notebook.html#sphx-glr-tutorials-plot-notebook-py
+
+https://github.com/pytorch/tutorials
+
+This one from `Keras`
+https://www.mkdocs.org/#adding-pages
+
