@@ -6,8 +6,16 @@ Author: Quang Nguyen
 Category: tutorial
 TopPost: no
 
-# Some common operations
+# Some useful links 
 
+* https://towardsdatascience.com/@yufengg
+* googlecloud series on Youtube
+
+{% youtube t3Uuk8edSzs 640 480 %}
+
+* https://pair-code.github.io/facets/ Visualize your data
+
+# Some common operations
 ## Tensorflow Debugging, Keras Debugging
 
 * https://wookayin.github.io/tensorflow-talk-debugging/
@@ -565,3 +573,5 @@ tf.assert_equal(
 with tf.control_dependencies([tf.assert_equal(x, y)]):
   output = tf.reduce_sum(x)
 ```
+
+
