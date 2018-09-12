@@ -82,7 +82,7 @@ publish:  ## Generate output ready for publish
 	git commit -m "Some notes added to pelican-blog"
 	git push -u origin master
 	rm -rf ../quangdtsc.github.io/
-	mv $(OUTPUTDIR)/* ../quangdtsc.github.io/
+	mv $(OUTPUTDIR)/* ../quangdtsc.github.io/*
 	cd ../quangdtsc.github.io/ && pwd && git add . && git commit -m "Some notes added to quangdtsc.github.io" && git push -u origin master
 
 .PHONY: bootstrap
