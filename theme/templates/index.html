@@ -6,7 +6,8 @@
 <main id="index" class="index container">
     <br>
     <div class="container">
-        <!-- Nav tabs -->
+        <!--
+        <!- - Nav tabs - ->
         <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" data-toggle="tab" href="#all">All Posts</a>
@@ -27,19 +28,19 @@
 
         </ul>
             
-        <!-- Tab panes -->
+        <!- - Tab panes - ->
         <div class="tab-content">
             <div id="all" class="container tab-pane active"><br>
                 <h3>All of My Posts</h3>
 
-                <!--input box for searching and filtering posts by titles and tags-->
+                <!- -input box for searching and filtering posts by titles and tags- ->
                 <form class="filter d-flex align-items-center">
                     <span style="position: relative; display: inline-block; direction: ltr;">
                         <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
                     </span>
                 </form>
 
-                <!--Few words to readers and myself-->
+                <!- -Few words to readers and myself- ->
                 <div class="row">
                         <div class="hidden-md-down col-sm-6">
                             <div class="alert alert-info" style="text-align: center" onclick="displaytomyself()" role="alert" data-toggle="collapse" data-target="#readers" aria-expanded="false" aria-controls="myself">
@@ -53,7 +54,7 @@
                                         
                         </div>    
                 </div>
-                <!-- Text to readers-->
+                <!- - Text to readers- ->
                 <div class="collapse" id="readers">
                     <div class="card card-body" id="text2you">
                     </div>
@@ -70,10 +71,10 @@
                 </nav>
             </div>
 
-            <!--Paper Notes pane-->
+            <!- - Paper Notes pane- ->
             <div id="paper" class="container tab-pane fade"><br>
                 <h3>Paper Notes</h3>
-                <!--search input for filtering-->
+                <!- -search input for filtering- ->
                 <form class="filter d-flex align-items-center">
                     <span style="position: relative; display: inline-block; direction: ltr;">
                         <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
@@ -81,7 +82,7 @@
                 </form>
     
                 
-                <!--Introduction and A list of top post-->
+                <!- - Introduction and A list of top post - ->
                 <div class="row">
                         <div class="hidden-md-down col-sm-4">
                             <div class="alert alert-info" style="text-align: center" role="alert" data-toggle="collapse" data-target="#paper_introduction" aria-expanded="false" aria-controls="myself">
@@ -95,7 +96,7 @@
                                         
                         </div>    
                 </div>
-                <!-- Text to readers-->
+                <!- - Text to readers - ->
                 <div class="collapse" id="paper_introduction">
                     <div class="card card-body" id="introduction">
                         <p>Here are several learning notes during my reading on papers from Computer Vision, Deep Learning, Machine Learning, 
@@ -105,7 +106,7 @@
                         </p>
                     </div>
                 </div>                
-                <!-- Top posts -->
+                <!- - Top posts - ->
                 <div class="collapse" id="top_paper_posts">
                     <div class="card card-body">
                         <ul class="double-list" style="padding: 0px">
@@ -121,7 +122,7 @@
                     </div>
                 </div> 
 
-                <!-- List of filtered posts -->
+                <!- - List of filtered posts - ->
                 <nav>
                     <ul class="double-list">
                         <li v-for="item in filteredItems">
@@ -134,11 +135,11 @@
                 </nav>
             </div>
             
-            <!--Tutorial Notes pane-->
+            <!- - Tutorial Notes pane - ->
             <div id="tutorial" class="container tab-pane fade"><br>
                 <h3>Tutorial Notes</h3>
 
-                <!--search input for filtering-->
+                <!- - search input for filtering - ->
                 <form class="filter d-flex align-items-center">
                     <span style="position: relative; display: inline-block; direction: ltr;">
                         <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
@@ -146,7 +147,7 @@
                 </form>
     
                 
-                <!--Introduction and A list of top post-->
+                <!- - Introduction and A list of top post - ->
                 <div class="row">
                         <div class="hidden-md-down col-sm-4">
                             <div class="alert alert-info" style="text-align: center" role="alert" data-toggle="collapse" data-target="#tutorial_introduction" aria-expanded="false" aria-controls="myself">
@@ -160,7 +161,7 @@
                                         
                         </div>    
                 </div>
-                <!-- Text to readers-->
+                <!- - Text to readers - ->
                 <div class="collapse" id="tutorial_introduction">
                     <div class="card card-body" id="introduction">
                         <p>In this corner, I make a collection of tutorial notes which are generated by myself. 
@@ -168,7 +169,7 @@
                         </p>
                     </div>
                 </div>                
-                <!-- Top posts -->
+                <!- - Top posts - ->
                 <div class="collapse" id="top_tutorial_posts">
                     <div class="card card-body">
                         <ul class="double-list" style="padding: 0px">
@@ -184,7 +185,7 @@
                     </div>
                 </div>          
                 
-                <!--Filter posts-->
+                <!- -Filter posts- ->
                 <nav>
                     <ul class="double-list">
                         <li v-for="item in filteredItems">
@@ -197,10 +198,10 @@
                 </nav>
             </div>
 
-            <!--Book Notes pane-->
+            <!- -Book Notes pane- ->
             <div id="book" class="container tab-pane fade"><br>
                 <h3>Book Notes</h3>
-                <!--search input for filtering-->
+                <!- -search input for filtering- ->
                 <form class="filter d-flex align-items-center">
                     <span style="position: relative; display: inline-block; direction: ltr;">
                         <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
@@ -208,7 +209,7 @@
                 </form>
     
                 
-                <!--Introduction and A list of top post-->
+                <!- -Introduction and A list of top post- ->
                 <div class="row">
                         <div class="hidden-md-down col-sm-4">
                             <div class="alert alert-info" style="text-align: center" role="alert" data-toggle="collapse" data-target="#book_introduction" aria-expanded="false" aria-controls="myself">
@@ -222,7 +223,7 @@
                                         
                         </div>    
                 </div>
-                <!-- Text to readers-->
+                <!- - Text to readers- ->
                 <div class="collapse" id="book_introduction">
                     <div class="card card-body" id="introduction">
                         <p>This pane is dedicated to the thought notes I create during my reading. 
@@ -230,7 +231,7 @@
                         </p>
                     </div>
                 </div>                
-                <!-- Top posts -->
+                <!- - Top posts - ->
                 <div class="collapse" id="top_book_posts">
                     <div class="card card-body">
                         <ul class="double-list" style="padding: 0px">
@@ -246,7 +247,7 @@
                     </div>
                 </div> 
 
-                <!-- List of filtered posts -->
+                <!- - List of filtered posts - ->
                 <nav>
                     <ul class="double-list">
                         <li v-for="item in filteredItems">
@@ -259,7 +260,7 @@
                 </nav>
             </div>
 
-            <!--Personal corners pane-->
+            <!- - Personal corners pane - ->
             <div id="other" class="container tab-pane fade"><br>
                 <h3>Traveling and Other Hobbies</h3>
                 <p> I write some posts here for my future self about the memories that I go through.
@@ -283,8 +284,28 @@
                 </nav>  
             </div>                
         </div>
+        -->
 
-        <!--cloud of Tags here-->
+        <h3>All Posts</h3>
+
+        <!- -input box for searching and filtering posts by titles and tags- ->
+        <form class="filter d-flex align-items-center">
+            <span style="position: relative; display: inline-block; direction: ltr;">
+                <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
+            </span>
+        </form>
+                    
+        <nav>
+            <ul class="double-list">
+                <li v-for="item in filteredItems">
+                    <a :href="item.url">{{ "{{ item.title }}" }}</a>
+                    <span class="date">{{ "{{ item.date }}" }}</span>
+                </li>
+            </ul>
+        </nav>
+        
+
+        <!- -cloud of Tags here- ->
         <div class="tags" style="text-align: center">
             {% for tag, articles in tags %}
                 <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag }} ({{ articles | length }})</a>
@@ -299,7 +320,7 @@
 
 {% block end_doc %}
 
-<!--Few words to readers and myself-->
+<!- -Few words to readers and myself- ->
 <script>
     function displaytomyself() {
         document.getElementById("text2you").innerHTML = "<span><strong>Dear my future self</strong>,<br></span>When you are reading these notes, you will be amazed at how far you are. Please keep writing while enjoying life.";
@@ -309,7 +330,7 @@
     }
 </script>
 
-<!--Filter the posts with title and tags-->
+<!- -Filter the posts with title and tags- ->
 
 
 <script>
