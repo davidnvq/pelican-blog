@@ -130,6 +130,7 @@ pre > code {
     }
 }
 
+
 .wrapper:after, .footer-col-wrapper:after, .cover:after, .profile-wrapper:after {
     content: "";
     display: table;
@@ -662,15 +663,25 @@ pre > code {
     margin-right: auto;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
     .profile-wrapper {
         top: 5%;
-        border-radius: 25px;
+        border-radius: 15px;
         position: relative;
-        width: -webkit-calc(90% - (30px / 2));
+        width: -webkit-calc(100% - (10px / 2));
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: -100px;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .profile-wrapper {
+        top: 5%;
+        border-radius: 10px;
+        position: relative;
+        width: -webkit-calc(100% - (4px / 2));
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -711,7 +722,7 @@ pre > code {
 @media screen and (max-width: 600px) {
     .profile-col {
         position: relative;
-        margin: 10px auto;
+        margin: 5px auto;
         float: none;
         width: -webkit-calc(100%);
         width: calc(100%)
