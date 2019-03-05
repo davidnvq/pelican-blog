@@ -37,6 +37,7 @@ build:  ## Generate the output
 	$(PELICAN) -s $(CONFFILE) $(PELICANOPTS)
 	cp $(INPUTDIR)/favicon.ico $(OUTPUTDIR)
 	cp $(INPUTDIR)/robots.txt $(OUTPUTDIR)
+	cp $(INPUTDIR)/pages/*.html $(OUTPUTDIR)
 
 
 .PHONY: clean

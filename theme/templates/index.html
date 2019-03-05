@@ -1,380 +1,909 @@
-{% extends "base.html" %}
-{% block title %}Home{% endblock %}
-{% block headerimg %}{{ DEFAULT_HEADER_BG }}{% endblock %}
+<!--
+Table of Contents
+1.0 Header
+2.0
 
-{% block content %}
-<main id="index" class="index container">
-    <br>
-    <div class="container">
-        <!--
-        <!- - Nav tabs - ->
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#all">All Posts</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#paper">Paper Notes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tutorial">Tech Tutorials</a>
-            </li>
+-->
 
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#book">Book Notes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#other">Travel and Others</a>
-            </li>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        </ul>
-            
-        <!- - Tab panes - ->
-        <div class="tab-content">
-            <div id="all" class="container tab-pane active"><br>
-                <h3>All of My Posts</h3>
+        <title>Quang Nguyen</title>
+        <meta name="description" lang="en"
+              content="This is an academic website for Nguyen Van Quang to share his experiences, projects,
+              publications and tech/non-tech posts. He is a graduate student of Tohoku University. His research
+              interests lie in the field of Machine Learning and Computer Vison, particularly in Deep Learning. ">
 
-                <!- -input box for searching and filtering posts by titles and tags- ->
-                <form class="filter d-flex align-items-center">
-                    <span style="position: relative; display: inline-block; direction: ltr;">
-                        <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
-                    </span>
-                </form>
+        <meta name="description" lang="vi" content="Website cá nhân của Nguyễn Văn Quang - NCS ngành Khoa học Máy
+        tính tại Đại học Tohoku.">
 
-                <!- -Few words to readers and myself- ->
-                <div class="row">
-                        <div class="hidden-md-down col-sm-6">
-                            <div class="alert alert-info" style="text-align: center" onclick="displaytomyself()" role="alert" data-toggle="collapse" data-target="#readers" aria-expanded="false" aria-controls="myself">
-                                Dear my future self,
-                            </div>
-                        </div>
-                        <div class="hidden-md-down col-sm-6">
-                            <div class="alert alert-warning" style="text-align: center"  onclick="displaytoreaders()" role="alert" data-toggle="collapse" data-target="#readers" aria-expanded="true" aria-controls="readers">
-                                Dear my potential readers,
-                            </div>
-                                        
-                        </div>    
-                </div>
-                <!- - Text to readers- ->
-                <div class="collapse" id="readers">
-                    <div class="card card-body" id="text2you">
+        <meta name="keywords" lang="en"
+              content="Nguyen Van , Publications, Posts, Research, Deep Learning, Computer Vision, Natural Language
+              Processing"/>
+        <meta name="keywords" lang="vi" content="Thị giác máy, Học sâu, Xử lý ngôn ngữ tự nhiên, Nghiên cứu"/>
+
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="canonical" href="https://quangdtsc.github.io/">
+        <link rel="alternate" type="application/rss+xml" title="Nguyễn Văn Quang"
+              href="https://quangdtsc.github.io/feed.xml"/>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/theme/css/custom.css">
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+        </script>
+        <![endif]-->
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WMM4SNF');</script>
+        <!-- End Google Tag Manager -->
+    </head>
+
+
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMM4SNF"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        <header class="site-header">
+            <div class="wrapper">
+                <a class="site-title" href="/">Home</a>
+                <nav class="site-nav">
+                    <a href="#" class="menu-icon">
+                        <svg viewBox="0 0 18 15">
+                            <path fill="#424242"
+                                  d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+                        </svg>
+                    </a>
+
+                    <div class="trigger">
+                        <a class="page-link" href="#bio">About</a>
+                        <a class="page-link" href="#timeline">Timeline</a>
+                        <a class="page-link" href="#publications">Publications</a>
+                        <a class="page-link" href="#blog">Blog</a>
                     </div>
-                </div>
-                
-                    
-                <nav>
-                    <ul class="double-list">
-                        <li v-for="item in filteredItems">
-                            <a :href="item.url">{{ "{{ item.title }}" }}</a>
-                            <span class="date">{{ "{{ item.date }}" }}</span>
-                        </li>
-                    </ul>
                 </nav>
             </div>
+        </header>
 
-            <!- - Paper Notes pane- ->
-            <div id="paper" class="container tab-pane fade"><br>
-                <h3>Paper Notes</h3>
-                <!- -search input for filtering- ->
-                <form class="filter d-flex align-items-center">
-                    <span style="position: relative; display: inline-block; direction: ltr;">
-                        <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
-                    </span>
-                </form>
-    
-                
-                <!- - Introduction and A list of top post - ->
-                <div class="row">
-                        <div class="hidden-md-down col-sm-4">
-                            <div class="alert alert-info" style="text-align: center" role="alert" data-toggle="collapse" data-target="#paper_introduction" aria-expanded="false" aria-controls="myself">
-                                Introduction
-                            </div>
-                        </div>
-                        <div class="hidden-md-down col-sm-8">
-                            <div class="alert alert-warning" style="text-align: center" role="alert" data-toggle="collapse" data-target="#top_paper_posts" aria-expanded="true" aria-controls="readers">
-                                Top Posts in Tutorial Notes
-                            </div>
-                                        
-                        </div>    
-                </div>
-                <!- - Text to readers - ->
-                <div class="collapse" id="paper_introduction">
-                    <div class="card card-body" id="introduction">
-                        <p>Here are several learning notes during my reading on papers from Computer Vision, Deep Learning, Machine Learning, 
-                            Artificial Intelligence to the other interdisciplinary fields. If you find any errors and papers or sources 
-                            I forget to cite in the References part, please feel free to leave me a message. I'll also be happy to hear some ideas,
-                            comments and other things related to the topics.
-                        </p>
-                    </div>
-                </div>                
-                <!- - Top posts - ->
-                <div class="collapse" id="top_paper_posts">
-                    <div class="card card-body">
-                        <ul class="double-list" style="padding: 0px">
-                            <li v-for="item in filteredItems" style="padding: 0px">
-                                <span v-if="item.category == 'paper'" style="padding: 0px">
-                                    <span v-if="item.toppost == 'yes'" style="padding: 0px">
-                                        <a :href="item.url">{{ "{{ item.title }}" }}</a>
-                                        <span class="date">{{ "{{ item.date }}" }}</span>
-                                    </span>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                </div> 
-
-                <!- - List of filtered posts - ->
-                <nav>
-                    <ul class="double-list">
-                        <li v-for="item in filteredItems">
-                            <span v-if="item.category == 'paper'">
-                                <a :href="item.url">{{ "{{ item.title }}" }}</a>
-                                <span class="date">{{ "{{ item.date }}" }}</span>
-                            </span>
-                        </li>
-                    </ul>
-                </nav>
+        <div id="profile-cover" class="cover shallow-bg img-responsive">
+            <div id="profile-namecard" class="profile-wrapper wrapper-light">
+            <div id="my-pic" class="profile-col profile-col-1">
+                <img id="profile-avatar" src="/images/self-portrait/me.jpg" alt="Me"
+                     class="circle-img border-dark"/>
             </div>
-            
-            <!- - Tutorial Notes pane - ->
-            <div id="tutorial" class="container tab-pane fade"><br>
-                <h3>Tutorial Notes</h3>
-
-                <!- - search input for filtering - ->
-                <form class="filter d-flex align-items-center">
-                    <span style="position: relative; display: inline-block; direction: ltr;">
-                        <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
-                    </span>
-                </form>
-    
-                
-                <!- - Introduction and A list of top post - ->
-                <div class="row">
-                        <div class="hidden-md-down col-sm-4">
-                            <div class="alert alert-info" style="text-align: center" role="alert" data-toggle="collapse" data-target="#tutorial_introduction" aria-expanded="false" aria-controls="myself">
-                                Introduction
-                            </div>
-                        </div>
-                        <div class="hidden-md-down col-sm-8">
-                            <div class="alert alert-warning" style="text-align: center"  role="alert" data-toggle="collapse" data-target="#top_tutorial_posts" aria-expanded="true" aria-controls="readers">
-                                Top Posts in Tutorial Notes
-                            </div>
-                                        
-                        </div>    
+            <div id="my-contact" class="profile-col profile-col-2">
+                <div id="my-name" class="text-grey-dark">
+                    Nguyen Van Quang
                 </div>
-                <!- - Text to readers - ->
-                <div class="collapse" id="tutorial_introduction">
-                    <div class="card card-body" id="introduction">
-                        <p>In this corner, I make a collection of tutorial notes which are generated by myself. 
-                            There are also several tutorials from the other sources on the Internet that I find interesting to note here.
-                        </p>
-                    </div>
-                </div>                
-                <!- - Top posts - ->
-                <div class="collapse" id="top_tutorial_posts">
-                    <div class="card card-body">
-                        <ul class="double-list" style="padding: 0px">
-                            <li v-for="item in filteredItems" style="padding: 0px">
-                                <span v-if="item.category == 'tutorial'" style="padding: 0px">
-                                    <span v-if="item.toppost == 'yes'" style="padding: 0px">
-                                        <a :href="item.url">{{ "{{ item.title }}" }}</a>
-                                        <span class="date">{{ "{{ item.date }}" }}</span>
-                                    </span>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>          
-                
-                <!- -Filter posts- ->
-                <nav>
-                    <ul class="double-list">
-                        <li v-for="item in filteredItems">
-                            <span v-if="item.category == 'tutorial'">
-                                <a :href="item.url">{{ "{{ item.title }}" }}</a>
-                                <span class="date">{{ "{{ item.date }}" }}</span>
-                            </span>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-            <!- -Book Notes pane- ->
-            <div id="book" class="container tab-pane fade"><br>
-                <h3>Book Notes</h3>
-                <!- -search input for filtering- ->
-                <form class="filter d-flex align-items-center">
-                    <span style="position: relative; display: inline-block; direction: ltr;">
-                        <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
-                    </span>
-                </form>
-    
-                
-                <!- -Introduction and A list of top post- ->
-                <div class="row">
-                        <div class="hidden-md-down col-sm-4">
-                            <div class="alert alert-info" style="text-align: center" role="alert" data-toggle="collapse" data-target="#book_introduction" aria-expanded="false" aria-controls="myself">
-                                Introduction
-                            </div>
-                        </div>
-                        <div class="hidden-md-down col-sm-8">
-                            <div class="alert alert-warning" style="text-align: center" role="alert" data-toggle="collapse" data-target="#top_book_posts" aria-expanded="true" aria-controls="readers">
-                                Top Posts in Tutorial Notes
-                            </div>
-                                        
-                        </div>    
+                <div id="my-title" class="text-grey">
+                    Graduate Student <br /> at Tohoku Universrity
                 </div>
-                <!- - Text to readers- ->
-                <div class="collapse" id="book_introduction">
-                    <div class="card card-body" id="introduction">
-                        <p>This pane is dedicated to the thought notes I create during my reading. 
-                            I'm really pleased if you can introduce me some good books.
-                        </p>
-                    </div>
-                </div>                
-                <!- - Top posts - ->
-                <div class="collapse" id="top_book_posts">
-                    <div class="card card-body">
-                        <ul class="double-list" style="padding: 0px">
-                            <li v-for="item in filteredItems" style="padding: 0px">
-                                <span v-if="item.category == 'book'" style="padding: 0px">
-                                    <span v-if="item.toppost == 'yes'" style="padding: 0px">
-                                        <a :href="item.url">{{ "{{ item.title }}" }}</a>
-                                        <span class="date">{{ "{{ item.date }}" }}</span>
-                                    </span>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                </div> 
+                <div id="my-email" class="text-grey-light">
+                    quanguet [at] gmail.com
+                </div>
+                <div class="social-media">
 
-                <!- - List of filtered posts - ->
-                <nav>
-                    <ul class="double-list">
-                        <li v-for="item in filteredItems">
-                            <span v-if="item.category == 'book'">
-                                <a :href="item.url">{{ "{{ item.title }}" }}</a>
-                                <span class="date">{{ "{{ item.date }}" }}</span>
-                            </span>
-                        </li>
-                    </ul>
-                </nav>
+                    <a href="https://github.com/quangdtsc" class="icon-button github">
+                        <i class="fa fa-github icon-github"></i>
+                        <span></span>
+                    </a>
+
+                    <a href="https://twitter.com/quanguet" class="icon-button twitter">
+                        <i class="fa fa-twitter icon-twitter"></i>
+                        <span></span>
+                    </a>
+
+
+                    <a href="https://facebook.com/quanghus" class="icon-button facebook">
+                        <i class="fa fa-facebook icon-facebook"></i>
+                        <span></span>
+                    </a>
+
+
+                    <a href="https://linkedin.com/in/quanguet" class="icon-button linkedin">
+                        <i class="fa fa-linkedin icon-linkedin"></i>
+                        <span></span>
+                    </a>
+                </div>
             </div>
-
-            <!- - Personal corners pane - ->
-            <div id="other" class="container tab-pane fade"><br>
-                <h3>Traveling and Other Hobbies</h3>
-                <p> I write some posts here for my future self about the memories that I go through.
-                </p>
-
-                <form class="filter d-flex align-items-center">
-                    <span style="position: relative; display: inline-block; direction: ltr;">
-                        <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
-                    </span>
-                </form>
-                    
-                <nav>
-                    <ul class="double-list">
-                        <li v-for="item in filteredItems">
-                            <span v-if="item.category == 'other'">
-                                <a :href="item.url">{{ "{{ item.title }}" }}</a>
-                                <span class="date">{{ "{{ item.date }}" }}</span>
-                            </span>
-                        </li>
-                    </ul>
-                </nav>  
-            </div>                
         </div>
-        -->
-
-        <h3>All Posts</h3>
-
-        <!- -input box for searching and filtering posts by titles and tags- ->
-        <form class="filter d-flex align-items-center">
-            <span style="position: relative; display: inline-block; direction: ltr;">
-                <input type="search" v-model="filter" class="form-control" placeholder="Filter by title or tag" autocomplete="off" spellcheck="false" />
-            </span>
-        </form>
-                    
-        <nav>
-            <ul class="double-list">
-                <li v-for="item in filteredItems">
-                    <a :href="item.url">{{ "{{ item.title }}" }}</a>
-                    <span class="date">{{ "{{ item.date }}" }}</span>
-                </li>
-            </ul>
-        </nav>
-        
-
-        <!- -cloud of Tags here- ->
-        <div class="tags" style="text-align: center">
-            {% for tag, articles in tags %}
-                <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag }} ({{ articles | length }})</a>
-            {% endfor %}
         </div>
 
-    </div>
-    
+        <script type="text/javascript">
+        function deepFeature() {
+            $('#profile-avatar').attr('src', '/images/self-portrait/deep-me.jpg');
+            $('#profile-avatar').removeClass('border-dark');
+            $('#profile-avatar').addClass('border-bright');
 
-</main>
-{% endblock %}
+            $('#profile-cover').removeClass('shallow-bg');
+            $('#profile-cover').addClass('deep-bg');
 
-{% block end_doc %}
+            $('#profile-namecard').removeClass('wrapper-light');
+            $('#profile-namecard').addClass('wrapper-dark');
 
-<!- -Few words to readers and myself- ->
-<script>
-    function displaytomyself() {
-        document.getElementById("text2you").innerHTML = "<span><strong>Dear my future self</strong>,<br></span>When you are reading these notes, you will be amazed at how far you are. Please keep writing while enjoying life.";
-    }
-    function displaytoreaders() {
-        document.getElementById("text2you").innerHTML = "<span><strong>Dear my potential readers</strong>, <br> </span> Welcome to my blog where I share part of what I see, learn and understand about our world. I hope that you will find some interesting. Enjoy your time and text me if you can."    
-    }
-</script>
-
-<!- -Filter the posts with title and tags- ->
-
-
-<script>
-items = [
-    {% for article in articles %}
-        { title: "{{ article.title }}", url: "/{{ article.url }}",
-        category: "{{ article.category }}",
-        toppost: "{{ article.toppost }}",
-        date: "{{ article.date.strftime('%d.%m.%Y') }}", 
-        tags: [{% for tag in article.tags %}"{{ tag }}",{% endfor %}],
-        headers: "{{ article.headers }}",
-        },
-        
-    {% endfor %}
-]
-
-mycategories = ['paper', 'book', 'tutorial', 'other']
-
-function contains(text, filter) {
-    return text.toLowerCase().indexOf(filter.toLowerCase()) > -1
-}
-
-var index = new Vue({
-    el: '#index',
-    data: {
-        filter: '',
-        items: items,
-        mycategories: mycategories
-    },
-    methods: {
-        toogle_nav: function(event) {
-            this.show = !this.show;
+            $('#my-desc').removeClass('hide');
+            $('#my-contact').addClass('hide');
+            // console.log('Move in now...');
         }
-    },
-    computed: {
-        filteredItems() {
-            return this.items.filter(item => {
-                searches = [item.title].concat(item.tags).concat([item.headers]);
-                query = searches.map(x => contains(x, this.filter));
-                return query.some(x => x == true);
+
+        function shallowFeature() {
+            $('#profile-avatar').attr('src', '/images/self-portrait/me.jpg');
+            $('#profile-avatar').removeClass('border-bright');
+            $('#profile-avatar').addClass('border-dark');
+
+            $('#profile-cover').removeClass('deep-bg');
+            $('#profile-cover').addClass('shallow-bg');
+
+            $('#profile-namecard').removeClass('wrapper-dark');
+            $('#profile-namecard').addClass('wrapper-light');
+
+            $('#my-contact').removeClass('hide');
+            $('#my-desc').addClass('hide');
+            // console.log('Move out now...');
+        }
+
+        $(function () {
+            $('#my-pic').hover(deepFeature, shallowFeature);
+        })
+
+    </script>
+
+        <div class="page-content">
+            <div class="wrapper">
+
+                <!-- Biography -->
+                <div id="bio" class="bio">
+                    <h1 class="md-heading text-center">
+                        <i class="fa fa-id-card" aria-hidden="true"></i>
+                        Biography
+                    </h1>
+                    <div class="bio-body" style="text-align:justify;">
+                        <p>
+                            <strong>Nguyen Van Quang</strong> is a Computer Science master student in Graduate School of
+                            Information Sciences at <strong>Tohoku University, Japan</strong> under the supervision of <a
+                                href="http://www.dais.is.tohoku.ac.jp/~tokuyama/profile_e.htm" >Prof. Takeshi
+                            Tokuyama</a> and <a href="http://www.dais.is.tohoku.ac.jp/~jinhee/">Assoc. Prof. Jinhee
+                            Chun</a>. He obtained a Bachelor degree in Computer Science from <a href="https://uet.vnu.edu
+                            .vn/">University of Engineering and Technology</a> (UET, VNU-H) with the highest honor. He
+                            worked with <a href="https://uet.vnu.edu.vn/~thuyhq/">Assoc. Prof. Ha Quang Thuy</a> in Data
+                            Science & Knowledge Technology Lab of UET. His research interests lie in the field of
+                            <strong>Machine Learning</strong>, <strong>Computer Vision</strong> and <strong>Natural Language
+                            Processing</strong>.
+                            [<strong> <a href='/assets/resume/CV.pdf'>Résumé</a></strong>]
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div id="timeline" class="timeline-brief">
+                    <h1 class="md-heading text-center">
+                        <i class="fa fa-tasks" aria-hidden="true"></i>
+                        Timeline
+                    </h1>
+
+                    <div class="timeline-body">
+
+                        <!-- Internship at Laboro -->
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                Summer 2018
+                            </div>
+                            <div class="timeline-title">
+                                AI Intern @ Laboro.AI Inc, Japan
+                            </div>
+                            <div class="timeline-desc">
+                                Large scale Image Recognition, Face Detection
+                            </div>
+
+                            <div class="timeline-host">
+                                Advisor: <a href='https://laboro.ai/company/message/'>CTO Dr. Hiromasa Fujihara</a>
+                            </div>
+                        </div>
+
+                        <!--Summer Program-->
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                Summer 2018
+                            </div>
+                            <div class="timeline-title">
+                                Student @ Gottingen University, Germany
+                            </div>
+                            <div class="timeline-desc">
+                                Data Science Summer School 2018
+                            </div>
+                            <div class="timeline-host">
+                                Host: <a href='#'>Gottingen University</a>
+                            </div>
+                        </div>
+
+                        <!--Master Student-->
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                2017 - Current
+                            </div>
+                            <div class="timeline-title">
+                                Master Student @ Tohoku University
+                            </div>
+                            <div class="timeline-desc">
+                                Data Science Program
+                            </div>
+
+                            <div class="timeline-host">
+                                Mentor: <a href='http://www.dais.is.tohoku.ac.jp/~tokuyama/profile_e.htm'>
+                                        Prof. Takeshi Tokuyama</a>
+                            </div>
+
+                        </div>
+
+                        <!--Internship at Fujitsu-->
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                Summer 2017
+                            </div>
+                            <div class="timeline-title">
+                                AI Intern @ Fujitsu Japan
+                            </div>
+                            <div class="timeline-desc">
+                                Automated Question Answering System
+                            </div>
+
+                            <div class="timeline-host">
+                                Host: <a href='https://fujitsu.com'>Software Engineer Incubation Center</a>
+                            </div>
+
+                        </div>
+
+                        <!--Bachelor Program-->
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                2012 - 2017
+                            </div>
+                            <div class="timeline-title">
+                                Undergraduate student @ UET, VNU-H
+                            </div>
+                            <div class="timeline-desc">
+                                Computer Science, International Standard Program
+                            </div>
+                            <div class="timeline-host">
+                                Supervisor: <a href='https://uet.vnu.edu.vn/~thuyhq/'>Assoc. Prof. Ha Quang Thuy</a>
+                            </div>
+                        </div>
+
+                        <!--Exchange Program-->
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                2015 - 2016
+                            </div>
+                            <div class="timeline-title">
+                                Exchange Student @ DJU, South Korea
+                            </div>
+                            <div class="timeline-desc">
+                                Fostering ASEAN Future Leaders Program
+                            </div>
+                            <div class="timeline-host">
+                                Host: <a href='www.dju.ac.kr/foreign/eng/html/main.htm'>Daejeon University</a>
+                            </div>
+                        </div>
+
+                        <!--Summer Program-->
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                Summer 2015
+                            </div>
+                            <div class="timeline-title">
+                                Student @ Kyoto University, Japan
+                            </div>
+                            <div class="timeline-desc">
+                                Machine Learning Summer School 2015
+                            </div>
+                            <div class="timeline-host">
+                                Host: <a href='#'>Kyoto University</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button">
+                        <h1 class="sm-heading text-center">
+                            <a href="/timeline.html">
+                                <i class="fa fa-info-circle"></i> Full Timeline
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+
+                <!-- Publications -->
+                <div id="publications" class="publications">
+                    <h1 class="md-heading text-left">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+                        Selected Publications
+                    </h1>
+                    <div class="pub-list">
+
+                        <!-- Micro-expression Recognition with CapsuleNet-->
+                        <div class="pub">
+                            <div class="pub-left">
+                                <img class="intro-img frame"
+                                     src="/images/projects/fg2019-micro-expression.png"/>
+                            </div>
+                            <div class="pub-right">
+                                <div class="title">
+                                    CapsuleNet for Micro-Expression Recognition
+                                </div>
+                                <div class="authors">
+
+                                    <a class="author" href="">
+                                        <strong>Nguyen Van Quang</strong>
+                                    </a>
+                                    ,
+                                    <a class="author" href="">
+                                         Jinhee Chun, Takeshi Tokuyama
+                                    </a>
+                                </div>
+                                <div class="desc">
+                                    <p  style="text-align: justify">
+                                         In this paper, we propose a simple yet effective CapsuleNet for micro-expression
+                                        recognition. The effectiveness of our proposed methods was evaluated on the cross-database micro-expression benchmark using the Leave-One-Object-Out cross-validation. The experiments show that our method achieved superiorly higher results than the baseline method (LBP-TOP) provided and other stateof-the-art CNN models.
+                                    </p>
+                                </div>
+                                <div class="publish">
+                                    <span class="publisher">In proceedings of Automatic Face and Gesture Recognition
+                                        2019</span>
+                                    <span class="status">(soon)</span>
+                                    <span class="place">France</span>
+                                </div>
+                                <div class="tags">
+                                    [<a class="tag" href="">
+                                    <strong>pdf</strong> </a>]
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single-stage method for face detection-->
+                        <div class="pub">
+                            <div class="pub-left">
+                                <img class="intro-img frame"
+                                     src="/images/projects/fg2019-face-detection.png"/>
+                            </div>
+                            <div class="pub-right">
+                                <div class="title">
+                                    Revisiting a single-stage method for face detection
+                                </div>
+                                <div class="authors">
+
+                                    <a class="author" href="">
+                                        <strong>Nguyen Van Quang</strong>
+                                    </a>
+                                    ,
+                                    <a class="author" href="">
+                                         Hiromasa Fujihara
+                                    </a>
+                                </div>
+                                <div class="desc">
+                                    <p  style="text-align: justify">
+                                        This paper proposes an effective single-stage model for real-time face detection
+                                        with a prominently high accuracy.We build our single-stage model on the top of
+                                        the ResNet101 backbone and analyze some problems with the baseline single-stage
+                                        detector in order to design several strategies for reducing the false positive
+                                        rate. The design leverages the context information from the deeper layers in
+                                        order to increase recall rate while maintaining a low false positive rate.
+                                    </p>
+                                </div>
+                                <div class="publish">
+                                    <span class="publisher">In proceedings of Automatic Face and Gesture Recognition
+                                        2019</span>
+                                    <span class="status">(soon)</span>
+                                    <span class="place">France</span>
+                                </div>
+                                <div class="tags">
+                                    [<a class="tag" href="">
+                                    <strong>pdf</strong> </a>]
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lifelong learning ACIIDS-->
+                        <div class="pub">
+                            <div class="pub-left">
+                                <img class="intro-img frame"
+                                     src="/images/projects/2018-lifelong.png"/>
+                            </div>
+                            <div class="pub-right">
+                                <div class="title">
+                                    A New Lifelong Topic Modeling Method and Its Application to Vietnamese Text Multi-label Classification.
+                                </div>
+                                <div class="authors">
+
+                                    <a class="author" href="">
+                                        Quang-Thuy Ha, Thi-Ngan Pham
+                                    </a>
+                                    ,
+                                    <a class="author" href="">
+                                        <strong>Van-Quang Nguyen</strong>
+                                    </a>
+                                    ,
+                                    <a class="author" href="">
+                                         Thi-Cham Nguyen, Thi-Hong Vuong, Minh-Tuoi Tran, Tri-Thanh Nguyen
+                                    </a>
+                                </div>
+                                <div class="desc">
+                                    <p style="text-align: justify">
+                                        This paper proposes a lifelong topic modeling method, which focuses on learning bias on the domain level based on a proposed domain closeness measure, and an application framework for multi-label classification on Vietnamese texts. Experimental results on three previously solved Vietnamese texts, and five different current Vietnamese text datasets in combination with different topic set sizes showed that our proposed method is better than AMC method for all cases
+                                    </p>
+                                </div>
+                                <div class="publish">
+                                    <span class="publisher">In proceedings of ACIIDS 2018, LNAI 10751</span>
+                                    <span class="status"></span>
+                                    <span class="place"></span>
+                                </div>
+                                <div class="tags">
+                                    [<a class="tag" href="https://doi.org/10.1007/978-3-319-75417-8_19">
+                                    <strong>doi</strong> </a>]
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lifelong learning ICCCI-->
+                        <div class="pub">
+                            <div class="pub-left">
+                                <img class="intro-img frame"
+                                     src="/images/projects/2018-lifelong.png"/>
+                            </div>
+                            <div class="pub-right">
+                                <div class="title">
+                                    A New Text Semi-supervised Multi-label Learning Model Based on Using the Label-Feature Relations
+                                </div>
+
+                                <div class="authors">
+
+                                    <a class="author" href="">
+                                        Quang-Thuy Ha, Thi-Ngan Pham
+                                    </a>
+                                    ,
+                                    <a class="author" href="">
+                                        <strong>Van-Quang Nguyen</strong>
+                                    </a>
+                                    ,
+                                    <a class="author" href="">
+                                         Minh-Chau Nguyen, Thanh-Huyen Pham, Tri-Thanh Nguyen
+                                    </a>
+                                </div>
+                                <div class="desc">
+                                    <p  style="text-align: justify">
+                                        In this paper, we propose a solution to select the most influential label
+                                        based on using the relations among the labels and features to a semi-supervised
+                                        multi-label classification algorithm on texts. Experiments on two datasets of
+                                        Vietnamese reviews and English emails of Enron show the positive effects of the
+                                        proposal
+                                    </p>
+                                </div>
+                                <div class="publish">
+                                    <span class="publisher">In proceedings of ICCCI 2018, LNAI 11055</span>
+                                    <span class="status"></span>
+                                    <span class="place">UK</span>
+                                </div>
+                                <div class="tags">
+                                    [<a class="tag" href="https://doi.org/10.1007/978-3-319-98443-8_37">
+                                    <strong>doi</strong> </a>]
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Journal of Information Telecomunication-->
+                        <div class="pub">
+                            <div class="pub-left">
+                                <img class="intro-img frame"
+                                     src="/images/projects/2017-journal.png"/>
+                            </div>
+                            <div class="pub-right">
+                                <div class="title">
+                                    A semi-supervised multi-label classification framework with feature reduction and enrichment
+                                </div>
+                                <div class="authors">
+
+                                    <a class="author" href="">
+                                        Thi-Ngan Pham
+                                    </a>
+                                    ,
+                                    <a class="author" href="">
+                                        <strong>Van-Quang Nguyen</strong>
+                                    </a>
+                                    ,
+                                    <a class="author" href="">
+                                          Van-Hien Tran, Tri-Thanh Nguyen, Quang-Thuy Ha
+                                    </a>
+                                </div>
+                                <div class="desc">
+                                    <p  style="text-align: justify">
+                                        In this work, we propose a semi-supervised MLC
+                                        algorithm exploiting the specific features of the prominent class
+                                        label(s) chosen by a greedy approach as an extension of the LIFT
+                                        algorithm, and unlabelled data consumption mechanism from the
+                                        TExt classification using Semi-supervised Clustering algorithm. We
+                                        also make a semi-supervised MLC application framework for
+                                        Vietnamese texts with several feature enrichment steps including
+                                        (a) a stage of enriching features by adding hidden topic features
+                                        and (b) a stage of dimensional reduction for subtracting irrelevant
+                                        features.
+                                    </p>
+                                </div>
+                                <div class="publish">
+                                    <span class="publisher">In Journal of Information Tecommunication, 2018</span>
+                                    <span class="status"></span>
+                                    <span class="place">UK</span>
+                                </div>
+                                <div class="tags">
+                                    [<a class="tag" href="https://doi.org/10.1080/24751839.2017.1364925">
+                                    <strong>doi</strong> </a>]
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--ACIIDS 2017-->
+                        <div class="pub">
+                            <div class="pub-left">
+                                <img class="intro-img frame"
+                                     src="/images/projects/2017-aciids.png"/>
+                            </div>
+                            <div class="pub-right">
+                                <div class="title">
+                                    MASS: A Semi-supervised Multi-label Classification Algorithm with Specific Features
+                                </div>
+                                <div class="authors">
+
+                                    <a class="author" href="">
+                                        Thi-Ngan Pham
+                                    </a>
+                                    ,
+                                    <a class="author" href="">
+                                        <strong>Van-Quang Nguyen</strong>
+                                    </a>
+                                    ,
+                                    <a class="author" href="">
+                                         Tri-Thanh Nguyen, Quang-Thuy Ha
+                                    </a>
+                                </div>
+                                <div class="desc">
+                                    <p  style="text-align: justify">
+                                        This paper proposes a lifelong topic modeling method, which focuses on learning bias on the domain level based on a proposed domain closeness measure, and an application framework for multi-label classification on Vietnamese texts. Experimental results on three previously solved Vietnamese texts, and five different current Vietnamese text datasets in combination with different topic set sizes showed that our proposed method is better than AMC method for all cases
+                                    </p>
+                                </div>
+                                <div class="publish">
+                                    <span class="publisher">In proceedings of ACIIDS 2017,  Studies in Computational Intelligence 710</span>
+                                    <span class="status"></span>
+                                    <span class="place">Japan</span>
+                                </div>
+                                <div class="tags">
+                                    [<a class="tag" href="https://doi.org/10.1007/978-3-319-56660-3_4">
+                                    <strong>doi</strong> </a>]
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--An toan thong tin 2016-->
+                        <div class="pub">
+                            <div class="pub-left">
+                                <img class="intro-img frame"
+                                     src="/images/projects/2016-security.png"/>
+                            </div>
+                            <div class="pub-right">
+                                <div class="title">
+                                    Social-spam Profile Detection based on Content Classification and User Behavior
+                                </div>
+                                <div class="authors">
+
+                                    <a class="author" href="">
+                                        Thi-Hong Vuong, Van-Hien Tran
+                                    </a>
+                                    ,
+                                    <a class="author" href="">
+                                        <strong>Van-Quang Nguyen</strong>
+                                    </a>
+                                    ,
+                                    <a class="author" href="">
+                                         Minh-Duc Nguyen, Cam-Van Thi Nguyen, Thanh-Huyen Pham, Mai-Vu Tran
+                                    </a>
+                                </div>
+                                <div class="desc">
+                                    <p  style="text-align: justify">
+                                        In this paper, we consider the
+                                        problem of detecting spam accounts on Facebook based on
+                                        comment content and user social behavior. We will propose a
+                                        hybrid approach using Maximum Entropy (Maxent) model for
+                                        classifying user comments as either spam or non-spam. We
+                                        carefully conducted an empirical evaluation for our model on a
+                                        large collection of comments in Vietnamese Facebook Pages and
+                                        achieved promising results with an average accuracy of more
+                                        than 90%.
+                                    </p>
+                                </div>
+                                <div class="publish">
+                                    <span class="publisher">Information Security Conference 2016</span>
+                                    <span class="status"></span>
+                                    <span class="place">Vietnam</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="button">
+                        <h1 class="sm-heading text-left">
+                            <a href="#publications">
+                                <i class="fa fa-info-circle"></i> All Publications
+                            </a>
+                        </h1>
+                    </div>
+                    -->
+                </div>
+
+                <!-- Awards -->
+                <div id="timeline-award" class="timeline-a">
+                    <h1 class="md-heading text-left">
+                        <i class="fa fa-tasks" aria-hidden="true"></i>
+                        Scholarships and Awards
+                    </h1>
+
+                    <div class="timeline-a-body">
+
+                        <!-- MEXT PhD -->
+                        <div class="timeline-a-item">
+                            <div class="timeline-a-date">
+                                2019 - 2022
+                            </div>
+                            <div class="timeline-a-title">
+                                MEXT Scholarship @ Tohoku University
+                            </div>
+                            <div class="timeline-a-desc">
+                                Japanese Government (Monbukagakusho) Scholarship for PhD Course.
+                            </div>
+                        </div>
+
+                        <!-- MEXT Master -->
+                        <div class="timeline-a-item">
+                            <div class="timeline-a-date">
+                                2017 - 2019
+                            </div>
+                            <div class="timeline-a-title">
+                                MEXT Scholarship @ Tohoku University
+                            </div>
+                            <div class="timeline-a-desc">
+                                Japanese Government (Monbukagakusho) Scholarship for Master Course.
+                            </div>
+                        </div>
+
+                        <!-- Honda YES -->
+                        <div class="timeline-a-item">
+                            <div class="timeline-a-date">
+                                2016 - 2017
+                            </div>
+                            <div class="timeline-a-title">
+                                Honda Young Engineer Scientist Award 2017
+                            </div>
+                            <div class="timeline-a-desc">
+                                For 10 excellent Young Engineers and Scientists in Vietnam
+                            </div>
+                        </div>
+
+                        <!-- National Contest -->
+                        <div class="timeline-a-item">
+                            <div class="timeline-a-date">
+                                Sept 2017
+                            </div>
+                            <div class="timeline-a-title">
+                                Third Prize of National Scientific Student Research Conference
+                            </div>
+                            <div class="timeline-a-desc">
+                                Granted by Vietnam Science and Technology Ministry
+                            </div>
+                        </div>
+
+                        <!-- University Contest -->
+                        <div class="timeline-a-item">
+                            <div class="timeline-a-date">
+                                June 2017
+                            </div>
+                            <div class="timeline-a-title">
+                                First Prize of Scientific Student Research Conference
+                            </div>
+                            <div class="timeline-a-desc">
+                                Granted by University of Engineering and Technology, VNU-H
+                            </div>
+                        </div>
+
+                        <!-- Excellent Thesis Award -->
+                        <div class="timeline-a-item">
+                            <div class="timeline-a-date">
+                                June 2017
+                            </div>
+                            <div class="timeline-a-title">
+                                Excellent Thesis Award
+                            </div>
+                            <div class="timeline-a-desc">
+                                Best undergraduate thesis (scored 10/10), titled <strong>An algorithm adaptation
+                                multilabel classification method and experiments on Vietnamese text</strong>
+                            </div>
+                        </div>
+
+                        <!-- AmCham -->
+                        <div class="timeline-a-item">
+                            <div class="timeline-a-date">
+                                Dec 2016
+                            </div>
+                            <div class="timeline-a-title">
+                                AmCham Scholarship
+                            </div>
+                            <div class="timeline-a-desc">
+                                Awarded 40 American Chamber to 40 excellent students from all university in Vietnam
+                            </div>
+                        </div>
+
+                        <!-- Internship at Laboro -->
+                        <div class="timeline-a-item">
+                            <div class="timeline-a-date">
+                                Summer 2018
+                            </div>
+                            <div class="timeline-a-title">
+                                AI Intern @ Laboro.AI Inc, Japan
+                            </div>
+                            <div class="timeline-a-desc">
+                                Large scale Image Recognition, Face Detection
+                            </div>
+                        </div>
+
+                        <!-- Internship at Laboro -->
+                        <div class="timeline-a-item">
+                            <div class="timeline-a-date">
+                                Summer 2018
+                            </div>
+                            <div class="timeline-a-title">
+                                AI Intern @ Laboro.AI Inc, Japan
+                            </div>
+                            <div class="timeline-a-desc">
+                                Large scale Image Recognition, Face Detection
+                            </div>
+                        </div>
+
+                        <!-- Internship at Laboro -->
+                        <div class="timeline-a-item">
+                            <div class="timeline-a-date">
+                                Summer 2018
+                            </div>
+                            <div class="timeline-a-title">
+                                AI Intern @ Laboro.AI Inc, Japan
+                            </div>
+                            <div class="timeline-a-desc">
+                                Large scale Image Recognition, Face Detection
+                            </div>
+                        </div>
+
+                        <!-- Internship at Laboro -->
+                        <div class="timeline-a-item">
+                            <div class="timeline-a-date">
+                                Summer 2018
+                            </div>
+                            <div class="timeline-a-title">
+                                AI Intern @ Laboro.AI Inc, Japan
+                            </div>
+                            <div class="timeline-a-desc">
+                                Large scale Image Recognition, Face Detection
+                            </div>
+                        </div>
+
+                        <!-- Internship at Laboro -->
+                        <div class="timeline-a-item">
+                            <div class="timeline-a-date">
+                                Summer 2018
+                            </div>
+                            <div class="timeline-a-title">
+                                AI Intern @ Laboro.AI Inc, Japan
+                            </div>
+                            <div class="timeline-a-desc">
+                                Large scale Image Recognition, Face Detection
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="button" style="padding-left:12.5%;">
+                        <h1 class="sm-heading text-left">
+                            <a href="/timeline.html">
+                                <i class="fa fa-info-circle"></i> Full Timeline
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer class="site-footer">
+
+            <div class="wrapper">
+
+            <h2 class="footer-heading">
+                <a class="page-link" href="https://quangdtsc.github.io">
+                    About Nguyen Van Quang
+                </a></h2>
+
+            <div class="footer-col-wrapper">
+                <div class="footer-col  footer-col-1">
+                    <ul class="contact-list">
+                        <li>Nguyen Van Quang</li>
+                        <li><a href="mailto:">quanguet [at] gmail.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col  footer-col-2">
+
+                    <a href="https://twitter.com/quanguet">
+                        <img src="/images/icon/color-twitter.png" class="social-icon">
+                    </a>
+
+
+                    <a href="https://linkedin.com/in/quanguet">
+                        <img src="/images/icon/color-linkedin.png" class="social-icon">
+                    </a>
+
+
+                    <a href="https://github.com/quangdtsc">
+                        <img src="/images/icon/color-github.png" class="social-icon">
+                    </a>
+
+
+                    <a href="https://facebook.com/quanghus">
+                        <img src="/images/icon/color-facebook.png" class="social-icon">
+                    </a>
+
+
+                    <a href="/feed.xml">
+                        <img src="/images/icon/color-rss.png" class="social-icon">
+                    </a>
+
+
+                </div>
+
+                <div class="footer-col  footer-col-3">
+                    <p class="text">This is an academic website using Pelican framework with the design from Frank
+                        .</p>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+        <div class="back-to-top">Top</div>
+
+        <script type="text/javascript">
+        jQuery(document).ready(function () {
+            var offset = 220;
+            var duration = 500;
+            jQuery(window).scroll(function () {
+                if (jQuery(this).scrollTop() > offset) {
+                    jQuery('.back-to-top').fadeIn(duration);
+                } else {
+                    jQuery('.back-to-top').fadeOut(duration);
+                }
+            });
+
+            jQuery('.back-to-top').click(function (event) {
+                event.preventDefault();
+                jQuery('html, body').animate({scrollTop: 0}, duration);
+                return false;
             })
-        }
-    }
-})
-</script>
+        });
+    </script>
+    </body>
 
-{% endblock %}
+</html>

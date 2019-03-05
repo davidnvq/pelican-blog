@@ -1,7 +1,6 @@
 Title: AI nào cho Việt Nam
-
 Slug: ai-nao-cho-viet-nam
-Date: 2018-09-03 20:58:05
+Date: 2018-08-23 08:26:00
 Tags: , OTHER
 Author: Quang Nguyen
 Category: other
