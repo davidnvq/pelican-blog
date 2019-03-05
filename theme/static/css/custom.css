@@ -619,33 +619,35 @@ pre > code {
     margin-right: auto;
     margin-left: auto;
     padding-right: 0px;
-    padding-left: 0px
+    padding-left: 0px;
+    position: relative;
 }
 
 @media screen and (max-width: 800px) {
     .cover {
         max-width: -webkit-calc(1024px - (30px));
-        max-width: calc(1024px - (30px));
         padding-right: 15px;
-        padding-left: 15px
+        padding-left: 15px;
+        position: relative;
     }
 }
 
 @media screen and (max-width: 600px) {
     .cover {
-        height: 400px
+        height: 400px;
+        position: relative;
     }
 }
 
 .shallow-bg {
-    background-image: url("/images/background/background-cube.jpg");
+    background-image: url("/images/background/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center
 }
 
 .deep-bg {
-    background-image: url("/images/background/background-deepcube-2.jpg");
+    background-image: url("/images/background/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center
@@ -657,7 +659,7 @@ pre > code {
     top: 20%;
     width: 600px;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -666,14 +668,14 @@ pre > code {
         border-radius: 25px;
         position: relative;
         width: -webkit-calc(90% - (30px / 2));
-        width: calc(90% - (30px / 2));
         margin-left: auto;
-        margin-right: auto
+        margin-right: auto;
+        margin-bottom: -100px;
     }
 }
 
 .wrapper-light {
-    background-color: rgba(255, 255, 255, 0.8)
+    background-color: rgba(250, 250, 250, 0.8)
 }
 
 .wrapper-dark {
@@ -1022,11 +1024,13 @@ hr.soft {
     margin-left: -webkit-calc(20%);
     border-left: 5px solid #333;
     border-right: 0px;
-    padding-left: 20px;
     font-size: 18px;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
-    color: #9b3022
+    color: #9b3022;
+    padding-left: 20px;
+    padding-right: 80px;
+    text-align: left;
 }
 
 .timeline-a-desc {
@@ -1034,10 +1038,12 @@ hr.soft {
     margin-left: -webkit-calc(20%);
     border-left: 5px solid #333;
     border-right: 0px;
-    padding-left: 20px;
     padding-bottom: 30px;
     font-size: 16px;
-    font-weight: 200
+    font-weight: 200;
+    text-align: left;
+    padding-left: 20px;
+    padding-right:80px;
 }
 
 /* Timeline for Research and Education */

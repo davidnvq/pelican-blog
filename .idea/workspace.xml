@@ -2,45 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f8783-0eec-41ad-8776-ccc868b60898" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/quanguet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/pages/timeline.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/background/background-cube.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/background/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/projects/2016-security.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/projects/2017-aciids.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/projects/2017-journal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/projects/2018-lifelong.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/projects/fg2019-face-detection.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/projects/fg2019-micro-expression.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/ScrollToPlugin.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/TweenMax.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/jquery-1.11.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/jquery.carouFredSel-6.2.1-packed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/jquery.dropdownit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/jquery.mixitup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/jquery.nicescroll.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/jquery.touchSwipe.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/magnific-popup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/masonry.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/modernizr.custom.63321.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/moment_timeline_tweet.6e5b62723488aee38af0c77681396a5b.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/perfect-scrollbar-0.4.5.with-mousewheel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/timeline.e5048dcb69aab38ea88531a898d0081c.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/static/js/widgets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/templates/old_index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/templates/timeline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/pages/timeline/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blog/other/2018/ai-nao-cho-viet-nam/ai-nao-cho-viet-nam.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blog/other/2018/ai-nao-cho-viet-nam/ai-nao-cho-viet-nam.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blog/paper/2018/face-detector-report/face-detector-report.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blog/paper/2018/face-detector-report/face-detector-report.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/pages/about.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/pages/timeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/pages/awards/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/background/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/background/background.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theme/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/theme/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,18 +22,19 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theme/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="733" column="43" selection-start-line="733" selection-start-column="43" selection-end-line="733" selection-end-column="43" />
+            <state relative-caret-position="188">
+              <caret line="652" selection-start-line="652" selection-end-line="845" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="e#3183#4870#0#HTML" />
-                <element signature="n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="e#4871#6086#0#HTML" />
                 <element signature="e#5484#5998#0#HTML" />
                 <element signature="e#6015#6074#0#HTML" />
                 <element signature="e#6155#7218#0#HTML" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -75,8 +43,7 @@
                 <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#3;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#p#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#p#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -93,7 +60,9 @@
                 <element signature="n#div#6;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#p#0;n#div#2;n#div#1;n#div#6;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#34071#34424#0#HTML" />
+                <element signature="n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#footer#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#script#0;n#div#1;n#body#0;n#html#0;n#!!top" />
               </folding>
@@ -101,13 +70,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/theme/static/css/custom.css">
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="991" column="20" selection-start-line="991" selection-start-column="20" selection-end-line="991" selection-end-column="20" />
+            <state relative-caret-position="259">
+              <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/pages/timeline/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="288" column="16" selection-start-line="288" selection-start-column="16" selection-end-line="288" selection-end-column="16" />
+              <folding>
+                <element signature="n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/content/pages/awards/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="366" column="30" selection-start-line="366" selection-start-column="30" selection-end-line="366" selection-end-column="30" />
+              <folding>
+                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/theme/static/css/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="677" column="45" selection-start-line="677" selection-start-column="45" selection-end-line="677" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="background.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/background/background.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
@@ -152,13 +165,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>/body</find>
-      <find>/2017</find>
-      <find>/2018</find>
-      <find>2019/</find>
-      <find>2019</find>
-      <find>Timeline</find>
-      <find>header</find>
       <find>timeline</find>
       <find>background.</find>
       <find>page-link</find>
@@ -172,8 +178,6 @@
       <find>timeline-body</find>
       <find>cp</find>
       <find>quangdtsc</find>
-      <find>pub-list</find>
-      <find>pagecontents</find>
       <find>section-container</find>
       <find>color-1</find>
       <find>with hi</find>
@@ -181,6 +185,16 @@
       <find>border-radius</find>
       <find>timeline-item:before</find>
       <find>timeline-a-date:before</find>
+      <find>pagecontents</find>
+      <find>profile-wrapper</find>
+      <find>cover</find>
+      <find>pub-list</find>
+      <find>timeline-a-desc</find>
+      <find>desc</find>
+      <find>desc {</find>
+      <find>right:</find>
+      <find>background.jpg</find>
+      <find>wrapper-light</find>
     </findStrings>
     <replaceStrings>
       <replace>/theme/js</replace>
@@ -198,13 +212,15 @@
         <option value="$PROJECT_DIR$/output/theme/css/custom.css" />
         <option value="$PROJECT_DIR$/theme/templates/timeline.html" />
         <option value="$PROJECT_DIR$/content/pages/about.md" />
-        <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/content/pages/timeline.html" />
         <option value="$USER_HOME$/Desktop/Website/Prof. Fei Sha's home page_files/bootstrap.css" />
         <option value="$PROJECT_DIR$/theme/static/css/style.css" />
         <option value="$USER_HOME$/Desktop/Website/Prof. Fei Sha's home page.html" />
-        <option value="$PROJECT_DIR$/theme/templates/index.html" />
         <option value="$PROJECT_DIR$/theme/static/css/custom.css" />
+        <option value="$PROJECT_DIR$/content/pages/timeline/index.html" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/theme/templates/index.html" />
+        <option value="$PROJECT_DIR$/content/pages/awards/index.html" />
       </list>
     </option>
   </component>
@@ -217,7 +233,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1280" />
     <option name="height" value="800" />
   </component>
@@ -243,6 +259,29 @@
               <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="timeline" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="background" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
@@ -279,9 +318,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/pages/timeline" />
       <recent name="$PROJECT_DIR$/theme/static/js" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/pages/awards" />
+      <recent name="$PROJECT_DIR$/output/images/background" />
       <recent name="$PROJECT_DIR$/theme/static/css" />
       <recent name="$PROJECT_DIR$/images/background" />
       <recent name="$PROJECT_DIR$/images/projects" />
@@ -313,7 +355,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -321,7 +364,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.20827587" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32965517" />
       <window_info anchor="right" id="Remote Host" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2253635" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -511,48 +554,6 @@
     <entry file="file://$PROJECT_DIR$/pelicanconf.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/pages/timeline.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-862">
-          <caret line="76" column="21" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#6050#6642#0#HTML" />
-            <element signature="e#6666#6738#0#HTML" />
-            <element signature="n#h1#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#5;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/background/background.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/Website/Prof. Fei Sha's home page_files/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="2070" column="1" selection-start-line="2070" selection-start-column="1" selection-end-line="2070" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/theme/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22478">
@@ -585,20 +586,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/Website/Prof. Fei Sha's home page_files/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="2070" column="1" selection-start-line="2070" selection-start-column="1" selection-end-line="2070" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/background/background.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/images/background/background.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theme/static/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="677" column="45" selection-start-line="677" selection-start-column="45" selection-end-line="677" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/pages/timeline/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="288" column="16" selection-start-line="288" selection-start-column="16" selection-end-line="288" selection-end-column="16" />
+          <folding>
+            <element signature="n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/theme/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="733" column="43" selection-start-line="733" selection-start-column="43" selection-end-line="733" selection-end-column="43" />
+        <state relative-caret-position="188">
+          <caret line="652" selection-start-line="652" selection-end-line="845" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#3183#4870#0#HTML" />
-            <element signature="n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="e#4871#6086#0#HTML" />
             <element signature="e#5484#5998#0#HTML" />
             <element signature="e#6015#6074#0#HTML" />
             <element signature="e#6155#7218#0#HTML" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -607,8 +648,7 @@
             <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#3;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#p#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#p#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -625,17 +665,26 @@
             <element signature="n#div#6;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#p#0;n#div#2;n#div#1;n#div#6;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#34071#34424#0#HTML" />
+            <element signature="n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#footer#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#script#0;n#div#1;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theme/static/css/custom.css">
+    <entry file="file://$PROJECT_DIR$/content/pages/awards/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="991" column="20" selection-start-line="991" selection-start-column="20" selection-end-line="991" selection-end-column="20" />
+        <state relative-caret-position="406">
+          <caret line="366" column="30" selection-start-line="366" selection-start-column="30" selection-end-line="366" selection-end-column="30" />
+          <folding>
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
