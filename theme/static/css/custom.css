@@ -572,7 +572,7 @@ pre > code {
     margin-right: auto;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
     .profile-wrapper {
         top: 5%;
         border-radius: 15px;
@@ -620,6 +620,13 @@ pre > code {
     width: -webkit-calc(60% - (30px / 2));
     width: calc(60% - (30px / 2))
 }
+.circle-img {
+    margin: 0px auto;
+    width: 168px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%
+}
 
 @media screen and (max-width: 800px) {
     .profile-col-1, .profile-col-2 {
@@ -636,15 +643,16 @@ pre > code {
         width: -webkit-calc(100%);
         width: calc(100%)
     }
+    .circle-img {
+        margin: 0px auto;
+        width: 100px;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 50%
+    }
+
 }
 
-.circle-img {
-    margin: 0px auto;
-    width: 168px;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 50%
-}
 
 .border-dark {
     border-color: navy
