@@ -5,465 +5,500 @@ Table of Contents
 
 -->
 <html>
-    <head>
-        <script>
-            var home = "/"
-        </script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Quang Nguyen</title>
-        <meta name="description" lang="en"
-              content="This is an academic website for Nguyen Van Quang to share his experiences, projects,
+    <title>Quang Nguyen</title>
+    <meta name="description" lang="en"
+          content="This is an academic website for Nguyen Van Quang to share his experiences, projects,
               publications and tech/non-tech posts. He is a graduate student of Tohoku University. His research
               interests lie in the field of Machine Learning and Computer Vison, particularly in Deep Learning. ">
 
-        <meta name="description" lang="vi" content="Website cá nhân của Nguyễn Văn Quang - NCS ngành Khoa học Máy
+    <meta name="description" lang="vi" content="Website cá nhân của Nguyễn Văn Quang - NCS ngành Khoa học Máy
         tính tại Đại học Tohoku.">
 
-        <meta name="keywords" lang="en"
-              content="Nguyen Van , Publications, Posts, Research, Deep Learning, Computer Vision, Natural Language
+    <meta name="keywords" lang="en"
+          content="Nguyen Van , Publications, Posts, Research, Deep Learning, Computer Vision, Natural Language
               Processing"/>
-        <meta name="keywords" lang="vi" content="Thị giác máy, Học sâu, Xử lý ngôn ngữ tự nhiên, Nghiên cứu"/>
-
-
-        <link rel="stylesheet" href="/theme/css/custom.css">
-
-        <link rel="shortcut icon" href="/favicon.ico">
-        <link rel="canonical" href="/">
-        <link rel="alternate" type="application/rss+xml" title="Nguyễn Văn Quang"
-              href="/feed.xml"/>
-
-        <link rel="stylesheet"
-              href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="/js/jquery-2.1.3.min.js"></script>
-
-        <!--[if lt IE 9]>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-        </script>
-        <![endif]-->
-
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-WMM4SNF');</script>
-        <!-- End Google Tag Manager -->
-    </head>
-
-
-    <body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMM4SNF"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-
-        <header class="site-header">
-            <div class="wrapper">
-                <a class="site-title" href="/">Home</a>
-                <nav class="site-nav">
-                    <a href="#" class="menu-icon">
-                        <svg viewBox="0 0 18 15">
-                            <path fill="#424242"
-                                  d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-                        </svg>
-                    </a>
-
-                    <div class="trigger">
-                        <a class="page-link" href="/#bio" >About</a>
-                        <a class="page-link" href="/#timeline">Timeline</a>
-                        <a class="page-link" href="<script>document.write(</script>#publications">Publications</a>
-                        <a class="page-link" href="<script>document.write(</script>#blog">Blog</a>
-                    </div>
-                </nav>
-            </div>
-        </header>
-
-        <div id="profile-cover" class="cover shallow-bg img-responsive">
-            <div id="profile-namecard" class="profile-wrapper wrapper-light">
-            <div id="my-pic" class="profile-col profile-col-1">
-                <img id="profile-avatar" src="/images/self-portrait/me.jpg" alt="Me"
-                     class="circle-img border-dark"/>
-            </div>
-            <div id="my-contact" class="profile-col profile-col-2">
-                <div id="my-name" class="text-grey-dark">
-                    Nguyen Van Quang
-                </div>
-                <div id="my-title" class="text-grey">
-                    Graduate Student <br /> at Tohoku Universrity
-                </div>
-                <div id="my-email" class="text-grey-light">
-                    quanguet [at] gmail.com
-                </div>
-                <div class="social-media">
-
-                    <a href="https://github.com/quangdtsc" class="icon-button github">
-                        <i class="fa fa-github icon-github"></i>
-                        <span></span>
-                    </a>
-
-                    <a href="https://twitter.com/quanguet" class="icon-button twitter">
-                        <i class="fa fa-twitter icon-twitter"></i>
-                        <span></span>
-                    </a>
-
-
-                    <a href="https://facebook.com/quanghus" class="icon-button facebook">
-                        <i class="fa fa-facebook icon-facebook"></i>
-                        <span></span>
-                    </a>
-
-
-                    <a href="https://linkedin.com/in/quanguet" class="icon-button linkedin">
-                        <i class="fa fa-linkedin icon-linkedin"></i>
-                        <span></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        </div>
-
-        <script type="text/javascript">
-        function deepFeature() {
-            $('#profile-avatar').attr('src', '/images/self-portrait/deep-me.jpg');
-            $('#profile-avatar').removeClass('border-dark');
-            $('#profile-avatar').addClass('border-bright');
-
-            $('#profile-cover').removeClass('shallow-bg');
-            $('#profile-cover').addClass('deep-bg');
-
-            $('#profile-namecard').removeClass('wrapper-light');
-            $('#profile-namecard').addClass('wrapper-dark');
-
-            $('#my-desc').removeClass('hide');
-            $('#my-contact').addClass('hide');
-            // console.log('Move in now...');
-        }
-
-        function shallowFeature() {
-            $('#profile-avatar').attr('src', '/images/self-portrait/me.jpg');
-            $('#profile-avatar').removeClass('border-bright');
-            $('#profile-avatar').addClass('border-dark');
-
-            $('#profile-cover').removeClass('deep-bg');
-            $('#profile-cover').addClass('shallow-bg');
-
-            $('#profile-namecard').removeClass('wrapper-dark');
-            $('#profile-namecard').addClass('wrapper-light');
-
-            $('#my-contact').removeClass('hide');
-            $('#my-desc').addClass('hide');
-            // console.log('Move out now...');
-        }
-
-        $(function () {
-            $('#my-pic').hover(deepFeature, shallowFeature);
-        })
-
-    </script>
-
-        <div class="page-content">
-            <div class="wrapper">
-
-                <!-- Awards -->
-                <div id="timeline-award" class="timeline-a">
-                    <h1 class="md-heading text-left">
-                        <i class="fa fa-tasks" aria-hidden="true"></i>
-                        Scholarships and Awards
-                    </h1>
-
-                    <div class="timeline-a-body">
-
-                        <!-- MEXT PhD -->
-                        <div class="timeline-a-item">
-                            <div class="timeline-a-date">
-                                2019 - 2022
-                            </div>
-                            <div class="timeline-a-title">
-                                MEXT Scholarship for PhD Course
-                            </div>
-                            <div class="timeline-a-desc">
-                                Japanese Government (Monbukagakusho) for PhD students at Tohoku University
-                            </div>
-                        </div>
-
-                        <!-- MEXT Master -->
-                        <div class="timeline-a-item">
-                            <div class="timeline-a-date">
-                                2017 - 2019
-                            </div>
-                            <div class="timeline-a-title">
-                                MEXT Scholarship for Master Course
-                            </div>
-                            <div class="timeline-a-desc">
-                                Awared by Japanese Government (Monbukagakusho) for master students at Tohoku University
-                            </div>
-                        </div>
-
-                        <!-- Summer School @ Gottingen-->
-                        <div class="timeline-a-item">
-                            <div class="timeline-a-date">
-                                Summer 2018
-                            </div>
-                            <div class="timeline-a-title">
-                                Summer School Scholarship @ University of Gottingen
-                            </div>
-                            <div class="timeline-a-desc">
-                                Awarded by University of Gottingen to students joining Data Science Summer School
-                            </div>
-                        </div>
-
-                        <!-- Honda YES -->
-                        <div class="timeline-a-item">
-                            <div class="timeline-a-date">
-                                2016 - 2017
-                            </div>
-                            <div class="timeline-a-title">
-                                Honda Young Engineer Scientist Award 2017
-                            </div>
-                            <div class="timeline-a-desc">
-                                For 10 excellent Young Engineers and Scientists in Vietnam
-                            </div>
-                        </div>
-
-                        <!-- National Contest -->
-                        <div class="timeline-a-item">
-                            <div class="timeline-a-date">
-                                Sept 2017
-                            </div>
-                            <div class="timeline-a-title">
-                                Third Prize of National Scientific Student Research Conference
-                            </div>
-                            <div class="timeline-a-desc">
-                                Awarded by Vietnam Science and Technology Ministry
-                            </div>
-                        </div>
-
-                        <!-- University Contest -->
-                        <div class="timeline-a-item">
-                            <div class="timeline-a-date">
-                                June 2017
-                            </div>
-                            <div class="timeline-a-title">
-                                First Prize of Scientific Student Research Conference
-                            </div>
-                            <div class="timeline-a-desc">
-                                Awarded by University of Engineering and Technology, VNU-H
-                            </div>
-                        </div>
-
-                        <!-- Excellent Thesis Award -->
-                        <div class="timeline-a-item">
-                            <div class="timeline-a-date">
-                                June 2017
-                            </div>
-                            <div class="timeline-a-title">
-                                Excellent Thesis Award
-                            </div>
-                            <div class="timeline-a-desc">
-                                Best undergraduate thesis (scored 10/10), titled <i>An algorithm adaptation
-                                multilabel classification method and experiments on Vietnamese text</i>
-                            </div>
-                        </div>
-
-                        <!-- Excellent Student Award -->
-                        <div class="timeline-a-item">
-                            <div class="timeline-a-date">
-                                2013 - 2016
-                            </div>
-                            <div class="timeline-a-title">
-                                Excellent Student Award
-                            </div>
-                            <div class="timeline-a-desc">
-                                Awarded by UET-VNU to excellent undergraduate students, <i>I was a valedictorian of
-                                QH-2012 batch with 3.89/4.0 GPA </i>
-                            </div>
-                        </div>
-
-                        <!-- AmCham -->
-                        <div class="timeline-a-item">
-                            <div class="timeline-a-date">
-                                Dec 2016
-                            </div>
-                            <div class="timeline-a-title">
-                                AmCham Scholarship
-                            </div>
-                            <div class="timeline-a-desc">
-                                Awarded by American Chamber and US Ambassy to 40 excellent students from all
-                                universities in Vietnam
-                            </div>
-                        </div>
-
-                        <!-- Merit-based University Scholarships -->
-                        <div class="timeline-a-item">
-                            <div class="timeline-a-date">
-                                2013 - 2016
-                            </div>
-                            <div class="timeline-a-title">
-                                Merit-based University Scholarships
-
-                            </div>
-                            <div class="timeline-a-desc">
-                                Awarded by UET-VNU to excellent undergraduate students
-                            </div>
-                        </div>
-
-
-                        <!-- DJU Scholarship -->
-                        <div class="timeline-a-item">
-                            <div class="timeline-a-date">
-                                2015 - 2016
-                            </div>
-                            <div class="timeline-a-title">
-                                FAFL Scholarship
-                            </div>
-                            <div class="timeline-a-desc">
-                                Awarded by Korean Government for <strong>Fostering ASEAN Future Leaders</strong>
-                                exchange program in South Korea
-                            </div>
-                        </div>
-
-                        <!-- Shinnyo-en Scholarship -->
-                        <div class="timeline-a-item">
-                            <div class="timeline-a-date">
-                                2012 - 2016
-                            </div>
-                            <div class="timeline-a-title">
-                                Shinnyo-en Scholarship
-                            </div>
-                            <div class="timeline-a-desc">
-                                Awarded by Shinnyo-en Organization in <strong>3 consecutive years</strong>
-                            </div>
-                        </div>
-
-                        <!-- Summer School -->
-                        <div class="timeline-a-item">
-                            <div class="timeline-a-date">
-                                Summer 2015
-                            </div>
-                            <div class="timeline-a-title">
-                                Summer School Scholarship @ Kyoto University
-                            </div>
-                            <div class="timeline-a-desc">
-                                Awarded by Kyoto University to students joining Machine Learning Summer School 2015
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="button" style="padding-left:12.5%;">
-                        <h1 class="sm-heading text-left">
-                            <a href="/awards">
-                                <i class="fa fa-arrow-circle-left"></i> Back
-                            </a>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <footer class="site-footer">
-
-            <div class="wrapper">
-
-            <h2 class="footer-heading">
-                <a class="page-link" href="/">
-                    About Nguyen Van Quang
-                </a></h2>
-
-            <div class="footer-col-wrapper">
-                <div class="footer-col  footer-col-1">
-                    <ul class="contact-list">
-                        <li>Nguyen Van Quang</li>
-                        <li><a href="mailto:">quanguet [at] gmail.com</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col  footer-col-2">
-
-                    <a href="https://twitter.com/quanguet">
-                        <img src="/images/icon/color-twitter.png" class="social-icon">
-                    </a>
-
-
-                    <a href="https://linkedin.com/in/quanguet">
-                        <img src="/images/icon/color-linkedin.png" class="social-icon">
-                    </a>
-
-
-                    <a href="https://github.com/quangdtsc">
-                        <img src="/images/icon/color-github.png" class="social-icon">
-                    </a>
-
-
-                    <a href="https://facebook.com/quanghus">
-                        <img src="/images/icon/color-facebook.png" class="social-icon">
-                    </a>
-
-
-                    <a href="/feed.xml">
-                        <img src="/images/icon/color-rss.png" class="social-icon">
-                    </a>
-
-
-                </div>
-
-                <div class="footer-col  footer-col-3">
-                    <p class="text">This is an academic website using Pelican framework with the design from Frank
-                        .</p>
-                </div>
-            </div>
-
-        </div>
-
-    </footer>
-
-        <div class="back-to-top">Top</div>
-
-        <script type="text/javascript">
-        jQuery(document).ready(function () {
-            var offset = 220;
-            var duration = 500;
-            jQuery(window).scroll(function () {
-                if (jQuery(this).scrollTop() > offset) {
-                    jQuery('.back-to-top').fadeIn(duration);
-                } else {
-                    jQuery('.back-to-top').fadeOut(duration);
-                }
-            });
-
-            jQuery('.back-to-top').click(function (event) {
-                event.preventDefault();
-                jQuery('html, body').animate({scrollTop: 0}, duration);
-                return false;
-            })
+    <meta name="keywords" lang="vi" content="Thị giác máy, Học sâu, Xử lý ngôn ngữ tự nhiên, Nghiên cứu"/>
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="canonical" href="https://quangdtsc.github.io/">
+    <link rel="alternate" type="application/rss+xml" title="Nguyễn Văn Quang"
+          href="https://quangdtsc.github.io/feed.xml"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/theme/css/custom.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Script -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
         });
-    </script>
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WMM4SNF');</script>
+    <!-- End Google Tag Manager -->
+</head>
 
-    </body>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMM4SNF"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Quang Nguyen</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="/blog">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        About <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/#bio">Biography</a></li>
+                        <li><a href="/#timeline">Timeline</a></li>
+                        <li><a href="/#publications">Publications</a></li>
+                        <li><a href="/#timeline-award">Scholarships and Awards</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/#my-CV"><strong>Download CV</strong></a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        Blog Categories <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"></a></li>
+                        <li><a href="#">NLP Posts</a></li>
+                        <li><a href="#">Computer Vision Posts</a></li>
+                        <li><a href="#">Programming Tutorials</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Personal Thoughts</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 
 
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+<div id="profile-cover" class="cover shallow-bg img-responsive">
+    <div id="profile-namecard" class="profile-wrapper wrapper-light">
+        <div id="my-pic" class="profile-col profile-col-1">
+            <img id="profile-avatar" src="/images/self-portrait/me.jpg" alt="Me"
+                 class="circle-img border-dark"/>
+        </div>
+        <div id="my-contact" class="profile-col profile-col-2">
+            <div id="my-name" class="text-grey-dark">
+                Nguyen Van Quang
+            </div>
+            <div id="my-title" class="text-grey">
+                Graduate Student <br/> at Tohoku Universrity
+            </div>
+            <div id="my-email" class="text-grey-light">
+                quanguet [at] gmail.com
+            </div>
+            <div class="social-media">
 
-        ga('create', 'UA-60071442-1', 'auto');
-        ga('send', 'pageview');
+                <a href="https://github.com/quangdtsc" class="icon-button github">
+                    <i class="fa fa-github icon-github"></i>
+                    <span></span>
+                </a>
 
-    </script>
+                <a href="https://twitter.com/quanguet" class="icon-button twitter">
+                    <i class="fa fa-twitter icon-twitter"></i>
+                    <span></span>
+                </a>
+
+
+                <a href="https://facebook.com/quanghus" class="icon-button facebook">
+                    <i class="fa fa-facebook icon-facebook"></i>
+                    <span></span>
+                </a>
+
+
+                <a href="https://linkedin.com/in/quanguet" class="icon-button linkedin">
+                    <i class="fa fa-linkedin icon-linkedin"></i>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function deepFeature() {
+        $('#profile-avatar').attr('src', '/images/self-portrait/deep-me.jpg');
+        $('#profile-avatar').removeClass('border-dark');
+        $('#profile-avatar').addClass('border-bright');
+
+        $('#profile-cover').removeClass('shallow-bg');
+        $('#profile-cover').addClass('deep-bg');
+
+        $('#profile-namecard').removeClass('wrapper-light');
+        $('#profile-namecard').addClass('wrapper-dark');
+
+        $('#my-desc').removeClass('hide');
+        $('#my-contact').addClass('hide');
+        // console.log('Move in now...');
+    }
+
+    function shallowFeature() {
+        $('#profile-avatar').attr('src', '/images/self-portrait/me.jpg');
+        $('#profile-avatar').removeClass('border-bright');
+        $('#profile-avatar').addClass('border-dark');
+
+        $('#profile-cover').removeClass('deep-bg');
+        $('#profile-cover').addClass('shallow-bg');
+
+        $('#profile-namecard').removeClass('wrapper-dark');
+        $('#profile-namecard').addClass('wrapper-light');
+
+        $('#my-contact').removeClass('hide');
+        $('#my-desc').addClass('hide');
+        // console.log('Move out now...');
+    }
+
+    $(function () {
+        $('#my-pic').hover(deepFeature, shallowFeature);
+    })
+
+</script>
+
+<div class="page-content">
+    <div class="wrapper">
+
+        <!-- Awards -->
+        <div id="timeline-award" class="timeline-a">
+            <h1 class="md-heading text-left">
+                <i class="fa fa-tasks" aria-hidden="true"></i>
+                Scholarships and Awards
+            </h1>
+
+            <div class="timeline-a-body">
+
+                <!-- MEXT PhD -->
+                <div class="timeline-a-item">
+                    <div class="timeline-a-date">
+                        2019 - 2022
+                    </div>
+                    <div class="timeline-a-title">
+                        MEXT Scholarship for PhD Course
+                    </div>
+                    <div class="timeline-a-desc">
+                        Japanese Government (Monbukagakusho) for PhD students at Tohoku University
+                    </div>
+                </div>
+
+                <!-- MEXT Master -->
+                <div class="timeline-a-item">
+                    <div class="timeline-a-date">
+                        2017 - 2019
+                    </div>
+                    <div class="timeline-a-title">
+                        MEXT Scholarship for Master Course
+                    </div>
+                    <div class="timeline-a-desc">
+                        Awared by Japanese Government (Monbukagakusho) for master students at Tohoku University
+                    </div>
+                </div>
+
+                <!-- Summer School @ Gottingen-->
+                <div class="timeline-a-item">
+                    <div class="timeline-a-date">
+                        Summer 2018
+                    </div>
+                    <div class="timeline-a-title">
+                        Summer School Scholarship @ University of Gottingen
+                    </div>
+                    <div class="timeline-a-desc">
+                        Awarded by University of Gottingen to students joining Data Science Summer School
+                    </div>
+                </div>
+
+                <!-- Honda YES -->
+                <div class="timeline-a-item">
+                    <div class="timeline-a-date">
+                        2016 - 2017
+                    </div>
+                    <div class="timeline-a-title">
+                        Honda Young Engineer Scientist Award 2017
+                    </div>
+                    <div class="timeline-a-desc">
+                        For 10 excellent Young Engineers and Scientists in Vietnam
+                    </div>
+                </div>
+
+                <!-- National Contest -->
+                <div class="timeline-a-item">
+                    <div class="timeline-a-date">
+                        Sept 2017
+                    </div>
+                    <div class="timeline-a-title">
+                        Third Prize of National Scientific Student Research Conference
+                    </div>
+                    <div class="timeline-a-desc">
+                        Awarded by Vietnam Science and Technology Ministry
+                    </div>
+                </div>
+
+                <!-- University Contest -->
+                <div class="timeline-a-item">
+                    <div class="timeline-a-date">
+                        June 2017
+                    </div>
+                    <div class="timeline-a-title">
+                        First Prize of Scientific Student Research Conference
+                    </div>
+                    <div class="timeline-a-desc">
+                        Awarded by University of Engineering and Technology, VNU-H
+                    </div>
+                </div>
+
+                <!-- Excellent Thesis Award -->
+                <div class="timeline-a-item">
+                    <div class="timeline-a-date">
+                        June 2017
+                    </div>
+                    <div class="timeline-a-title">
+                        Excellent Thesis Award
+                    </div>
+                    <div class="timeline-a-desc">
+                        Best undergraduate thesis (scored 10/10), titled <i>An algorithm adaptation
+                        multilabel classification method and experiments on Vietnamese text</i>
+                    </div>
+                </div>
+
+                <!-- Excellent Student Award -->
+                <div class="timeline-a-item">
+                    <div class="timeline-a-date">
+                        2013 - 2016
+                    </div>
+                    <div class="timeline-a-title">
+                        Excellent Student Award
+                    </div>
+                    <div class="timeline-a-desc">
+                        Awarded by UET-VNU to excellent undergraduate students, <i>I was a valedictorian of
+                        QH-2012 batch with 3.89/4.0 GPA </i>
+                    </div>
+                </div>
+
+                <!-- AmCham -->
+                <div class="timeline-a-item">
+                    <div class="timeline-a-date">
+                        Dec 2016
+                    </div>
+                    <div class="timeline-a-title">
+                        AmCham Scholarship
+                    </div>
+                    <div class="timeline-a-desc">
+                        Awarded by American Chamber and US Ambassy to 40 excellent students from all
+                        universities in Vietnam
+                    </div>
+                </div>
+
+                <!-- Merit-based University Scholarships -->
+                <div class="timeline-a-item">
+                    <div class="timeline-a-date">
+                        2013 - 2016
+                    </div>
+                    <div class="timeline-a-title">
+                        Merit-based University Scholarships
+
+                    </div>
+                    <div class="timeline-a-desc">
+                        Awarded by UET-VNU to excellent undergraduate students
+                    </div>
+                </div>
+
+
+                <!-- DJU Scholarship -->
+                <div class="timeline-a-item">
+                    <div class="timeline-a-date">
+                        2015 - 2016
+                    </div>
+                    <div class="timeline-a-title">
+                        FAFL Scholarship
+                    </div>
+                    <div class="timeline-a-desc">
+                        Awarded by Korean Government for <strong>Fostering ASEAN Future Leaders</strong>
+                        exchange program in South Korea
+                    </div>
+                </div>
+
+                <!-- Shinnyo-en Scholarship -->
+                <div class="timeline-a-item">
+                    <div class="timeline-a-date">
+                        2012 - 2016
+                    </div>
+                    <div class="timeline-a-title">
+                        Shinnyo-en Scholarship
+                    </div>
+                    <div class="timeline-a-desc">
+                        Awarded by Shinnyo-en Organization in <strong>3 consecutive years</strong>
+                    </div>
+                </div>
+
+                <!-- Summer School -->
+                <div class="timeline-a-item">
+                    <div class="timeline-a-date">
+                        Summer 2015
+                    </div>
+                    <div class="timeline-a-title">
+                        Summer School Scholarship @ Kyoto University
+                    </div>
+                    <div class="timeline-a-desc">
+                        Awarded by Kyoto University to students joining Machine Learning Summer School 2015
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="button" style="padding-left:12.5%;">
+                <h1 class="sm-heading text-left">
+                    <a href="/">
+                        <i class="fa fa-arrow-circle-left"></i> Back
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="site-footer">
+
+    <div class="wrapper">
+
+        <h2 class="footer-heading">
+            <a class="page-link" href="/">
+                Back to Home
+            </a></h2>
+
+        <div class="footer-col-wrapper">
+            <div class="footer-col  footer-col-1">
+                <ul class="contact-list">
+                    <li>Nguyen Van Quang</li>
+                    <li><a href="mailto:">quanguet [at] gmail.com</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col  footer-col-2">
+
+                <a href="https://twitter.com/quanguet">
+                    <img src="/images/icon/color-twitter.png" class="social-icon">
+                </a>
+
+
+                <a href="https://linkedin.com/in/quanguet">
+                    <img src="/images/icon/color-linkedin.png" class="social-icon">
+                </a>
+
+
+                <a href="https://github.com/quangdtsc">
+                    <img src="/images/icon/color-github.png" class="social-icon">
+                </a>
+
+
+                <a href="https://facebook.com/quanghus">
+                    <img src="/images/icon/color-facebook.png" class="social-icon">
+                </a>
+
+
+                <a href="/feed.xml">
+                    <img src="/images/icon/color-rss.png" class="social-icon">
+                </a>
+
+
+            </div>
+
+            <div class="footer-col  footer-col-3">
+                <p class="text">This is an academic website using Pelican framework.</p>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+<div class="back-to-top">Top</div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        var offset = 220;
+        var duration = 500;
+        jQuery(window).scroll(function () {
+            if (jQuery(this).scrollTop() > offset) {
+                jQuery('.back-to-top').fadeIn(duration);
+            } else {
+                jQuery('.back-to-top').fadeOut(duration);
+            }
+        });
+
+        jQuery('.back-to-top').click(function (event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+    });
+</script>
+
+</body>
+
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-60071442-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
 
 </html>

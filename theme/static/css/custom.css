@@ -18,21 +18,21 @@ body, html {
 }
 
 body {
-    z-index: initial;
+    padding-top: 50px; /* bootstrap for navbar */
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
     font-weight: 300;
     color: #111;
     background-color: #f9f9f9;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
 }
 
-body:after {
-    display: none;
-    content: url("/images/background/background.jpg") url("/images/background/background.jpg");
-    margin-bottom: 20px;
-}
+section {
+    padding-top: 60px;
+    margin-top: -60px;
+} /* https://stackoverflow.com/questions/18948440/when-navigating-to-id-element-is-hidden-under-fixed-position-header */
+
 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight {
     margin-bottom: 15px
@@ -147,97 +147,6 @@ pre > code {
 
 .text-grey {
     color: #828282
-}
-
-.site-header {
-    border-top: 3px solid #3B1583;  /*--Color of Tohoku University*/
-    border-bottom: 1px solid #3B1583;
-    background-color: #3B1583;
-    min-height: 40px;
-    position: relative
-}
-
-.site-title {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 400;
-    font-family: 'Roboto', sans-serif, Helvetica;
-    line-height: 40px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left
-}
-
-.site-title, .site-title:visited {
-    color: #ffffff;
-}
-
-.site-nav {
-    float: right;
-    line-height: 40px;
-    z-index: 3
-}
-
-.site-nav .menu-icon {
-    display: none
-}
-
-.site-nav .page-link {
-    font-size: 16px;
-    font-weight: 300;
-    color: #ffffff;
-    line-height: 1.5
-}
-
-.site-nav .page-link:not(:first-child) {
-    margin-left: 20px
-}
-
-@media screen and (max-width: 600px) {
-    .site-nav {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: #3B1583;
-        border: 1px solid #f2f2f2;
-        border-radius: 5px;
-        text-align: right
-    }
-
-    .site-nav .menu-icon {
-        display: block;
-        float: right;
-        width: 36px;
-        height: 16px;
-        line-height: 0;
-        padding-top: 10px;
-        text-align: center
-    }
-
-    .site-nav .menu-icon > svg {
-        width: 18px;
-        height: 20px
-    }
-
-    .site-nav .menu-icon > svg path {
-        fill: #f2f2f2;
-    }
-
-    .site-nav .trigger {
-        clear: both;
-        display: none
-    }
-
-    .site-nav:hover .trigger {
-        display: block;
-        padding-bottom: 5px
-    }
-
-    .site-nav .page-link {
-        font-weight: 400;
-        display: block;
-        padding: 5px 10px
-    }
 }
 
 .site-footer {
@@ -615,7 +524,7 @@ pre > code {
 
 .cover {
     max-width: 100%;
-    height: 320px;
+    height: 300px;
     z-index: initial;
     margin-right: auto;
     margin-left: auto;
@@ -626,7 +535,7 @@ pre > code {
 
 @media screen and (max-width: 800px) {
     .cover {
-        max-width: -webkit-calc(1024px - (30px));
+        height: 300px;
         padding-right: 15px;
         padding-left: 15px;
         position: relative;
@@ -635,7 +544,7 @@ pre > code {
 
 @media screen and (max-width: 600px) {
     .cover {
-        height: 400px;
+        height: 300px;
         position: relative;
     }
 }
@@ -1058,25 +967,25 @@ hr.soft {
 }
 
 /* Timeline for Research and Education */
-.timeline-brief, .timeline, .timeline-a{
+.timeline-edu-brief, .timeline-edu, .timeline-a{
     font-family: 'Roboto', sans-serif, Helvetica;
     margin-top: 30px;
     font-size: 20px;
     font-weight: 400
 }
 
-.timeline-body, .timeline-a-body {
+.timeline-edu-body, .timeline-a-body {
     padding: 0
 }
 
-.timeline-start {
+.timeline-edu-start {
     width: -webkit-calc(100% - 2 * (20px));
     width: calc(100% - 2 * (20px));
     text-align: center;
     padding: 20px
 }
 
-.timeline-item:before {
+.timeline-edu-item:before {
     width: 11px;
     height: 11px;
     background: #333;
@@ -1087,68 +996,67 @@ hr.soft {
 }
 
 
-.timeline-item {
-    width: -webkit-calc(50% - (20px));
-    width: calc(50% - (20px));
-    position: relative
+.timeline-edu-item {
+    width: -webkit-calc(50%);
+    width: calc(50%);
+    position: relative;
 }
 
-.timeline-item:nth-child(odd):before {
+.timeline-edu-item:nth-child(odd):before {
     left: -8px
 }
 
-.timeline-item:nth-child(odd):after {
+.timeline-edu-item:nth-child(odd):after {
     left: -8px;
     bottom: 0
 }
 
-.timeline-item:nth-child(odd) {
-    margin-left: 50%;
+.timeline-edu-item:nth-child(odd) {
+    margin-left: calc(50% - 5px);
     padding-left: 20px;
     border-left: 5px solid #333;
     text-align: left
 }
 
-.timeline-item:nth-child(even) {
-    margin-right: -webkit-calc(50% + (20px));
-    margin-right: calc(50% + (20px));
+.timeline-edu-item:nth-child(even) {
+    margin-right: calc(50%);
     padding-right: 20px;
     border-right: 5px solid #333;
     text-align: right
 }
 
-.timeline-item:nth-child(even):before {
+.timeline-edu-item:nth-child(even):before {
     right: -8px
 }
 
-.timeline-item:nth-child(even):after {
+.timeline-edu-item:nth-child(even):after {
     right: -8px
 }
 
-.timeline-date {
+.timeline-edu-date {
     font-size: 16px;
     font-weight: 600;
     color: #113f7c
 }
 
-.timeline-title {
+.timeline-edu-title {
     font-size: 20px;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
     color: #9b3022
 }
 
-.timeline-desc {
+.timeline-edu-desc {
     font-size: 16px;
     font-weight: 200
 }
 
-.timeline-host {
+.timeline-edu-host {
     font-size: 14px;
     font-weight: 400
 }
 
-.timeline > .timeline-body > .timeline-item:last-child:after {
+.timeline-edu > .timeline-edu-body > .timeline-edu-item:last-child:after {
     bottom: 0;
     width: 11px;
     height: 11px;
@@ -1159,21 +1067,21 @@ hr.soft {
     border-radius: 5px
 }
 
-.timeline > .timeline-body > .timeline-item:last-child:nth-child(even) {
+.timeline-edu > .timeline-edu-body > .timeline-edu-item:last-child:nth-child(even) {
     vertical-align: middle;
     min-height: 200px;
     border-right: 5px dashed #333
 }
 
-.timeline > .timeline-body > .timeline-item:last-child:nth-child(odd) {
+.timeline-edu > .timeline-edu-body > .timeline-edu-item:last-child:nth-child(odd) {
     vertical-align: middle;
     min-height: 200px;
     border-left: 5px dashed #333
 }
 
-/*
+
 @media screen and (max-width: 600px) {
-    .timeline-start {
+    .timeline-edu-start {
         min-height: 50px;
         padding: 0 0 0 5px;
         text-align: left;
@@ -1183,7 +1091,7 @@ hr.soft {
         margin-left: 5px
     }
 
-    .timeline-start:after {
+    .timeline-edu-start:after {
         left: 17px;
         width: 11px;
         height: 11px;
@@ -1194,7 +1102,7 @@ hr.soft {
         border-radius: 5px
     }
 
-    .timeline-item, .timeline-item:nth-child(odd), .timeline-item:nth-child(even) {
+    .timeline-edu-item, .timeline-edu-item:nth-child(odd), .timeline-edu-item:nth-child(even) {
         min-height: 0;
         text-align: left;
         border-left: 5px solid #333;
@@ -1206,7 +1114,8 @@ hr.soft {
         padding-right: 0px
     }
 
-    .timeline > .timeline-body > .timeline-item:last-child:nth-child(odd), .timeline > .timeline-body > .timeline-item:last-child:nth-child(even) {
+    .timeline-edu > .timeline-edu-body > .timeline-edu-item:last-child:nth-child(odd),
+    .timeline-edu > .timeline-edu-body > .timeline-edu-item:last-child:nth-child(even) {
         min-height: 0;
         text-align: left;
         border-left: 5px solid #333;
@@ -1218,31 +1127,30 @@ hr.soft {
         padding-right: 0px
     }
 
-    .timeline-item:before {
+    .timeline-edu-item:before {
         left: -8px
     }
 
-    .timeline-item:after {
+    .timeline-edu-item:after {
         left: -8px
     }
 
-    .timeline-date {
+    .timeline-edu-date {
         font-size: 14px
     }
 
-    .timeline-title {
+    .timeline-edu-title {
         font-size: 16px
     }
 
-    .timeline-desc {
+    .timeline-edu-desc {
         font-size: 12px
     }
 
-    .timeline-host {
+    .timeline-edu-host {
         font-size: 10px
     }
 }
-*/
 
 /* Pagination */
 .toy-list {
