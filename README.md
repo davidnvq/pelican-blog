@@ -2,10 +2,9 @@
 
 To run on `localhost`:
 ```bash
-make serve
+make build && make serve
 # Then open localhost:8000
 ```
-
 
 
 ## 2. Publish to the Internet
