@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="038f8783-0eec-41ad-8776-ccc868b60898" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/theme/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/theme/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/theme/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="156">
-              <caret line="717" column="26" lean-forward="true" selection-start-line="717" selection-start-column="26" selection-end-line="717" selection-end-column="26" />
+              <caret line="717" column="26" selection-start-line="717" selection-start-column="26" selection-end-line="717" selection-end-column="26" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
@@ -66,8 +65,8 @@
       <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/theme/static/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="985" column="27" lean-forward="true" selection-start-line="985" selection-start-column="27" selection-end-line="985" selection-end-column="27" />
+            <state relative-caret-position="111">
+              <caret line="986" selection-start-line="986" selection-end-line="986" />
             </state>
           </provider>
         </entry>
@@ -289,7 +288,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49919224" weight="0.32965517" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.50080776" side_tool="true" visible="true" weight="0.3075862" />
@@ -577,7 +575,7 @@
     <entry file="file://$PROJECT_DIR$/theme/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
-          <caret line="717" column="26" lean-forward="true" selection-start-line="717" selection-start-column="26" selection-end-line="717" selection-end-column="26" />
+          <caret line="717" column="26" selection-start-line="717" selection-start-column="26" selection-end-line="717" selection-end-column="26" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
@@ -586,8 +584,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/theme/static/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="985" column="27" lean-forward="true" selection-start-line="985" selection-start-column="27" selection-end-line="985" selection-end-column="27" />
+        <state relative-caret-position="111">
+          <caret line="986" selection-start-line="986" selection-end-line="986" />
         </state>
       </provider>
     </entry>

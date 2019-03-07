@@ -983,8 +983,8 @@ hr.soft {
         font-size: 12px;
         font-weight:500;
         color: #113f7c;
-        padding-right: 0px;
         text-align: right;
+
 
     }
 
@@ -993,6 +993,7 @@ hr.soft {
         font-size: 14px;
         font-weight: 500;
         padding-left: 10px;
+        padding-right: 20px;
         text-align: left;
     }
 
@@ -1001,6 +1002,7 @@ hr.soft {
         font-size: 12px;
         font-weight: 300;
         text-align: left;
+        padding-right: 20px;
         padding-left: 10px;
     }
 
