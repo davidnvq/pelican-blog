@@ -983,7 +983,8 @@ hr.soft {
         font-size: 12px;
         font-weight:500;
         color: #113f7c;
-        padding-left: 0px;
+        padding-right: 0px;
+        text-align: right;
 
     }
 
