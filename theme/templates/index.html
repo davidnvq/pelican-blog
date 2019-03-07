@@ -70,6 +70,7 @@ Table of Contents
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
+            <!-- button appears when width is too small -->
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -77,25 +78,26 @@ Table of Contents
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Quang Nguyen</a>
+            <!-- Nav brand or logo -->
+            <a class="navbar-brand" href="#" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Quang Nguyen</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/blog">Blog</a></li>
+                <li><a href="/blog" data-toggle="collapse" data-target=".navbar-collapse.show">Blog</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">
                         About <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="/#bio">Biography</a></li>
-                        <li><a href="/#timeline">Timeline</a></li>
-                        <li><a href="/#publications">Publications</a></li>
-                        <li><a href="/#timeline-award">Scholarships and Awards</a></li>
+                        <li><a href="/#bio" data-toggle="collapse" data-target=".navbar-collapse.show">Biography</a></li>
+                        <li><a href="/#timeline" data-toggle="collapse" data-target=".navbar-collapse.show">Timeline</a></li>
+                        <li><a href="/#publications" data-toggle="collapse" data-target=".navbar-collapse.show">Publications</a></li>
+                        <li><a href="/#timeline-award" data-toggle="collapse" data-target=".navbar-collapse.show">Scholarships and Awards</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="/#my-CV"><strong>Download CV</strong></a></li>
+                        <li><a href="/#my-CV" data-toggle="collapse" data-target=".navbar-collapse.show"><strong>Download CV</strong></a></li>
                     </ul>
                 </li>
             </ul>
@@ -107,12 +109,12 @@ Table of Contents
                         Blog Categories <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="/blog/#nlp"></a></li>
+                        <li><a href="/blog/#nlp" data-toggle="collapse" data-target=".navbar-collapse.show"></a></li>
                         <li><a href="#">NLP Posts</a></li>
-                        <li><a href="/blog/#cv">Computer Vision Posts</a></li>
-                        <li><a href="/blog/#programming">Programming Tutorials</a></li>
+                        <li><a href="/blog/#cv" data-toggle="collapse" data-target=".navbar-collapse.show">Computer Vision Posts</a></li>
+                        <li><a href="/blog/#programming" data-toggle="collapse" data-target=".navbar-collapse.show">Programming Tutorials</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="/blog/#personal">Personal Thoughts</a></li>
+                        <li><a href="/blog/#personal" data-toggle="collapse" data-target=".navbar-collapse.show">Personal Thoughts</a></li>
                     </ul>
                 </li>
             </ul>
@@ -879,7 +881,7 @@ Table of Contents
 
         <h2 class="footer-heading">
             <a class="page-link" href="https://quangdtsc.github.io">
-                About Nguyen Van Quang
+                To the Top
             </a></h2>
 
         <div class="footer-col-wrapper">
