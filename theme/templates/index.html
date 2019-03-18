@@ -66,6 +66,7 @@ Table of Contents
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -84,22 +85,29 @@ Table of Contents
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/blog" data-toggle="collapse" data-target=".navbar-collapse.show">Blog</a></li>
+                <li><a href="/" data-toggle="collapse" data-target=".navbar-collapse">Blog</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">
                         About <span class="caret"></span>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/#bio" data-toggle="collapse" data-target=".navbar-collapse.show">Biography</a></li>
-                        <li><a href="/#timeline" data-toggle="collapse" data-target=".navbar-collapse.show">Timeline</a></li>
-                        <li><a href="/#publications" data-toggle="collapse" data-target=".navbar-collapse.show">Publications</a></li>
-                        <li><a href="/#timeline-award" data-toggle="collapse" data-target=".navbar-collapse.show">Scholarships and Awards</a></li>
+                    <ul class="dropdown-menu collapse">
+                        <li><a href="/#bio" class="dropdown-item js-btn-bio" data-toggle="collapse"
+                               data-target=".navbar-collapse">Biography</a>
+                        </li>
+                        <li><a href="/#timeline" class="dropdown-item js-btn-timeline" data-toggle="collapse"
+                               data-target=".navbar-collapse">Timeline</a>
+                        </li>
+                        <li><a href="/#publications" class="dropdown-item js-btn-publications" data-toggle="collapse"
+                               data-target=".navbar-collapse">Publications</a>
+                        </li>
+                        <li><a href="/#awards" class="dropdown-item js-btn-awards" data-toggle="collapse"
+                               data-target=".navbar-collapse">Scholarships
+                            and Awards</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href='/assets/resume/CV.pdf' data-toggle="collapse" data-target=".navbar-collapse
-                        .show"><strong>Download CV</strong></a></li>
+                        <li><a href='/assets/resume/CV.pdf' data-toggle="collapse" data-target=".navbar-collapse"><strong>Download CV</strong></a></li>
                     </ul>
                 </li>
             </ul>
@@ -111,12 +119,15 @@ Table of Contents
                         Blog Categories <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="/blog/#nlp" data-toggle="collapse" data-target=".navbar-collapse.show"></a></li>
-                        <li><a href="#">NLP Posts</a></li>
-                        <li><a href="/blog/#cv" data-toggle="collapse" data-target=".navbar-collapse.show">Computer Vision Posts</a></li>
-                        <li><a href="/blog/#programming" data-toggle="collapse" data-target=".navbar-collapse.show">Programming Tutorials</a></li>
+                        <li><a href="/" data-toggle="collapse" data-target=".navbar-collapse.show"></a></li>
+                        <li><a href="/">NLP Posts</a></li>
+                        <li><a href="/" data-toggle="collapse" data-target=".navbar-collapse.show">Computer
+                            Vision Posts</a></li>
+                        <li><a href="/" data-toggle="collapse" data-target=".navbar-collapse.show">Programming
+                            Tutorials</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="/blog/#personal" data-toggle="collapse" data-target=".navbar-collapse.show">Personal Thoughts</a></li>
+                        <li><a href="/" data-toggle="collapse" data-target=".navbar-collapse.show">Personal
+                            Thoughts</a></li>
                     </ul>
                 </li>
             </ul>
@@ -175,7 +186,7 @@ Table of Contents
     <div class="wrapper">
 
         <!-- Biography -->
-        <section id="bio" class="bio">
+        <section id="bio" class="bio js-section-bio">
             <h1 class="md-heading text-center">
                 <i class="fa fa-id-card" aria-hidden="true"></i>
                 Biography
@@ -198,7 +209,7 @@ Table of Contents
         </section>
 
         <!-- Timeline -->
-        <section id="timeline" class="timeline-edu-brief">
+        <section id="timeline" class="timeline-edu-brief js-section-timeline">
             <h1 class="md-heading text-center">
                 <i class="fa fa-tasks" aria-hidden="true"></i>
                 Timeline
@@ -335,7 +346,7 @@ Table of Contents
         </section>
 
         <!-- Publications -->
-        <section id="publications" class="publications">
+        <section id="publications" class="publications js-section-publications">
             <h1 class="md-heading text-center">
                 <i class="fa fa-file" aria-hidden="true"></i>
                 Selected Publications
@@ -676,7 +687,7 @@ Table of Contents
         </section>
 
         <!-- Awards -->
-        <section id="timeline-award" class="timeline-a">
+        <section id="awards" class="timeline-a js-section-awards">
             <h1 class="md-heading text-center">
                 <i class="fa fa-certificate" aria-hidden="true"></i>
                 Scholarships and Awards
@@ -860,7 +871,6 @@ Table of Contents
                         Awarded by Kyoto University to students joining Machine Learning Summer School 2015
                     </div>
                 </div>
-
             </div>
 
             <div class="button" style="padding-left:12.5%;">
@@ -951,6 +961,127 @@ Table of Contents
         })
     });
 </script>
+
+<!-- Scroll section
+https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/
+-->
+<script>
+    function scrollIt(destination, duration = 200, easing = 'linear', callback) {
+
+        const easings = {
+            linear(t) {
+                return t;
+            },
+            easeInQuad(t) {
+                return t * t;
+            },
+            easeOutQuad(t) {
+                return t * (2 - t);
+            },
+            easeInOutQuad(t) {
+                return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+            },
+            easeInCubic(t) {
+                return t * t * t;
+            },
+            easeOutCubic(t) {
+                return (--t) * t * t + 1;
+            },
+            easeInOutCubic(t) {
+                return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+            },
+            easeInQuart(t) {
+                return t * t * t * t;
+            },
+            easeOutQuart(t) {
+                return 1 - (--t) * t * t * t;
+            },
+            easeInOutQuart(t) {
+                return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t;
+            },
+            easeInQuint(t) {
+                return t * t * t * t * t;
+            },
+            easeOutQuint(t) {
+                return 1 + (--t) * t * t * t * t;
+            },
+            easeInOutQuint(t) {
+                return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t;
+            }
+        };
+
+        const start = window.pageYOffset;
+        const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+
+        const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+        const destinationOffset = typeof destination === 'number' ? destination -100 : destination.offsetTop - 60;
+        const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
+
+        if ('requestAnimationFrame' in window === false) {
+            window.scroll(0, destinationOffsetToScroll);
+            if (callback) {
+                callback();
+            }
+            return;
+        }
+
+        function scroll() {
+            const now = 'now' in window.performance ? performance.now() : new Date().getTime();
+            const time = Math.min(1, ((now - startTime) / duration));
+            const timeFunction = easings[easing](time);
+            window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
+
+            if (window.pageYOffset === destinationOffsetToScroll) {
+                if (callback) {
+                    callback();
+                }
+                return;
+            }
+
+            requestAnimationFrame(scroll);
+        }
+
+        scroll();
+    }
+    document.querySelector('.js-btn-bio').addEventListener('click', () => {
+        scrollIt(
+            document.querySelector('.js-section-bio'),
+            300,
+            'easeOutQuad',
+            () => console.log(`Just finished scrolling to ${window.pageYOffset}px`)
+        );
+    });
+
+    document.querySelector('.js-btn-timeline').addEventListener('click', () => {
+        scrollIt(
+            document.querySelector('.js-section-timeline'),
+            300,
+            'easeOutQuad',
+            () => console.log(`Just finished scrolling to ${window.pageYOffset}px`)
+        );
+    });
+
+    document.querySelector('.js-btn-publications').addEventListener('click', () => {
+        scrollIt(
+            document.querySelector('.js-section-publications'),
+            300,
+            'easeOutQuad',
+            () => console.log(`Just finished scrolling to ${window.pageYOffset}px`)
+        );
+    });
+    document.querySelector('.js-btn-awards').addEventListener('click', () => {
+        scrollIt(
+            document.querySelector('.js-section-awards'),
+            300,
+            'easeOutQuad',
+            () => console.log(`Just finished scrolling to ${window.pageYOffset}px`)
+        );
+    });
+
+
+</script>
+
 </body>
 
 </html>
