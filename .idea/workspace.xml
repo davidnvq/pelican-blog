@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f8783-0eec-41ad-8776-ccc868b60898" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/theme/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/theme/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/assets/projects/face_detection/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,7 +13,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theme/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="276">
@@ -22,11 +22,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="141" column="24" selection-start-line="141" selection-start-column="24" selection-end-line="141" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-truncated-model/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="81" column="24" lean-forward="true" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>body {</find>
       <find>Brand</find>
       <find>timeline-desc</find>
       <find>profile</find>
@@ -56,6 +73,7 @@
       <find>torch-ex</find>
       <find>face_detection</find>
       <find>torch-extract-model.md</find>
+      <find>projects</find>
     </findStrings>
     <replaceStrings>
       <replace>/theme/js</replace>
@@ -87,7 +105,6 @@
         <option value="$PROJECT_DIR$/content/pages/awards/index.html" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/output/assets/projects/face_detection/index.html" />
-        <option value="$PROJECT_DIR$/content/assets/projects/face_detection/index.html" />
         <option value="$PROJECT_DIR$/content/assets/projects/face_detection/torch-truncated-model/index.html" />
         <option value="$PROJECT_DIR$/content/assets/projects/face_detection/torch-getting-started/index.html" />
         <option value="$PROJECT_DIR$/content/assets/projects/face_detection/torch-environment-setup/index.html" />
@@ -95,6 +112,7 @@
         <option value="$PROJECT_DIR$/content/assets/projects/face_detection/torch-build-model/index.html" />
         <option value="$PROJECT_DIR$/content/assets/projects/face_detection/torch-train-model/index.html" />
         <option value="$PROJECT_DIR$/theme/templates/index.html" />
+        <option value="$PROJECT_DIR$/content/assets/projects/face_detection/index.html" />
       </list>
     </option>
   </component>
@@ -141,6 +159,23 @@
               <item name="content" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="face_detection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="face_detection" type="462c0819:PsiDirectoryNode" />
+              <item name="torch-truncated-model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
@@ -231,9 +266,9 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.5274637" visible="true" weight="0.32794118" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.5274637" visible="true" weight="0.32794118" />
       <window_info anchor="right" id="Remote Host" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33925685" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33925685" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
@@ -578,20 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-truncated-model/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-environment-setup/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -620,6 +641,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="426" column="36" lean-forward="true" selection-start-line="426" selection-start-column="36" selection-end-line="426" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-truncated-model/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="81" column="24" lean-forward="true" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="141" column="24" selection-start-line="141" selection-start-column="24" selection-end-line="141" selection-end-column="24" />
         </state>
       </provider>
     </entry>
