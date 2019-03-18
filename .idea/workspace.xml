@@ -2,55 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f8783-0eec-41ad-8776-ccc868b60898" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/content/assets/papers/face_detection.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/papers/me_recognition.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/css/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/css/theme_extra.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/Facenet_resnet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/anchor_matching.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/det_block1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/det_block2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/facenet_det_block.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/feature_extractor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/general_model.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/many_anchors_in_cell.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/size_of_anchor0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/size_of_anchor1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/ssd7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/tod_documentation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/truncated_facenet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/img/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/js/jquery-2.1.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/js/modernizr-2.8.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/js/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/search/lunr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/search/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/search/search_index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/search/worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/sitemap.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/sitemap.xml.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-build-model/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-encoding/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-environment-setup/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-getting-started/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-inference/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-prepare-dataset/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-train-model/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-truncated-model/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/assets/resume/CV.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/pages/awards/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/pages/awards/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/pages/timeline/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/pages/timeline/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/theme/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/assets/projects/face_detection/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-build-model/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-build-model/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-encoding/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-encoding/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-environment-setup/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-environment-setup/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-getting-started/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-getting-started/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-train-model/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-train-model/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-truncated-model/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-truncated-model/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,7 +19,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theme/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
@@ -70,11 +28,116 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Makefile">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+            <state relative-caret-position="93">
+              <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-truncated-model/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-train-model/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+              <folding>
+                <element signature="e#4325#4331#0#HTML" expanded="true" />
+                <element signature="e#4832#4839#0#HTML" expanded="true" />
+                <element signature="e#4905#4912#0#HTML" expanded="true" />
+                <element signature="e#7142#7146#0#HTML" expanded="true" />
+                <element signature="e#7146#7150#0#HTML" expanded="true" />
+                <element signature="e#7150#7154#0#HTML" expanded="true" />
+                <element signature="e#7214#7218#0#HTML" expanded="true" />
+                <element signature="e#7218#7222#0#HTML" expanded="true" />
+                <element signature="e#7222#7226#0#HTML" expanded="true" />
+                <element signature="e#7252#7256#0#HTML" expanded="true" />
+                <element signature="e#7268#7272#0#HTML" expanded="true" />
+                <element signature="e#7272#7276#0#HTML" expanded="true" />
+                <element signature="e#7276#7280#0#HTML" expanded="true" />
+                <element signature="e#7303#7307#0#HTML" expanded="true" />
+                <element signature="e#7315#7319#0#HTML" expanded="true" />
+                <element signature="e#7331#7335#0#HTML" expanded="true" />
+                <element signature="e#7335#7339#0#HTML" expanded="true" />
+                <element signature="e#7339#7343#0#HTML" expanded="true" />
+                <element signature="e#7369#7373#0#HTML" expanded="true" />
+                <element signature="e#7386#7390#0#HTML" expanded="true" />
+                <element signature="e#7390#7394#0#HTML" expanded="true" />
+                <element signature="e#7394#7398#0#HTML" expanded="true" />
+                <element signature="e#7473#7477#0#HTML" expanded="true" />
+                <element signature="e#7477#7481#0#HTML" expanded="true" />
+                <element signature="e#7481#7485#0#HTML" expanded="true" />
+                <element signature="e#7519#7523#0#HTML" expanded="true" />
+                <element signature="e#7523#7527#0#HTML" expanded="true" />
+                <element signature="e#7527#7531#0#HTML" expanded="true" />
+                <element signature="e#7561#7565#0#HTML" expanded="true" />
+                <element signature="e#7565#7569#0#HTML" expanded="true" />
+                <element signature="e#7569#7573#0#HTML" expanded="true" />
+                <element signature="e#7597#7601#0#HTML" expanded="true" />
+                <element signature="e#7601#7605#0#HTML" expanded="true" />
+                <element signature="e#7605#7609#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#11314#11321#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#1;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#11454#11461#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-getting-started/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-environment-setup/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-encoding/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-build-model/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output/assets/projects/face_detection/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="102" column="9" selection-start-line="72" selection-end-line="102" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -88,9 +151,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>page-content</find>
-      <find>timeline-</find>
-      <find>timeline-date</find>
       <find>body {</find>
       <find>Brand</find>
       <find>timeline-desc</find>
@@ -117,7 +177,10 @@
       <find>Assoc</find>
       <find>Quang Nguyen</find>
       <find>Please</find>
+      <find>Environment setup</find>
       <find>face_detection</find>
+      <find>torch-ex</find>
+      <find>torch-extract-model.md</find>
     </findStrings>
     <replaceStrings>
       <replace>/theme/js</replace>
@@ -149,6 +212,14 @@
         <option value="$PROJECT_DIR$/content/pages/awards/index.html" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/theme/templates/index.html" />
+        <option value="$PROJECT_DIR$/output/assets/projects/face_detection/index.html" />
+        <option value="$PROJECT_DIR$/content/assets/projects/face_detection/index.html" />
+        <option value="$PROJECT_DIR$/content/assets/projects/face_detection/torch-truncated-model/index.html" />
+        <option value="$PROJECT_DIR$/content/assets/projects/face_detection/torch-getting-started/index.html" />
+        <option value="$PROJECT_DIR$/content/assets/projects/face_detection/torch-environment-setup/index.html" />
+        <option value="$PROJECT_DIR$/content/assets/projects/face_detection/torch-encoding/index.html" />
+        <option value="$PROJECT_DIR$/content/assets/projects/face_detection/torch-build-model/index.html" />
+        <option value="$PROJECT_DIR$/content/assets/projects/face_detection/torch-train-model/index.html" />
       </list>
     </option>
   </component>
@@ -196,6 +267,103 @@
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="projects" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="face_detection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="face_detection" type="462c0819:PsiDirectoryNode" />
+              <item name="torch-build-model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="face_detection" type="462c0819:PsiDirectoryNode" />
+              <item name="torch-encoding" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="face_detection" type="462c0819:PsiDirectoryNode" />
+              <item name="torch-environment-setup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="face_detection" type="462c0819:PsiDirectoryNode" />
+              <item name="torch-getting-started" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="face_detection" type="462c0819:PsiDirectoryNode" />
+              <item name="torch-prepare-dataset" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="face_detection" type="462c0819:PsiDirectoryNode" />
+              <item name="torch-train-model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="face_detection" type="462c0819:PsiDirectoryNode" />
+              <item name="torch-truncated-model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="face_detection" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -217,11 +385,11 @@
       <recent name="$PROJECT_DIR$/theme/static/js" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/assets/projects/face_detection" />
       <recent name="$PROJECT_DIR$/content/assets/resume" />
       <recent name="$PROJECT_DIR$/content/assets/projects" />
       <recent name="$PROJECT_DIR$/content/assets/papers" />
       <recent name="$PROJECT_DIR$/content/pages/awards" />
-      <recent name="$PROJECT_DIR$/output/images/background" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -260,6 +428,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49919224" weight="0.32965517" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.47253636" side_tool="true" visible="true" weight="0.32794118" />
@@ -269,7 +438,7 @@
       <window_info anchor="bottom" id="Python Console" />
       <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.5274637" visible="true" weight="0.32794118" />
       <window_info anchor="right" id="Remote Host" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2253635" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33925685" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
@@ -558,6 +727,104 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="422" column="30" selection-start-line="422" selection-start-column="30" selection-end-line="422" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/assets/projects/face_detection/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="102" column="9" selection-start-line="72" selection-end-line="102" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-truncated-model/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-environment-setup/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-encoding/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-build-model/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-getting-started/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/torch-train-model/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+          <folding>
+            <element signature="e#4325#4331#0#HTML" expanded="true" />
+            <element signature="e#4832#4839#0#HTML" expanded="true" />
+            <element signature="e#4905#4912#0#HTML" expanded="true" />
+            <element signature="e#7142#7146#0#HTML" expanded="true" />
+            <element signature="e#7146#7150#0#HTML" expanded="true" />
+            <element signature="e#7150#7154#0#HTML" expanded="true" />
+            <element signature="e#7214#7218#0#HTML" expanded="true" />
+            <element signature="e#7218#7222#0#HTML" expanded="true" />
+            <element signature="e#7222#7226#0#HTML" expanded="true" />
+            <element signature="e#7252#7256#0#HTML" expanded="true" />
+            <element signature="e#7268#7272#0#HTML" expanded="true" />
+            <element signature="e#7272#7276#0#HTML" expanded="true" />
+            <element signature="e#7276#7280#0#HTML" expanded="true" />
+            <element signature="e#7303#7307#0#HTML" expanded="true" />
+            <element signature="e#7315#7319#0#HTML" expanded="true" />
+            <element signature="e#7331#7335#0#HTML" expanded="true" />
+            <element signature="e#7335#7339#0#HTML" expanded="true" />
+            <element signature="e#7339#7343#0#HTML" expanded="true" />
+            <element signature="e#7369#7373#0#HTML" expanded="true" />
+            <element signature="e#7386#7390#0#HTML" expanded="true" />
+            <element signature="e#7390#7394#0#HTML" expanded="true" />
+            <element signature="e#7394#7398#0#HTML" expanded="true" />
+            <element signature="e#7473#7477#0#HTML" expanded="true" />
+            <element signature="e#7477#7481#0#HTML" expanded="true" />
+            <element signature="e#7481#7485#0#HTML" expanded="true" />
+            <element signature="e#7519#7523#0#HTML" expanded="true" />
+            <element signature="e#7523#7527#0#HTML" expanded="true" />
+            <element signature="e#7527#7531#0#HTML" expanded="true" />
+            <element signature="e#7561#7565#0#HTML" expanded="true" />
+            <element signature="e#7565#7569#0#HTML" expanded="true" />
+            <element signature="e#7569#7573#0#HTML" expanded="true" />
+            <element signature="e#7597#7601#0#HTML" expanded="true" />
+            <element signature="e#7601#7605#0#HTML" expanded="true" />
+            <element signature="e#7605#7609#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#11314#11321#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#1;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#11454#11461#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
