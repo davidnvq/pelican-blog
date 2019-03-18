@@ -5,25 +5,25 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="None">
   
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Home - Face Detection Documentation</title>
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Getting started - Face Detection Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Home";
-    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_name = "Getting started";
+    var mkdocs_page_input_path = "torch-getting-started.md";
     var mkdocs_page_url = null;
   </script>
   
-  <script src="js/jquery-2.1.1.min.js" defer></script>
-  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
@@ -36,9 +36,9 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> Face Detection Documentation</a>
+        <a href=".." class="icon icon-home"> Face Detection Documentation</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -52,41 +52,56 @@
 		
     <span class="caption-text">Pytorch Object Detection</span>
     <ul class="subnav">
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="torch-getting-started/">Getting started</a>
+    <a class="current" href="./">Getting started</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#contents">Contents</a></li>
+    
+
+    <li class="toctree-l3"><a href="#1-environment-setup">1. Environment setup</a></li>
+    
+
+    <li class="toctree-l3"><a href="#2-getting-started-30-seconds-to-face-detection">2. Getting started: 30 seconds to Face Detection</a></li>
+    
+
+    <li class="toctree-l3"><a href="#4-the-complete-script-for-end-to-end">4. The complete script for end-to-end</a></li>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="torch-environment-setup/">Environment setup</a>
+    <a class="" href="../torch-environment-setup/">Environment setup</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="torch-prepare-dataset/">Prepare the dataset</a>
+    <a class="" href="../torch-prepare-dataset/">Prepare the dataset</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="torch-encoding/">How to encode the grouth truth boxes</a>
+    <a class="" href="../torch-encoding/">How to encode the grouth truth boxes</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="torch-build-model/">Build some popular model</a>
+    <a class="" href="../torch-build-model/">Build some popular model</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="torch-extract-model.md">Extract the smaller model from pretrained model</a>
+    <a class="" href="../torch-extract-model.md">Extract the smaller model from pretrained model</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="torch-train-model/">Train the model</a>
+    <a class="" href="../torch-train-model/">Train the model</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="torch-inference/">Do inference from the trained model</a>
+    <a class="" href="../torch-inference/">Do inference from the trained model</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="torch-truncated-model/">Truncate the first detection layers from models</a>
+    <a class="" href="../torch-truncated-model/">Truncate the first detection layers from models</a>
                 </li>
     </ul>
 	    </li>
@@ -101,7 +116,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">Face Detection Documentation</a>
+        <a href="..">Face Detection Documentation</a>
       </nav>
 
       
@@ -109,11 +124,15 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".">Docs</a> &raquo;</li>
+    <li><a href="..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Pytorch Object Detection &raquo;</li>
+        
+      
     
-    <li>Home</li>
+    <li>Getting started</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -123,30 +142,176 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="object-detection-documentation">Object Detection Documentation</h3>
-<p><img alt="Object Detection model" src="/images/general_model.png" /></p>
-<p>For full documentation visit <a href="https://mkdocs.org">mkdocs.org</a>.</p>
-<h3 id="install-mkdocs">Install mkdocs</h3>
-<pre><code>$ pip install mkdocs
+                <h3 id="contents">Contents</h3>
+<ol>
+<li>
+<p><a href="#1-environment-setup">Environment setup</a></p>
+</li>
+<li>
+<p><a href="#2-getting-started-30-seconds-to-face-detection">Getting started in 30 seconds to Face Detection</a></p>
+</li>
+<li>
+<p><a href="/torch-prepare-dataset/">How to prepare the dataset for training and validation</a></p>
+</li>
+<li>
+<p><a href="/torch-build-model/">How to build a face detection model</a></p>
+</li>
+<li>
+<p><a href="/torch-train-model/">How to train the model</a></p>
+</li>
+<li>
+<p><a href="/torch-inference/">How to do inference</a></p>
+</li>
+</ol>
+<h3 id="1-environment-setup">1. Environment setup</h3>
+<p>To use <code>torch_object_detection</code> package, you need to install the several dependencies. I 
+strongly recommend using <code>conda</code> package with the below command in your terminal:</p>
+<ul>
+<li><strong>Install some presiquite dependencies</strong></li>
+</ul>
+<p><code>1</code>. Create the environment and install some required packages from <code>torch_environment.yml</code> file:</p>
+<pre><code>$ conda env create --name pytorch_p36 -f torch_environment.yml
 </code></pre>
 
-<h3 id="commands">Commands</h3>
+<p><code>2</code>. Activate the environment:</p>
+<pre><code>$ source activate pytorch_p36
+</code></pre>
+
+<p>Now you are ready to use the <code>torch_object_detection</code> for Face Detection.</p>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
+<li><strong>Install <code>torch_object_detection</code> as a Python package</strong></li>
 </ul>
-<h3 id="project-layout">Project layout</h3>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<pre><code>$ pip install dist/torch_object_detection-1.0.1-py3-none-any.whl
+</code></pre>
+
+<blockquote>
+<p>For more information about the environment setup, please visit <a href="/torch-environment-setup/">Setting up environment</a>.</p>
+</blockquote>
+<h3 id="2-getting-started-30-seconds-to-face-detection">2. Getting started: 30 seconds to Face Detection</h3>
+<ul>
+<li>Launch Python interactive shell, (or ipython, or Jupyter notebook) and import 
+<code>torch_object_detection</code> package:</li>
+</ul>
+<pre><code>&gt;&gt; import torch
+&gt;&gt; import torch_object_detection
+&gt;&gt; import torch_object_detection.models
+&gt;&gt; import torch_object_detection.utils
+</code></pre>
+
+<ul>
+<li><strong>Create the Face Detection model and load the trained weights</strong></li>
+</ul>
+<p><code>1.</code> Create the model</p>
+<p>We create <code>FaceNet</code> with 2 classes (<code>background</code> and <code>face</code>) with 
+<code>ResNet101</code> as the base network: </p>
+<pre><code class="python">&gt;&gt; net = torch_object_detection.models.FaceNet(num_classes=2, base=torch_object_detection.models.Base101())
+</code></pre>
+
+<p><code>2.</code> Load the trained weights</p>
+<pre><code class="python">&gt;&gt; net.load_state_dict(torch.load('path/to/trained_model.pkl'))
+</code></pre>
+
+<ul>
+<li><strong>Load the image and make detections</strong></li>
+</ul>
+<p><code>3.1.</code> Load image and preprocess the image</p>
+<pre><code class="python">&gt;&gt; image = torch_object_detection.utils.load_image('path/to/img', height=320, width=480)   
+&gt;&gt; tensor = torch_object_detection.utils.preprocess_image(image)                              
+</code></pre>
+
+<p><code>3.2.</code> Make detections</p>
+<ul>
+<li>
+<p>If we use only CPU, please set <code>device='cpu'</code>. </p>
+</li>
+<li>
+<p>If we use a GPU, please set <code>device='cuda'</code> or maybe more specifically <code>device='cuda:0'</code> to 
+indicate which GPU.</p>
+</li>
+</ul>
+<pre><code class="python">&gt;&gt; det_boxes, det_scores, det_labels = torch_object_detection.utils.detect(tensor, net,
+                                                                           device='cpu',
+                                                                           score_thresh=0.3,
+                                                                           nms_thresh=0.3)
+</code></pre>
+
+<p><code>3.3.</code> Draw the detected bounding boxes and scores and show the result</p>
+<pre><code class="python">&gt;&gt; torch_object_detection.utils.draw_detections(image, det_boxes, det_scores, det_labels)
+</code></pre>
+
+<h3 id="4-the-complete-script-for-end-to-end">4. The complete script for end-to-end</h3>
+<p>The script can be found at <code>inference.py</code> file.</p>
+<pre><code class="python"># test_inference.py
+
+import torch
+from torch_object_detection.utils import BoxCoder, load_image, prepocess_image, draw_detections, detect
+from torch_object_detection.models import FaceNet, Base101
+
+DEVICE = 'cuda'
+NUM_CLASSES = 2
+MODEL_PATH = ''
+img_path = ''
+
+# 1. Create and load trained weights
+net = FaceNet(num_classes=NUM_CLASSES, base=Base101())
+net.load_state_dict(torch.load(MODEL_PATH, map_location='cpu')) # first load to cpu, 
+# and then move to DEVICE if needed.
+net = net.to(DEVICE)
+
+# 2. Load image, convert and normalize it.
+image = load_image(img_path=img_path, height=640, width=640)
+tensor = prepocess_image(image)
+
+# 3. Create the boxcoder for decoding the outputs
+# Feature map sizes at each detection layer
+fm_sizes = [[160, 160],
+            [80, 80],
+            [40, 40],
+            [20, 20],
+            [10, 10],
+            [5, 5]]
+# The referenced size of anchors at each detection layer
+anchor_sizes = (16, 32, 64, 128, 256, 512),
+
+# The aspect ratios of the anchors at each detection layer
+aspect_ratios = [[1, ], [1, ], [1, ], [1, ], [1, ], [1, ]]
+
+box_coder = BoxCoder(img_size=(HEIGHT, WIDTH),
+                     fm_sizes=fm_sizes,
+                     anchor_sizes=anchor_sizes,
+                     aspect_ratios=aspect_ratios)
+
+# If you don't want to create box_coder manually, just set `box_coder=None`
+# 4. Make detection
+det_boxes, det_scores, det_labels = detect(tensor, net,
+                                           box_coder=None,
+                                           device=DEVICE,
+                                           score_thresh=0.3,
+                                           nms_thresh=0.3)
+
+# 5. Show the detected boxes and confidence scores
+draw_detections(image, boxes=det_boxes, scores=det_scores, labels=det_labels)
+</code></pre>
+
+<p>To run the script:</p>
+<p><code>1.</code> Activate the environment</p>
+<pre><code>&gt;&gt; source activate pytorch_p36
+</code></pre>
+
+<p><code>2.</code> Compile and run it</p>
+<pre><code>&gt;&gt; python test_inference.py
 </code></pre>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../torch-environment-setup/" class="btn btn-neutral float-right" title="Environment setup">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
   
 
   <hr/>
@@ -171,16 +336,13 @@ docs/
       
       
       
+        <span style="margin-left: 15px"><a href="../torch-environment-setup/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
     </span>
 </div>
-    <script>var base_url = '.';</script>
-    <script src="js/theme.js" defer></script>
-      <script src="search/main.js" defer></script>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
 
 </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2019-03-18 13:03:07
--->
