@@ -983,9 +983,6 @@ hr.soft {
         font-size: 12px;
         font-weight:500;
         color: #113f7c;
-        text-align: right;
-
-
     }
 
     .timeline-a-title {
@@ -1022,10 +1019,9 @@ hr.soft {
 }
 
 .timeline-edu-start {
-    width: -webkit-calc(100% - 2 * (20px));
-    width: calc(100% - 2 * (20px));
+    margin-left: -webkit-calc(0%);
     text-align: center;
-    padding: 20px
+    padding: 10px;
 }
 
 .timeline-edu-item:before {

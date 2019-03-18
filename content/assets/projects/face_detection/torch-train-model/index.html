@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Train the model - Face Detection Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Train the model";
+    var mkdocs_page_input_path = "torch-train-model.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Face Detection Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Pytorch Object Detection</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../torch-getting-started/">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-environment-setup/">Environment setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-prepare-dataset/">Prepare the dataset</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-encoding/">How to encode the grouth truth boxes</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-build-model/">Build some popular model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-extract-model.md">Extract the smaller model from pretrained model</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Train the model</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#train-a-model-for-object-detection">Train a model for object detection</a></li>
+    
+
+    <li class="toctree-l3"><a href="#1-prepare-the-dataloader-for-training-and-validation-dataset">1. Prepare the DataLoader for training and validation dataset</a></li>
+    
+
+    <li class="toctree-l3"><a href="#2-create-the-model">2. Create the model</a></li>
+    
+
+    <li class="toctree-l3"><a href="#3-define-the-optimizer-and-loss">3. Define the optimizer and loss</a></li>
+    
+
+    <li class="toctree-l3"><a href="#4-define-training-and-validation-steps">4. Define training and validation steps.</a></li>
+    
+
+    <li class="toctree-l3"><a href="#5-start-training-and-validation">5. Start training and validation.</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-inference/">Do inference from the trained model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-truncated-model/">Truncate the first detection layers from models</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Face Detection Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Pytorch Object Detection &raquo;</li>
+        
+      
+    
+    <li>Train the model</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="train-a-model-for-object-detection">Train a model for object detection</h3>
+<p>To perform training the model, you should visit the documentation for <a href="/torch-prepare-dataset/">part 1</a>, 
+and <a href="/torch-encoding/">part 2</a> to get the idea how to  prepare the dataset and how to build a 
+object detection model. For more details of the training code, please view <code>train.py</code> as an example.</p>
+<h3 id="1-prepare-the-dataloader-for-training-and-validation-dataset">1. Prepare the DataLoader for training and validation dataset</h3>
+<p>Please visit <a href="/torch-prepare-dataset/">Prepare the training dataset</a> and <a href="/torch-encoding/">How to encode bounding 
+boxes and labels for dataset</a>.</p>
+<pre><code class="python">train_loader = ...
+val_loader = ... # optionally
+
+</code></pre>
+
+<h3 id="2-create-the-model">2. Create the model</h3>
+<p>Please visit <a href="/torch-build-model/">Build an object detection model</a> to understand how to build your 
+own model.</p>
+<pre><code class="python">DEVICE = 'cuda'
+
+# Initiate a model
+net = ... # your model
+
+# Move it to 'GPUs'
+net = net.to(DEVICE)
+
+# If you have two GPUs, you can train it in parallel.
+net = torch.nn.DataParallel(net)
+</code></pre>
+
+<h3 id="3-define-the-optimizer-and-loss">3. Define the optimizer and loss</h3>
+<pre><code class="python"># The loss
+criterion = SSDLoss(num_classes=NUM_CLASSES, alpha=4.0)
+
+# The optimizer
+optimizer = torch.optim.SGD(net.parameters(), lr=lr, momentum=0.9, weight_decay=1e-4)
+scheduler = torch.optim.MultiStepLR(optimizer, milestones=[50, 100, 180], gamma=0.1)
+
+
+''' We use MultiStepLR for schedule the learning rate of optimizer during the training
+    Args:
+        optimizer (Optimizer): Wrapped optimizer.
+        milestones (list): List of epoch indices. Must be increasing.
+        gamma (float): Multiplicative factor of learning rate decay.
+            Default: 0.1.
+        last_epoch (int): The index of last epoch. Default: -1.
+
+    Example:
+        &gt;&gt;&gt; # Assuming optimizer uses lr = 0.05 for all groups
+        &gt;&gt;&gt; # lr = 0.05     if epoch &lt; 30
+        &gt;&gt;&gt; # lr = 0.005    if 30 &lt;= epoch &lt; 80
+        &gt;&gt;&gt; # lr = 0.0005   if epoch &gt;= 80
+        &gt;&gt;&gt; scheduler = MultiStepLR(optimizer, milestones=[30,80], gamma=0.1)
+        &gt;&gt;&gt; for epoch in range(100):
+        &gt;&gt;&gt;     scheduler.step()
+        &gt;&gt;&gt;     train(...)
+        &gt;&gt;&gt;     validate(...)
+'''
+</code></pre>
+
+<h3 id="4-define-training-and-validation-steps">4. Define training and validation steps.</h3>
+<p><code>1</code>. Training step</p>
+<pre><code class="python"># Define training step
+def train(epoch):
+    # change the mode of the network to `train`
+    net.train()
+    train_loss = 0
+
+    for batch_idx, (inputs, loc_targets, cls_targets) in enumerate(train_loader):
+        # Move the data to `DEVICE` (`cuda`).
+        inputs = inputs.to(DEVICE)
+        loc_targets = loc_targets.to(device=DEVICE)
+        cls_targets = cls_targets.to(device=DEVICE)
+
+        # Remember that we need to zero out the gradients before doing forward pass 
+        # because gradients will be aggregated from previous epochs.
+        optimizer.zero_grad()
+
+        # Do forward pass
+        loc_preds, cls_preds = net(inputs)
+
+        # Compute loss
+        loss = criterion(loc_preds, loc_targets, cls_preds, cls_targets)
+
+        # Do backward pass
+        loss.backward()
+        optimizer.step()
+
+        # Some auxilaury steps 
+        train_loss += loss.item()
+
+    train_loss /= (batch_idx + 1)
+
+    # Save the current model weights.
+    ...
+
+    # Update the best model weights if any.
+    ...
+
+    return train_loss
+</code></pre>
+
+<p><code>2</code>. Validation step</p>
+<pre><code class="python"># Define eval step
+def eval(epoch):
+    # Change the mode of network to `eval`
+    net.eval()
+
+    val_loss = 0
+    # We don't need to calculate the gradients for parameters
+    with torch.no_grad():
+        for batch_idx, (inputs, loc_targets, cls_targets) in enumerate(val_loader):
+            # Move the data to `DEVICE` (`cuda`).
+            inputs = inputs.to(device=DEVICE)
+            loc_targets = loc_targets.to(device=DEVICE)
+            cls_targets = cls_targets.to(device=DEVICE)
+
+            # Doing forward pass
+            loc_preds, cls_preds = net(inputs)
+
+            # Compute the loss
+            loss = criterion(loc_preds, loc_targets, cls_preds, cls_targets)
+
+            val_loss += loss.item()
+
+    # Compare with the previous best validation loss and save checkpoint if any
+    ...
+
+    return val_loss
+</code></pre>
+
+<h3 id="5-start-training-and-validation">5. Start training and validation.</h3>
+<pre><code class="python">for epoch in range(EPOCHS):
+    # Update the learning rate along the epoch
+    scheduler.step()
+
+    # Perform training in epoch `epoch_th`
+    train_loss = train(epoch)
+
+    # Perform evaluation in epoch `epoch_th`
+    val_loss = eval(epoch)
+
+    print('train_loss: %.4f, val_loss: %.4f' % (train_loss, val_loss))  
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../torch-inference/" class="btn btn-neutral float-right" title="Do inference from the trained model">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../torch-build-model/" class="btn btn-neutral" title="Build some popular model"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../torch-build-model/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../torch-inference/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

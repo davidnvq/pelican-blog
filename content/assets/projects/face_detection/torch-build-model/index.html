@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Build some popular model - Face Detection Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Build some popular model";
+    var mkdocs_page_input_path = "torch-build-model.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Face Detection Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Pytorch Object Detection</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../torch-getting-started/">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-environment-setup/">Environment setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-prepare-dataset/">Prepare the dataset</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-encoding/">How to encode the grouth truth boxes</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Build some popular model</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#how-to-build-a-single-stage-model-for-object-detection-and-face-detection">How to build a single-stage model for object detection and face detection</a></li>
+    
+
+    <li class="toctree-l3"><a href="#contents">Contents</a></li>
+    
+
+    <li class="toctree-l3"><a href="#1-the-general-architecture-of-a-single-stage-object-detector">1. The general architecture of a single-stage object detector</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#11-the-feature-extractor">1.1. The feature extractor</a></li>
+        
+            <li><a class="toctree-l4" href="#12-the-detection-block">1.2. The detection block</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#ssd7-the-simple-example-of-object-detector">SSD7: The simple example of object detector</a></li>
+    
+
+    <li class="toctree-l3"><a href="#facenet-a-single-stage-face-detector-using-resnet-backbone">FaceNet: A single-stage face detector using ResNet backbone.</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-extract-model.md">Extract the smaller model from pretrained model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-train-model/">Train the model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-inference/">Do inference from the trained model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-truncated-model/">Truncate the first detection layers from models</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Face Detection Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Pytorch Object Detection &raquo;</li>
+        
+      
+    
+    <li>Build some popular model</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="how-to-build-a-single-stage-model-for-object-detection-and-face-detection">How to build a single-stage model for object detection and face detection</h3>
+<p>In this part, I'm going to present how to build a single-stage object detector like SSD, SFD and 
+so on.</p>
+<h3 id="contents">Contents</h3>
+<ol>
+<li><a href="#the-general-architecture-of-a-single-stage-object-detector">The general architecture of a single-stage object detector</a></li>
+<li><a href="#ssd7-the-simple-example-of-object-detector">Building SSD7: The simple example of object detector</a></li>
+<li><a href="">Building S3FD: Single scale-invariant face detector</a></li>
+<li><a href="#facenet-a-single-stage-face-detector-using-resnet-backbone">FaceNet: A single-stage face detector using ResNet backbone</a></li>
+</ol>
+<h3 id="1-the-general-architecture-of-a-single-stage-object-detector">1. The general architecture of a single-stage object detector</h3>
+<p><img alt="The general single-stage object detector" src="../images/general_model.png" /></p>
+<p>The general architecture for a single-state (single-shot or one-stage or one-shot so on) object 
+detector usually consists of:</p>
+<h4 id="11-the-feature-extractor">1.1. The feature extractor</h4>
+<ul>
+<li>First, we build a base network as a feature extractor.</li>
+<li>Second, we extract some layers in the feature extractor as the detection layers. </li>
+<li>Detection layer <code>i</code> (of size (<code>Mi</code>x<code>Ni</code>x<code>Ki</code>)) is a set of <code>Ki</code> feature maps of size 
+(<code>Mi</code>x<code>Ni</code>). <code>Ki</code> can be considered as the number of channels of this layer.</li>
+<li>The detection layer <code>i</code> divides the image into <code>Mi</code> x <code>Ni</code> spatially equal cell. Each cell may 
+have 1 or more than 1 anchors. For more details about encoding, please visit <a href="docs/torch-encoding">How to encoding 
+ground truth boxes and labels to anchors</a>.</li>
+</ul>
+<p><img alt="" src="../images/feature_extractor.png" /></p>
+<p>In the example above, let say, we extract 3 detection layers from layers <code>i</code>, <code>j</code>, <code>k</code>. Later, we
+ pass these layers to detection blocks to get the detection of <code>total_num_anchors</code> generated by 
+ our model.</p>
+<pre><code>K = num_anchors_per_cells
+total_num_anchors = K[i]*(Mi*Ni) +  K[j]*(Mj*Nj) + K[k]*(Mk*Nk)
+</code></pre>
+
+<h4 id="12-the-detection-block">1.2. The detection block</h4>
+<ul>
+<li>
+<p>The outputs of detection blocks will tell us whether a anchor belongs to a certain object 
+class or not. If yes, then where is the detected bounding box by computing the offsets of 
+coordinates of the detected boxes with this anchor.
+<img alt="" src="../images/det_block1.png" /></p>
+</li>
+<li>
+<p>The detection block can be divided into 2 sub-blocks: classification block, and regression block.</p>
+</li>
+<li>
+<p>The detection block at each layer take the corresponding detection layer as the
+input and return the set of <code>loc_dets</code> and <code>cls_dets</code>.</p>
+<ul>
+<li>
+<p><code>cls_dets</code> is the set of detection classification scores for each class - the 
+probability that the anchor belongs to the class (outputs of classification block).</p>
+</li>
+<li>
+<p><code>loc_dets</code> is the set of detection locations of bounding boxes - the offset of coordinates 
+of bounding boxes to their respective anchors (outputs of regression block).</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../images/det_block2.png" />
+Classification block and regression block can consist of 1 direct conv layer or a stack 
+of several conv layers. </p>
+<h3 id="ssd7-the-simple-example-of-object-detector">SSD7: The simple example of object detector</h3>
+<p><img alt="" src="../images/ssd7.png" />
+SSD7 consists of:
+* <strong>Feature extractor</strong> is a stack of 8 conv layers. After each conv layer, the size of output is
+ reduced by two using <code>MaxPooling2D</code>.</p>
+<ul>
+<li>
+<p><strong>Detection blocks</strong> Each detection block for each layer includes two sub-blocks: regression 
+block and classification block. However, each sub-block is just 1 conv layer for simplicity as 
+below:</p>
+</li>
+<li>
+<p>We define the SSD7 including its <code>self.extractor</code>, <code>self.detection_blocks</code>. The below code is 
+simplified to make it succide. </p>
+</li>
+</ul>
+<pre><code class="python">class DetectionBlock(nn.Module):
+    def __init__(self):
+        self.reg_conv
+        self.cls_conv
+
+    def forward(self, input):
+        ...
+        return loc_dets, cls_dets 
+</code></pre>
+
+<pre><code class="python">class SSD7(nn.Module):
+    def __init__(self):
+        self.extractor = ... # conv1 -&gt; conv8
+        self.det_blocks = [DetectionBlock()] * num_detection_layers
+
+    def forward(self, input):
+        # perform feature extraction
+        detection_layers = self.extractor(input)
+
+        # perform detections
+        final_loc_dets, final_cls_dets = [], []
+        for i, detection_layer in enumerate(detection_layers):
+            loc_dets, cls_dets = self.det_blocks[i](detection_layers[i])
+            final_loc_dets.append(loc_dets)
+            final_cls_dets.append(cls_dets)
+        return final_loc_dets, final_cls_dets
+</code></pre>
+
+<p>The details of implementation can be found at file <code>models/ssd7.py</code>.</p>
+<h3 id="facenet-a-single-stage-face-detector-using-resnet-backbone">FaceNet: A single-stage face detector using ResNet backbone.</h3>
+<p><img alt="" src="../images/Facenet_resnet.png" /></p>
+<ul>
+<li>
+<p><strong>Feature extractor</strong></p>
+<ul>
+<li>
+<p><strong>ResNet backbone</strong>: The last conv layer of <code>conv2</code>, <code>conv3</code>, <code>conv4</code>, <code>conv5</code> blocks in 
+ResNet are 
+selected as 
+the detection layers.</p>
+</li>
+<li>
+<p><strong>Extra conv blocks</strong> Two more <code>conv6</code>, <code>conv7</code> blocks are added to ResNet backbone, each 
+block includes 2 
+conv3x3. The last conv layers of <code>conv6</code> and <code>conv7</code> are selected as detection layers. </p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Detection blocks</strong></p>
+<ul>
+<li>The classification branch consists of 4 <code>conv</code> layers of <code>3x3</code> before the classification 
+layer.</li>
+<li>The regression branch consists of 4 <code>conv</code> layers of <code>3x3</code> before the regression layer.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../images/facenet_det_block.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../torch-train-model/" class="btn btn-neutral float-right" title="Train the model">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../torch-encoding/" class="btn btn-neutral" title="How to encode the grouth truth boxes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../torch-encoding/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../torch-train-model/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

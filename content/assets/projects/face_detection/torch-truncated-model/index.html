@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Truncate the first detection layers from models - Face Detection Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Truncate the first detection layers from models";
+    var mkdocs_page_input_path = "torch-truncated-model.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Face Detection Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Pytorch Object Detection</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../torch-getting-started/">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-environment-setup/">Environment setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-prepare-dataset/">Prepare the dataset</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-encoding/">How to encode the grouth truth boxes</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-build-model/">Build some popular model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-extract-model.md">Extract the smaller model from pretrained model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-train-model/">Train the model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-inference/">Do inference from the trained model</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Truncate the first detection layers from models</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#1-build-the-truncated-models">1. Build the truncated models.</a></li>
+    
+
+    <li class="toctree-l3"><a href="#2-get-the-weights-for-these-truncated-models">2. Get the weights for these truncated models.</a></li>
+    
+
+    <li class="toctree-l3"><a href="#3-make-detections-with-the-truncated-models">3. Make detections with the truncated models.</a></li>
+    
+
+    <li class="toctree-l3"><a href="#4-complete-exmple">4. Complete exmple:</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Face Detection Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Pytorch Object Detection &raquo;</li>
+        
+      
+    
+    <li>Truncate the first detection layers from models</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><img alt="" src="../images/truncated_facenet.png" /></p>
+<p>In this post, I'm going to present how to reuse the trained model on few detection layers.</p>
+<p>As we built and trained the FaceNet (using ResNet101 via Base101) with 6 detection layers. </p>
+<ul>
+<li>The first detection layers will detect the faces of approximately (16x16) in 160x160 cells if 
+the input image size is 640x640 (the
+ feature maps size of this detection layer).</li>
+<li>The second detection layers will detect the faces of approximately (32x32) in 80x80 cells if the 
+input image size is 640x640 (the
+ feature maps size of this detection layer).</li>
+</ul>
+<blockquote>
+<p>In practical use, we rarely need to detect the very tiny faces like this. The purpose of two 
+layers is mainly for achieving high accuracy in WiderFace dataset.</p>
+</blockquote>
+<p>Removing the first detection layer or both layers will reduces a lot of time on making detections
+ via forward pass.</p>
+<p><strong>There are 3 main things we need to care when removing these layers.</strong></p>
+<h3 id="1-build-the-truncated-models">1. Build the truncated models.</h3>
+<p>A. Removing these detection layers is simply <strong>"don't create <code>DetectionBlock</code> for these layers"</strong>.</p>
+<p>When we define FaceNet model, I tried to make it flexible as possible. As we see in the code, 
+the number of detection blocks depends on the length of the list <code>num_anchors_per_cells</code>.
+* <code>num_anchors_per_cells</code>: list of values representing for the number of anchors per cell in each
+ detection layer (because we have only square anchor - then the values are 1 for all layers).</p>
+<pre><code class="python">class FaceNet():
+    def __init__(self,
+                 num_classes=2,
+                 num_anchors_per_cells=[1, 1, 1, 1, 1, 1],
+                 base=Base101(pretrained=True)):
+
+        # ...
+
+        self.num_det_layers = len(num_anchors_per_cells)
+
+        for i, num_anchor_per_cell in enumerate(self.num_anchors_per_cells):
+            self.det_blocks += [DetectionBlock(num_anchor_per_cell, self.num_classes)]
+
+</code></pre>
+
+<p>If we remove the first detection layer, simply set <code>num_anchors_per_cells=[1, 1, 1, 1, 1]</code>. Then,
+there will be 5 <code>DetectionBlock</code> created.</p>
+<p>B. We also need to <strong>determine the the input detection layer</strong> for each <code>DetectionBlock</code> we created.</p>
+<p>The feature maps of 6 detection layers we extract from the <code>self.extractor</code> are <code>[conv2, conv3, 
+conv4, conv5, conv6, conv7]</code>.</p>
+<p>If we remove the first detection layer, so we need to pass <code>[conv3, conv4, conv5, conv6, conv7]</code> 
+to the <code>self.det_blocks</code>.</p>
+<pre><code class="python">class FaceNet():
+
+    def __init__(self):
+        ...
+
+    def forward(self, input):
+        # Get [conv2, conv3, conv4, conv5, conv6, conv7]
+        ftmaps = self.extractor(input)
+
+        # If we remove the first detection layers, we only need to keep 
+        # [conv3, conv4, conv5, conv6, conv7].
+        start_idx = (len(ftmaps) - self.num_det_layers)
+        ftmaps = ftmaps[start_idx : ]
+
+        # Then, make the detections
+        for i in range(self.num_det_layers):
+            res_dets = self.det_blocks[i](ftmaps[i])
+</code></pre>
+
+<h3 id="2-get-the-weights-for-these-truncated-models">2. Get the weights for these truncated models.</h3>
+<p>We trained the FaceNet (ResNet101 backbone) model with 6 detection layers and save the weights to
+ the pickle file. Essentially, the pickle file is just a dictionary (<code>OrderedDict</code>) with key : 
+ value is <code>weight_name</code> : <code>weight_value</code>.</p>
+<p>The <code>DetectionBlock</code> contains several <code>conv</code> layers, and the weights of <code>conv</code> layers
+would start with the prefix which is the name of its <code>DetectionBlock</code>.</p>
+<p>We define <code>DetectionBlock</code> in a list with the attribute <code>self.det_blocks</code>:</p>
+<pre><code class="python">class FaceNet():
+    def __init__(self, ...):
+
+        ...
+
+        for i, num_anchor_per_cell in enumerate(self.num_anchors_per_cells):
+            self.det_blocks += [DetectionBlock(num_anchor_per_cell, self.num_classes)]
+
+</code></pre>
+
+<p>Therefore, the weights of all <code>conv</code> layers in the first <code>DetectionBlock</code> would start with the 
+prefix: <code>det_blocks.0.</code>. The second <code>DetectionBlock</code> starts with <code>det_blocks.1</code>, and so on.</p>
+<p>If we remove the first detection layer, we need to: 
+* Remove the first <code>DetectionBlock</code> from the weight dictionary. Remove all keys and weights which
+ start with <code>det_blocks.0.</code></p>
+<ul>
+<li>Change the key name of the other detection blocks.</li>
+</ul>
+<pre><code>'det_blocks.0' - remove
+'det_blocks.1' -&gt; change to 'det_blocks.0'
+'det_blocks.2' -&gt; change to 'det_blocks.1'
+'det_blocks.3' -&gt; change to 'det_blocks.2'
+'det_blocks.4' -&gt; change to 'det_blocks.3'
+'det_blocks.5' -&gt; change to 'det_blocks.4'
+</code></pre>
+
+<p>If we remove the first and second layers:</p>
+<pre><code>'det_blocks.0' - remove
+'det_blocks.1' - remove
+'det_blocks.2' -&gt; change to 'det_blocks.0'
+'det_blocks.3' -&gt; change to 'det_blocks.1'
+'det_blocks.4' -&gt; change to 'det_blocks.2'
+'det_blocks.5' -&gt; change to 'det_blocks.3'
+</code></pre>
+
+<p>Finally, we save the weights dictionary to a new file.</p>
+<p>The implementation of the code is located in '/utils/model_utils.py'.</p>
+<h3 id="3-make-detections-with-the-truncated-models">3. Make detections with the truncated models.</h3>
+<p>The example below is for the truncated model of 5 detection layers (remove the first detection 
+layer).</p>
+<pre><code class="python"># 1. Build model
+net = FaceNet(num_classes=2,
+              num_anchors_per_cells=[1, 1, 1, 1, 1], # 5
+              base=torch_object_detection.models.Base101(pretrained=False)
+              )
+
+# 2. Load truncated weights
+net.load_state_dict(torch.load(truncated_model_path))
+
+# 3. Make detections  and suppose we have an image -&gt; convert to a tensor
+loc_dets, cls_dets, fm_sizes = net(tensor, fm_sizes_return=True)
+</code></pre>
+
+<p>Now, after doing forward pass to the model, we need to decode 
+<code>loc_dets, cls_dets, fm_sizes</code> into the boxes, labels, and confidence scores. It means that we 
+need to define the <code>BoxCoder</code> for it. </p>
+<p>If we remove the first layers, we need to redefine the values of <code>anchor_sizes</code>, <code>aspect_ratios</code>,
+ and <code>fm_sizes</code>. The example below is for the input image of (640x640)</p>
+<pre><code class="python"># Load and image and preprocess it to tensor
+image = torch_object_detection.utils.load_image('./images/2.jpg', height=640, width=640)
+tensor = torch_object_detection.utils.preprocess_image(image)
+
+# Define some argument values for BoxCoder
+img_size = (640, 640)
+anchor_sizes = [32, 64, 128, 256, 512]
+aspect_ratios = [[1,],[1,], [1,], [1,], [1,]]
+fm_sizes = [[80, 80],
+            [40, 40],
+            [20, 20],
+            [10, 10],
+            [5, 5]]
+
+box_coder = torch_object_detection.utils.BoxCoder(img_size=img_size,
+                                                  anchor_sizes=anchor_sizes,
+                                                  aspect_ratios=aspect_ratios,
+                                                  fm_sizes=fm_sizes)
+</code></pre>
+
+<p>The <code>fm_sizes</code> can be changed if we change the input image size. For example, if we get the image
+ of (320, 480) but we don't know what is the values of <code>fm_sizes</code>, so there is 1 way to do it:</p>
+<pre><code class="python"># Load and image and preprocess it to tensor
+image = torch_object_detection.utils.load_image('./images/2.jpg', height=640, width=640)
+tensor = torch_object_detection.utils.preprocess_image(image) 
+
+# Do forward pass, we get the fm_sizes if `fm_sizes_return=True`
+loc_dets, cls_dets, fm_sizes = net(tensor, fm_sizes_return=True)
+</code></pre>
+
+<p>In <code>detect</code> method, I already implement it for you, but you must define <code>anchor_sizes</code>, 
+<code>aspect_ratio</code> for it while <code>fm_sizes=None</code>.</p>
+<pre><code class="python"># Load and image and preprocess it to tensor
+image = torch_object_detection.utils.load_image('./images/2.jpg', height=480, width=320)
+tensor = torch_object_detection.utils.preprocess_image(image)
+
+# Define some argument values for BoxCoder
+img_size = (image.size[1], image.size[0])
+anchor_sizes = [32, 64, 128, 256, 512]
+aspect_ratios = [[1,],[1,], [1,], [1,], [1,]]
+
+box_coder = torch_object_detection.utils.BoxCoder(img_size=img_size,
+                                                  anchor_sizes=anchor_sizes,
+                                                  aspect_ratios=aspect_ratios,
+                                                  fm_sizes=None)
+</code></pre>
+
+<h3 id="4-complete-exmple">4. Complete exmple:</h3>
+<pre><code class="python"># Build model 
+net = FaceNet(num_classes=2,
+              num_anchors_per_cells=[1, 1, 1, 1, 1], # 5
+              base=torch_object_detection.models.Base101(pretrained=False)
+              )
+
+
+# Load truncated weights
+net.load_state_dict(torch.load(truncated_model_path))
+
+
+# Load and image and preprocess it to tensor
+image = torch_object_detection.utils.load_image('./images/2.jpg', height=480, width=320)
+tensor = torch_object_detection.utils.preprocess_image(image)
+
+
+# Define some argument values for BoxCoder
+img_size = (image.size[1], image.size[0])
+anchor_sizes = [32, 64, 128, 256, 512]
+aspect_ratios = [[1,],[1,], [1,], [1,], [1,]]
+box_coder = torch_object_detection.utils.BoxCoder(img_size=img_size,
+                                                  anchor_sizes=anchor_sizes,
+                                                  aspect_ratios=aspect_ratios,
+                                                  fm_sizes=None)
+
+# Make detection with `detect` method
+det_boxes, det_scores, det_labels = torch_object_detection.utils.detect(tensor, net,
+                                                                        box_coder=box_coder,
+                                                                        device='cpu',
+                                                                        score_thresh=0.3,
+                                                                        nms_thresh=0.3)
+
+
+# Draw the detections
+drawn_image = torch_object_detection.utils.draw_detections(image, det_boxes, det_scores, det_labels)
+</code></pre>
+
+<p>The scripts of examples can be found at </p>
+<pre><code>examples/find_faces_with_original_model.py
+examples/find_faces_with_notop1_model.py
+examples/find_faces_with_notop12_model.py
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../torch-inference/" class="btn btn-neutral" title="Do inference from the trained model"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../torch-inference/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

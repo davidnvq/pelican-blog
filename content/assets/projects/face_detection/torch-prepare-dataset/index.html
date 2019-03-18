@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Prepare the dataset - Face Detection Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Prepare the dataset";
+    var mkdocs_page_input_path = "torch-prepare-dataset.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Face Detection Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Pytorch Object Detection</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../torch-getting-started/">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-environment-setup/">Environment setup</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Prepare the dataset</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#prepare-the-dataset-for-training">Prepare the dataset for training</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#annotation-file-format">Annotation file format</a></li>
+        
+            <li><a class="toctree-l4" href="#prepare-the-dataloader-for-datasets">Prepare the DataLoader for datasets</a></li>
+        
+            <li><a class="toctree-l4" href="#1-set-some-configuration-parameters">1. Set some configuration parameters</a></li>
+        
+            <li><a class="toctree-l4" href="#2-create-the-boxcoder">2. Create the BoxCoder</a></li>
+        
+            <li><a class="toctree-l4" href="#3-create-oddatasets-for-training-and-validation-datasets">3. Create ODDatasets for training and validation datasets</a></li>
+        
+            <li><a class="toctree-l4" href="#4-create-dataloaders-for-training-and-validation-datasets">4. Create DataLoaders for training and validation datasets</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-encoding/">How to encode the grouth truth boxes</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-build-model/">Build some popular model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-extract-model.md">Extract the smaller model from pretrained model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-train-model/">Train the model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-inference/">Do inference from the trained model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../torch-truncated-model/">Truncate the first detection layers from models</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Face Detection Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Pytorch Object Detection &raquo;</li>
+        
+      
+    
+    <li>Prepare the dataset</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="prepare-the-dataset-for-training">Prepare the dataset for training</h2>
+<h3 id="annotation-file-format">Annotation file format</h3>
+<ol>
+<li><strong>Dataset format</strong></li>
+</ol>
+<pre><code>relative/path/to/image1.jpg xmin1 ymin1 xmax1 ymax1 label1 xmin2 ymin2 xmax2 ymax2 label2 ...
+relative/path/to/image2.jpg xmin2 ymin2 xmax2 ymax2 label2 xmin2 ymin2 xmax2 ymax2 label2 ...
+.
+.
+.
+</code></pre>
+
+<ul>
+<li>The relative path to the image here is the path from the <code>data_root</code> to the image. For examples,</li>
+</ul>
+<pre><code>data_root
+|____train_datasets
+| |____train_image1.jpg
+| |____train_image2.jpg
+| |____train_image3.jpg
+| |____train_image4.jpg
+| |____train_image5.jpg
+|
+|____val_datasets
+  |____val_image1.jpg
+  |____val_image2.jpg
+  |____val_image3.jpg
+  |____val_image4.jpg
+  |____val_image5.jpg
+
+</code></pre>
+
+<p>If we set:</p>
+<pre><code>data_root = 'data_root/train_datasets' 
+
+</code></pre>
+
+<p>Then the annotations file <code>train_annotations.txt</code> for training dataset should be:</p>
+<pre><code>train_images1.jpg xmin1 ymin1 xmax1 ymax1 label1 xmin2 ymin2 xmax2 ymax2 label2 ...
+train_images2.jpg xmin1 ymin1 xmax1 ymax1 label1 xmin2 ymin2 xmax2 ymax2 label2 ...
+train_images3.jpg xmin1 ymin1 xmax1 ymax1 label1 xmin2 ymin2 xmax2 ymax2 label2 ...
+train_images4.jpg xmin1 ymin1 xmax1 ymax1 label1 xmin2 ymin2 xmax2 ymax2 label2 ...
+train_images5.jpg xmin1 ymin1 xmax1 ymax1 label1 xmin2 ymin2 xmax2 ymax2 label2 ...
+</code></pre>
+
+<p>Meanwhile, if we set:</p>
+<pre><code>val_data_root = 'data_root/val_datasets' 
+
+</code></pre>
+
+<p>Then the annotations file <code>val_annotations.txt</code> for validation dataset should be:</p>
+<pre><code>val_images1.jpg xmin1 ymin1 xmax1 ymax1 label1 xmin2 ymin2 xmax2 ymax2 label2 ...
+val_images2.jpg xmin1 ymin1 xmax1 ymax1 label1 xmin2 ymin2 xmax2 ymax2 label2 ...
+val_images3.jpg xmin1 ymin1 xmax1 ymax1 label1 xmin2 ymin2 xmax2 ymax2 label2 ...
+val_images4.jpg xmin1 ymin1 xmax1 ymax1 label1 xmin2 ymin2 xmax2 ymax2 label2 ...
+val_images5.jpg xmin1 ymin1 xmax1 ymax1 label1 xmin2 ymin2 xmax2 ymax2 label2 ...
+</code></pre>
+
+<ul>
+<li>For each image, after the relative path to image file, we list all the possible bounding boxes 
+of objects in the image. The a set of values <code>xmini ymini xmaxi ymaxi labeli</code> represents for a 
+bounding box i. We denote <code>(xmin, ymin), (xmax, ymax)</code> are the coordinates of top-left, and 
+bottom-right points of the bounding box while, the <code>label</code> is the class label of the object start
+ from <code>0</code>. We only need to label the bounding boxes of objects (not the background). 
+ If we have only 1 class <code>face</code>, then the class label for <code>face</code> is <code>0</code>. For example, if the 
+ image have <code>k</code> faces then:</li>
+</ul>
+<pre><code>relative/path/to/image.jpg xmin1 ymin1 xmax1 ymax1 label1 ... xmink ymink xmaxk ymaxk labelk 
+</code></pre>
+
+<h3 id="prepare-the-dataloader-for-datasets">Prepare the DataLoader for datasets</h3>
+<p>In this section, I'm going to explain how to create an <code>ODDataset</code>
+(<code>ODDataset</code> is acutally a wrapped class of <code>torch.utils.data.Dataset</code>). Then we will create 
+<code>DataLoader</code> for training and validation datasets (which is similar to <code>DataGenerator</code> in Keras):</p>
+<blockquote>
+<p>If we don't want to do validation during training, so we can skip all related below things for 
+validation dataset. </p>
+</blockquote>
+<h3 id="1-set-some-configuration-parameters">1. Set some configuration parameters</h3>
+<p>First, we set the values for the following parameters for making the data generator in <code>torch</code>, 
+<code>DataGenerator</code>:</p>
+<pre><code class="python">
+BATCH_SIZE = 16
+NUM_CLASSES = 2
+WIDTH = 640 
+HEIGHT = 640
+RGB_MEAN = (0.485, 0.456, 0.406)
+RGB_STD = (0.229, 0.224, 0.225)
+</code></pre>
+
+<p><strong>Explain</strong>:</p>
+<ol>
+<li><code>BATCH_SIZE</code>: The size of batch during training and validation. </li>
+<li><code>NUM_CLASSES</code>: Total number of classes in our datasets including the background class. For 
+examples, we set <code>NUM_CLASSES</code> for face detection because we have two classes: <code>face</code> and 
+<code>background</code> (non-face).</li>
+<li><code>WIDTH</code>: The width of image that we resize to. We must resize the image of different size into
+ the same size in order to take the advantage of <code>batch training</code> for GPUs.</li>
+<li><code>HEIGHT</code>:The height of image that we resize to. </li>
+<li>RGB_MEAN: The mean values in red, green, blue channels. After converting to tensors 
+using <code>ToTensor()</code>, the pixel values of the images will be converted from <code>0-255</code> to <code>0.0-1.0</code>. 
+The we subtract these values to RGB_MEAN in each channel of the image.</li>
+<li>RGB_STD: The standard deviation values in red, green, blue channels.</li>
+</ol>
+<blockquote>
+<p>Note: Normally, we use any pretrained models, we use the above values of <code>RGB_MEAN</code>, and 
+<code>RGB_STD</code> to normalize the values of inputs imagse. It's the common practice in Pytorch.</p>
+</blockquote>
+<p>Next, we create a box_coder for encoding the ground truth bounding boxes and labels of the 
+datasets into the corresponding formats (anchors) for training and validation.</p>
+<h3 id="2-create-the-boxcoder">2. Create the BoxCoder</h3>
+<p>We need to create for encoding the bounding boxes and labels of objects in images with the 
+following parameters.</p>
+<pre><code class="python">box_coder = BoxCoder(img_size=(640, 640),
+                 offset=(0.5, 0.5),
+                 box_sizes=(16, 32, 64, 128, 256, 512),
+                 aspect_ratios=((1,), (1,), (1,), (1,), (1,), (1,)),
+                 fm_sizes=((160, 160), (80, 80), (40, 40), (20, 20), (10, 10), (5, 5)),
+                 )
+
+</code></pre>
+
+<ol>
+<li><code>img_size</code>. The size of input image. (height, width)</li>
+<li><code>offset</code>. The offset values to normalize the bounding boxes to each cell. It shouldn't be 
+changed.</li>
+<li><code>aspect_ratios</code>. This is a set of aspect ratios in each detection layer. For example, the 
+first value <code>aspect_ratios[0] = (1,)</code> is the set of aspect ratios of anchors in a cell for the 
+first detection layer. Here there is 1 aspect ratio value <code>1</code> which means there is only 1 anchor 
+in a cell and anchor width / anchor height = <code>1</code>. </li>
+<li><code>fm_sizes</code>. This is a set of feature maps sizes in each detection layer.  </li>
+</ol>
+<h3 id="3-create-oddatasets-for-training-and-validation-datasets">3. Create ODDatasets for training and validation datasets</h3>
+<p><code>DataLoader</code> is similar to <code>DataGenerator</code> in Keras which generates a batch of data in CPU 
+meanwhile GPUs are doing heavy computations.</p>
+<h4 id="31-define-transformations">3.1. Define transformations</h4>
+<p>First, we define the transformations applied for our training datasets including: 
+<em> Color jittering: randomly adjust the <code>brightness</code>, <code>contrast</code>, <code>hue</code>.
+</em> Spatial transformations: randomly crop the several square patches from an image and select one 
+of them (I follow SFD paper), randomly flipping, and 
+<em> Resize to fixed size (640, 640) for training and validation.
+</em> Encoding the ground truth bounding boxes and labels: we need to pass to <code>box_coder</code>. </p>
+<blockquote>
+<p>We don't need to apply spatial transformations to validation dataset.</p>
+</blockquote>
+<pre><code class="python"># 2.1 Create train_loader
+# Initiate some augmentations perform on training data
+train_transform = Augmentation(brightnesss=32 / 255.,
+                               contrast=0.5,
+                               saturation=0.5,
+                               hue=0.1,
+                               random_crop=RandomCrop(),
+                               resize=Resize(size=(HEIGHT, WIDTH)),
+                               random_flip=RandomFlip(),
+                               box_coder=box_coder,
+                               rgb_mean=RGB_MEAN,
+                               rgb_std=RGB_STD,
+                               )
+
+val_transform = Augmentation(brightnesss=0,
+                             contrast=0,
+                             saturation=0,
+                             hue=0,
+                             resize=Resize(size=(HEIGHT, WIDTH)),
+                             box_coder=box_coder,
+                             rgb_mean=RGB_MEAN,
+                             rgb_std=RGB_STD,
+                             )
+</code></pre>
+
+<h4 id="32-create-oddatasets">3.2. Create ODDatasets</h4>
+<p><code>ODDataset</code> is actually a class that I wrap up <code>torch.utils.data.Dataset</code> which is needed for create
+ the <code>torch.utils.data.DataLoader</code>.</p>
+<pre><code class="python"># 2. Create the training and validation data loaders
+# 2.0.1 The dir that contain the images
+train_images_dir = '/home/ubuntu/Datasets/WiderFace/WIDER_train/images'
+val_images_dir = '/home/ubuntu/Datasets/WiderFace/WIDER_val/images'
+
+# 2.0.2 The dir that contain the annotation files.
+train_annotations_file = './examples/annotations/widerface/train_annotations.txt'
+val_annotations_file = './examples/annotations/widerface/val_annotations.txt'
+
+train_datasets = ODDataset(images_dir=train_images_dir,
+                           anno_file=train_annotations_file,
+                           transform=train_transform)
+</code></pre>
+
+<h3 id="4-create-dataloaders-for-training-and-validation-datasets">4. Create DataLoaders for training and validation datasets</h3>
+<p>Finally, we need to create <code>DataLoader</code> for training and validation dataset. </p>
+<pre><code class="python"># Get a train data loader (which is similar to DataGenerator in Keras)
+train_loader = torch.utils.data.DataLoader(train_datasets,
+                                           batch_size=BATCH_SIZE,
+                                           shuffle=True,
+                                           num_workers=8)
+
+
+
+val_datasets = ODDataset(images_dir=val_images_dir,
+                         anno_file=val_annotations_file,
+                         transform=val_transform)
+
+# Get a val data loader 
+val_loader = torch.utils.data.DataLoader(val_datasets,
+                                         batch_size=BATCH_SIZE,
+                                         shuffle=False,
+                                         num_workers=8)
+
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../torch-encoding/" class="btn btn-neutral float-right" title="How to encode the grouth truth boxes">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../torch-environment-setup/" class="btn btn-neutral" title="Environment setup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../torch-environment-setup/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../torch-encoding/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

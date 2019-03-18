@@ -2,7 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f8783-0eec-41ad-8776-ccc868b60898" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/content/assets/papers/face_detection.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/papers/me_recognition.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/css/theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/css/theme_extra.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/Facenet_resnet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/anchor_matching.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/det_block1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/det_block2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/facenet_det_block.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/feature_extractor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/general_model.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/many_anchors_in_cell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/size_of_anchor0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/size_of_anchor1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/ssd7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/tod_documentation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/images/truncated_facenet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/js/jquery-2.1.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/js/modernizr-2.8.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/js/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/search/lunr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/search/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/search/search_index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/search/worker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/sitemap.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/sitemap.xml.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-build-model/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-encoding/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-environment-setup/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-getting-started/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-inference/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-prepare-dataset/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-train-model/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/torch-truncated-model/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/assets/resume/CV.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/pages/awards/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/pages/awards/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/pages/timeline/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/pages/timeline/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theme/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/theme/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,42 +61,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/theme/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="717" column="26" selection-start-line="717" selection-start-column="26" selection-end-line="717" selection-end-column="26" />
-              <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/pages/awards/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="62" column="2" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
-              <folding>
-                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#ul#1;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/pages/timeline/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
-              <folding>
-                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#ul#1;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="275">
+              <caret line="422" column="30" selection-start-line="422" selection-start-column="30" selection-end-line="422" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -56,44 +73,21 @@
       <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="81" column="29" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
+            <state relative-caret-position="255">
+              <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/theme/static/css/custom.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="986" selection-start-line="986" selection-end-line="986" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="105">
-                <caret line="7" selection-start-line="7" selection-end-line="7" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
+      <file leaf-file-name="theme.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/js/theme.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>right:</find>
-      <find>background.jpg</find>
-      <find>timeline-a</find>
-      <find>wrapper-light</find>
-      <find>site-nav</find>
-      <find>site-header</find>
-      <find>border-color:</find>
       <find>page-content</find>
       <find>timeline-</find>
       <find>timeline-date</find>
@@ -111,12 +105,19 @@
       <find>script</find>
       <find>circle-img</find>
       <find>from Frank</find>
-      <find>publish</find>
       <find>Summer</find>
       <find>first chi</find>
       <find>first</find>
       <find>first-</find>
+      <find>timeline-start</find>
+      <find>timeline-edu-</find>
       <find>Summer 2018</find>
+      <find>publish</find>
+      <find>timeline-a-date</find>
+      <find>Assoc</find>
+      <find>Quang Nguyen</find>
+      <find>Please</find>
+      <find>face_detection</find>
     </findStrings>
     <replaceStrings>
       <replace>/theme/js</replace>
@@ -140,13 +141,14 @@
         <option value="$PROJECT_DIR$/theme/static/css/style.css" />
         <option value="$USER_HOME$/Desktop/Website/Prof. Fei Sha's home page.html" />
         <option value="$PROJECT_DIR$/output/index.html" />
-        <option value="$PROJECT_DIR$/output/theme/css/custom.css" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/content/pages/awards/index.html" />
+        <option value="$PROJECT_DIR$/output/timeline/index.html" />
+        <option value="$PROJECT_DIR$/output/theme/css/custom.css" />
+        <option value="$PROJECT_DIR$/theme/static/css/custom.css" />
         <option value="$PROJECT_DIR$/content/pages/timeline/index.html" />
+        <option value="$PROJECT_DIR$/content/pages/awards/index.html" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/theme/templates/index.html" />
-        <option value="$PROJECT_DIR$/theme/static/css/custom.css" />
       </list>
     </option>
   </component>
@@ -159,9 +161,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -184,45 +187,14 @@
               <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="awards" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="timeline" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="theme" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="theme" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="theme" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="theme" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -245,11 +217,11 @@
       <recent name="$PROJECT_DIR$/theme/static/js" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/assets/resume" />
+      <recent name="$PROJECT_DIR$/content/assets/projects" />
+      <recent name="$PROJECT_DIR$/content/assets/papers" />
       <recent name="$PROJECT_DIR$/content/pages/awards" />
       <recent name="$PROJECT_DIR$/output/images/background" />
-      <recent name="$PROJECT_DIR$/theme/static/css" />
-      <recent name="$PROJECT_DIR$/images/background" />
-      <recent name="$PROJECT_DIR$/images/projects" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -287,15 +259,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="777" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49919224" weight="0.32965517" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.50080776" side_tool="true" visible="true" weight="0.3075862" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.47253636" side_tool="true" visible="true" weight="0.32794118" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49919224" visible="true" weight="0.3075862" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.5274637" visible="true" weight="0.32794118" />
       <window_info anchor="right" id="Remote Host" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2253635" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -524,10 +496,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/output/timeline/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="318" column="39" selection-start-line="318" selection-start-column="39" selection-end-line="318" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/output/theme/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="576" column="14" selection-start-line="576" selection-start-column="14" selection-end-line="576" selection-end-column="14" />
+        <state relative-caret-position="210">
+          <caret line="1020" selection-start-line="1020" selection-end-line="1024" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theme/static/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="1025" lean-forward="true" selection-start-line="1025" selection-end-line="1025" />
         </state>
       </provider>
     </entry>
@@ -541,51 +527,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/pages/awards/index.html">
+    <entry file="file://$PROJECT_DIR$/content/pages/timeline/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="62" column="2" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#1;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="202">
+          <caret line="80" column="14" lean-forward="true" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/pages/timeline/index.html">
+    <entry file="file://$PROJECT_DIR$/content/pages/awards/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+        <state relative-caret-position="154">
+          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
           <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#1;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="81" column="29" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
+        <state relative-caret-position="255">
+          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/assets/projects/face_detection/js/theme.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/theme/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="717" column="26" selection-start-line="717" selection-start-column="26" selection-end-line="717" selection-end-column="26" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/theme/static/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="986" selection-start-line="986" selection-end-line="986" />
+        <state relative-caret-position="275">
+          <caret line="422" column="30" selection-start-line="422" selection-start-column="30" selection-end-line="422" selection-end-column="30" />
         </state>
       </provider>
     </entry>

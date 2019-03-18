@@ -38,6 +38,7 @@ build:  ## Generate the output
 	cp $(INPUTDIR)/favicon.ico $(OUTPUTDIR)
 	cp $(INPUTDIR)/robots.txt $(OUTPUTDIR)
 	cp -r $(INPUTDIR)/pages/* $(OUTPUTDIR)
+	cp -r $(INPUTDIR)/assets $(OUTPUTDIR)
 
 
 .PHONY: clean
@@ -80,6 +81,7 @@ publish:  ## Generate output ready for publish
 	cp $(INPUTDIR)/favicon.ico $(OUTPUTDIR)
 	cp $(INPUTDIR)/robots.txt $(OUTPUTDIR)
 	cp -r $(INPUTDIR)/pages/* $(OUTPUTDIR)
+	cp -r $(INPUTDIR)/assets $(OUTPUTDIR)
 	git add .
 	git commit -m "Some notes added to pelican-blog"
 	git push -u origin master
