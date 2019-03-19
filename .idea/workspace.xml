@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="038f8783-0eec-41ad-8776-ccc868b60898" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/content/assets/papers/SoIS_2016.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/theme/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="038f8783-0eec-41ad-8776-ccc868b60898" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +15,7 @@
         <entry file="file://$PROJECT_DIR$/theme/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="347">
-              <caret line="686" column="26" lean-forward="true" selection-start-line="686" selection-start-column="26" selection-end-line="686" selection-end-column="26" />
+              <caret line="686" column="26" selection-start-line="686" selection-start-column="26" selection-end-line="686" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -64,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/theme/static/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="827" column="23" lean-forward="true" selection-start-line="827" selection-start-column="23" selection-end-line="827" selection-end-column="23" />
+              <caret line="827" column="23" selection-start-line="827" selection-start-column="23" selection-end-line="827" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -164,7 +160,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="777" />
@@ -286,8 +282,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="777" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49919224" weight="0.32965517" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.47738287" side_tool="true" visible="true" weight="0.32794118" />
@@ -295,7 +290,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.5226171" visible="true" weight="0.32794118" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.5226171" weight="0.32794118" />
       <window_info anchor="right" id="Remote Host" order="3" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29483038" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -631,7 +626,7 @@
     <entry file="file://$PROJECT_DIR$/theme/static/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="827" column="23" lean-forward="true" selection-start-line="827" selection-start-column="23" selection-end-line="827" selection-end-column="23" />
+          <caret line="827" column="23" selection-start-line="827" selection-start-column="23" selection-end-line="827" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -652,7 +647,7 @@
     <entry file="file://$PROJECT_DIR$/theme/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
-          <caret line="686" column="26" lean-forward="true" selection-start-line="686" selection-start-column="26" selection-end-line="686" selection-end-column="26" />
+          <caret line="686" column="26" selection-start-line="686" selection-start-column="26" selection-end-line="686" selection-end-column="26" />
         </state>
       </provider>
     </entry>
