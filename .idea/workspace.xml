@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f8783-0eec-41ad-8776-ccc868b60898" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/content/assets/papers/SoIS_2016.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theme/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/theme/templates/index.html" afterDir="false" />
     </list>
@@ -17,8 +18,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/theme/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="113" column="74" selection-start-line="113" selection-start-column="74" selection-end-line="113" selection-end-column="74" />
+            <state relative-caret-position="347">
+              <caret line="686" column="26" lean-forward="true" selection-start-line="686" selection-start-column="26" selection-end-line="686" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -26,7 +27,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content/pages/awards/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1455">
+            <state relative-caret-position="377">
               <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="58" />
             </state>
           </provider>
@@ -35,7 +36,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content/pages/timeline/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1470">
+            <state relative-caret-position="377">
               <caret line="98" column="25" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="25" />
             </state>
           </provider>
@@ -62,8 +63,8 @@
       <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theme/static/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17400">
-              <caret line="1160" column="88" selection-start-line="1160" selection-start-column="88" selection-end-line="1160" selection-end-column="88" />
+            <state relative-caret-position="345">
+              <caret line="827" column="23" lean-forward="true" selection-start-line="827" selection-start-column="23" selection-end-line="827" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -195,7 +196,8 @@
               <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="pelican-blog" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="papers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pelican-blog" type="b2602c69:ProjectViewProjectNode" />
@@ -237,16 +239,16 @@
     <property name="settings.editor.splitter.proportion" value="0.24537487" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/content/pages/timeline" />
-      <recent name="$PROJECT_DIR$/theme/static/js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/assets/papers" />
       <recent name="$PROJECT_DIR$/content/assets/resume" />
       <recent name="$PROJECT_DIR$/content/assets/projects/face_detection" />
       <recent name="$PROJECT_DIR$/content/assets/projects" />
-      <recent name="$PROJECT_DIR$/content/assets/papers" />
       <recent name="$PROJECT_DIR$/content/pages/awards" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/pages/timeline" />
+      <recent name="$PROJECT_DIR$/theme/static/js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -288,20 +290,20 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49919224" weight="0.32965517" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.47576737" side_tool="true" visible="true" weight="0.32794118" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.47738287" side_tool="true" visible="true" weight="0.32794118" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.5242326" visible="true" weight="0.32794118" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.5226171" visible="true" weight="0.32794118" />
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27059773" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29483038" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -626,31 +628,31 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output/index.html" />
-    <entry file="file://$PROJECT_DIR$/content/pages/awards/index.html">
+    <entry file="file://$PROJECT_DIR$/theme/static/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="58" />
+        <state relative-caret-position="345">
+          <caret line="827" column="23" lean-forward="true" selection-start-line="827" selection-start-column="23" selection-end-line="827" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/content/pages/timeline/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
+        <state relative-caret-position="377">
           <caret line="98" column="25" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theme/static/css/custom.css">
+    <entry file="file://$PROJECT_DIR$/content/pages/awards/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17400">
-          <caret line="1160" column="88" selection-start-line="1160" selection-start-column="88" selection-end-line="1160" selection-end-column="88" />
+        <state relative-caret-position="377">
+          <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/theme/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="113" column="74" selection-start-line="113" selection-start-column="74" selection-end-line="113" selection-end-column="74" />
+        <state relative-caret-position="347">
+          <caret line="686" column="26" lean-forward="true" selection-start-line="686" selection-start-column="26" selection-end-line="686" selection-end-column="26" />
         </state>
       </provider>
     </entry>
