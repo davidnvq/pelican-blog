@@ -97,36 +97,37 @@ Table of Contents
                         <li><a href="/#bio" class="dropdown-item js-btn-bio" data-toggle="collapse"
                                data-target=".navbar-collapse">Biography</a>
                         </li>
-                        <li><a href="/#timeline" class="dropdown-item js-btn-timeline" data-toggle="collapse"
+                        <li><a href="/#timeline" class="dropdown-item js-btn-timeline"
                                data-target=".navbar-collapse">Timeline</a>
                         </li>
-                        <li><a href="/#publications" class="dropdown-item js-btn-publications" data-toggle="collapse"
+                        <li><a href="/#publications" class="dropdown-item js-btn-publications"
                                data-target=".navbar-collapse">Publications</a>
                         </li>
-                        <li><a href="/#awards" class="dropdown-item js-btn-awards" data-toggle="collapse"
+                        <li><a href="/#awards" class="dropdown-item js-btn-awards"
                                data-target=".navbar-collapse">Scholarships
                             and Awards</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href='/assets/resume/CV.pdf' data-toggle="collapse" data-target=".navbar-collapse"><strong>Download CV</strong></a></li>
+                        <li><a href='/assets/resume/CV.pdf' class="dropdown-item js-btn-CV" data-target=".navbar-collapse">
+                            <strong>Download CV</strong></a></li>
                     </ul>
                 </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
+                <li class="dropdown collapse">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">
                         Blog Categories <span class="caret"></span>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/" data-toggle="collapse" data-target=".navbar-collapse.show"></a></li>
+                    <ul class="dropdown-menu collapse">
+                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-nlp" data-target=".navbar-collapse"></a></li>
                         <li><a href="/">NLP Posts</a></li>
-                        <li><a href="/" data-toggle="collapse" data-target=".navbar-collapse.show">Computer
+                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-cv" data-target=".navbar-collapse">Computer
                             Vision Posts</a></li>
-                        <li><a href="/" data-toggle="collapse" data-target=".navbar-collapse.show">Programming
+                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-tutorial" data-target=".navbar-collapse">Programming
                             Tutorials</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="/" data-toggle="collapse" data-target=".navbar-collapse.show">Personal
+                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-personal" data-target=".navbar-collapse">Personal
                             Thoughts</a></li>
                     </ul>
                 </li>
@@ -1078,7 +1079,36 @@ https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/
             () => console.log(`Just finished scrolling to ${window.pageYOffset}px`)
         );
     });
+</script>
 
+<script>
+ function check_navbar(){
+      if ($(window).width() < 600) {
+      document.querySelector('.js-btn-bio').setAttribute('data-toggle', 'collapse')
+      document.querySelector('.js-btn-timeline').setAttribute('data-toggle', 'collapse')
+      document.querySelector('.js-btn-publications').setAttribute('data-toggle', 'collapse')
+      document.querySelector('.js-btn-awards').setAttribute('data-toggle', 'collapse')
+      document.querySelector('.js-btn-blog-nlp').setAttribute('data-toggle', 'collapse')
+      document.querySelector('.js-btn-blog-cv').setAttribute('data-toggle', 'collapse')
+      document.querySelector('.js-btn-blog-tutorial').setAttribute('data-toggle', 'collapse')
+      document.querySelector('.js-btn-blog-personal').setAttribute('data-toggle', 'collapse')
+  }
+ else {
+      document.querySelector('.js-btn-bio').removeAttribute('data-toggle')
+      document.querySelector('.js-btn-timeline').removeAttribute('data-toggle')
+      document.querySelector('.js-btn-publications').removeAttribute('data-toggle')
+      document.querySelector('.js-btn-awards').removeAttribute('data-toggle')
+      document.querySelector('.js-btn-blog-nlp').removeAttribute('data-toggle')
+      document.querySelector('.js-btn-blog-cv').removeAttribute('data-toggle')
+      document.querySelector('.js-btn-blog-tutorial').removeAttribute('data-toggle')
+      document.querySelector('.js-btn-blog-personal').removeAttribute('data-toggle')
+ }
+ }
+ check_navbar();
+ $(window).resize(function() {
+     check_navbar();
+
+});
 
 </script>
 

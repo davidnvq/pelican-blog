@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038f8783-0eec-41ad-8776-ccc868b60898" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/theme/static/js/scroll_section.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/assets/projects/face_detection/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/assets/projects/face_detection/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/pages/awards/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/pages/awards/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/pages/timeline/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/pages/timeline/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/theme/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theme/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/theme/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,10 +17,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/theme/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="75">
+              <caret line="1085" column="36" selection-start-line="1085" selection-start-column="36" selection-end-line="1085" selection-end-column="36" />
               <folding>
                 <element signature="n#noscript#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -373,6 +369,7 @@
           <caret line="426" column="36" selection-start-line="426" selection-start-column="36" selection-end-line="426" selection-end-column="36" />
           <folding>
             <element signature="n#noscript#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -619,10 +616,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/theme/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="75">
+          <caret line="1085" column="36" selection-start-line="1085" selection-start-column="36" selection-end-line="1085" selection-end-column="36" />
           <folding>
             <element signature="n#noscript#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#button#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#section#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
