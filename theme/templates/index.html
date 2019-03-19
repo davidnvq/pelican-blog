@@ -107,7 +107,8 @@ Table of Contents
                                data-target=".navbar-collapse">Scholarships
                             and Awards</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href='/assets/resume/CV.pdf' class="dropdown-item js-btn-CV" data-target=".navbar-collapse">
+                        <li><a href='/assets/resume/CV.pdf' class="dropdown-item js-btn-CV"
+                               data-target=".navbar-collapse">
                             <strong>Download CV</strong></a></li>
                     </ul>
                 </li>
@@ -120,14 +121,18 @@ Table of Contents
                         Blog Categories <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu collapse">
-                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-nlp" data-target=".navbar-collapse"></a></li>
+                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-nlp"
+                               data-target=".navbar-collapse"></a></li>
                         <li><a href="/">NLP Posts</a></li>
-                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-cv" data-target=".navbar-collapse">Computer
+                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-cv"
+                               data-target=".navbar-collapse">Computer
                             Vision Posts</a></li>
-                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-tutorial" data-target=".navbar-collapse">Programming
+                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-tutorial"
+                               data-target=".navbar-collapse">Programming
                             Tutorials</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-personal" data-target=".navbar-collapse">Personal
+                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-personal"
+                               data-target=".navbar-collapse">Personal
                             Thoughts</a></li>
                     </ul>
                 </li>
@@ -336,9 +341,8 @@ Table of Contents
                     </div>
                 </div>
             </div>
-
             <div class="button">
-                <h1 class="sm-heading text-center">
+                <h1 id="btn-timeline" class="sm-heading text-center">
                     <a href="/timeline">
                         <i class="fa fa-info-circle"></i> Full Timeline
                     </a>
@@ -1016,7 +1020,7 @@ https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/
 
         const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
         const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
-        const destinationOffset = typeof destination === 'number' ? destination -100 : destination.offsetTop - 60;
+        const destinationOffset = typeof destination === 'number' ? destination - 100 : destination.offsetTop - 60;
         const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
 
         if ('requestAnimationFrame' in window === false) {
@@ -1045,6 +1049,7 @@ https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/
 
         scroll();
     }
+
     document.querySelector('.js-btn-bio').addEventListener('click', () => {
         scrollIt(
             document.querySelector('.js-section-bio'),
@@ -1082,33 +1087,37 @@ https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/
 </script>
 
 <script>
- function check_navbar(){
-      if ($(window).width() < 600) {
-      document.querySelector('.js-btn-bio').setAttribute('data-toggle', 'collapse')
-      document.querySelector('.js-btn-timeline').setAttribute('data-toggle', 'collapse')
-      document.querySelector('.js-btn-publications').setAttribute('data-toggle', 'collapse')
-      document.querySelector('.js-btn-awards').setAttribute('data-toggle', 'collapse')
-      document.querySelector('.js-btn-blog-nlp').setAttribute('data-toggle', 'collapse')
-      document.querySelector('.js-btn-blog-cv').setAttribute('data-toggle', 'collapse')
-      document.querySelector('.js-btn-blog-tutorial').setAttribute('data-toggle', 'collapse')
-      document.querySelector('.js-btn-blog-personal').setAttribute('data-toggle', 'collapse')
-  }
- else {
-      document.querySelector('.js-btn-bio').removeAttribute('data-toggle')
-      document.querySelector('.js-btn-timeline').removeAttribute('data-toggle')
-      document.querySelector('.js-btn-publications').removeAttribute('data-toggle')
-      document.querySelector('.js-btn-awards').removeAttribute('data-toggle')
-      document.querySelector('.js-btn-blog-nlp').removeAttribute('data-toggle')
-      document.querySelector('.js-btn-blog-cv').removeAttribute('data-toggle')
-      document.querySelector('.js-btn-blog-tutorial').removeAttribute('data-toggle')
-      document.querySelector('.js-btn-blog-personal').removeAttribute('data-toggle')
- }
- }
- check_navbar();
- $(window).resize(function() {
-     check_navbar();
+    function check_navbar() {
+        if ($(window).width() < 600) {
+            document.querySelector('.js-btn-bio').setAttribute('data-toggle', 'collapse')
+            document.querySelector('.js-btn-timeline').setAttribute('data-toggle', 'collapse')
+            document.querySelector('.js-btn-publications').setAttribute('data-toggle', 'collapse')
+            document.querySelector('.js-btn-awards').setAttribute('data-toggle', 'collapse')
+            document.querySelector('.js-btn-blog-nlp').setAttribute('data-toggle', 'collapse')
+            document.querySelector('.js-btn-blog-cv').setAttribute('data-toggle', 'collapse')
+            document.querySelector('.js-btn-blog-tutorial').setAttribute('data-toggle', 'collapse')
+            document.querySelector('.js-btn-blog-personal').setAttribute('data-toggle', 'collapse')
+            document.getElementById("btn-timeline").className = "sm-heading text-left"
+        }
+        else {
+            document.querySelector('.js-btn-bio').removeAttribute('data-toggle')
+            document.querySelector('.js-btn-timeline').removeAttribute('data-toggle')
+            document.querySelector('.js-btn-publications').removeAttribute('data-toggle')
+            document.querySelector('.js-btn-awards').removeAttribute('data-toggle')
+            document.querySelector('.js-btn-blog-nlp').removeAttribute('data-toggle')
+            document.querySelector('.js-btn-blog-cv').removeAttribute('data-toggle')
+            document.querySelector('.js-btn-blog-tutorial').removeAttribute('data-toggle')
+            document.querySelector('.js-btn-blog-personal').removeAttribute('data-toggle')
+            document.getElementById("btn-timeline").className = "sm-heading text-center"
 
-});
+        }
+    }
+
+    check_navbar();
+    $(window).resize(function () {
+        check_navbar();
+
+    });
 
 </script>
 
