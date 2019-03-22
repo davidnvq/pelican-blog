@@ -70,6 +70,7 @@ Table of Contents
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
+            <!-- button appears when width is too small -->
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -77,48 +78,53 @@ Table of Contents
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/#">Quang Nguyen</a>
+            <!-- Nav brand or logo -->
+            <a class="navbar-brand" href="/#" data-toggle="collapse"
+               data-target="#bs-example-navbar-collapse-1">Quang Nguyen</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/blog">Blog</a></li>
-                <li class="dropdown">
+                <li class="dropdown collapse">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">
-                        About <span class="caret"></span>
+                        <strong>Blog</strong> <span class="caret"></span>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/#bio">Biography</a></li>
-                        <li><a href="/#timeline">Timeline</a></li>
-                        <li><a href="/#publications">Publications</a></li>
-                        <li><a href="/#awards">Scholarships and Awards</a></li>
+                    <ul class="dropdown-menu collapse">
+                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-nlp"
+                               data-target=".navbar-collapse"></a></li>
+                        <li><a href="/">NLP Posts</a></li>
+                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-cv"
+                               data-target=".navbar-collapse">Computer
+                            Vision Posts</a></li>
+                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-tutorial"
+                               data-target=".navbar-collapse">Programming
+                            Tutorials</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="/assets/resume/CV.pdf"><strong>Download CV</strong></a></li>
+                        <li><a href="/" data-toggle="collapse" class="dropdown-item js-btn-blog-personal"
+                               data-target=".navbar-collapse">Personal
+                            Thoughts</a></li>
                     </ul>
                 </li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">
-                        Blog Categories <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/blog/#nlp"></a></li>
-                        <li><a href="#">NLP Posts</a></li>
-                        <li><a href="/blog/#cv">Computer Vision Posts</a></li>
-                        <li><a href="/blog/#programming">Programming Tutorials</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="/blog/#personal">Personal Thoughts</a></li>
-                    </ul>
-                </li>
+            <ul class="nav navbar-nav  navbar-right">
+                <li><a href="/#bio" class="dropdown-item js-btn-bio" data-toggle="collapse"
+                       data-target=".navbar-collapse"><strong>About</strong></a></li>
+                <li><a href="/#awards" class="dropdown-item js-btn-awards"
+                       data-target=".navbar-collapse"><strong>Awards</strong></a></li>
+                <li><a href="/#timeline" class="dropdown-item js-btn-timeline"
+                       data-target=".navbar-collapse"><strong>Timeline</strong></a></li>
+                <li><a href="/#publications" class="dropdown-item js-btn-publications"
+                       data-target=".navbar-collapse"><strong>Publications</strong></a></li>
+                <li><a href='/assets/resume/CV.pdf' data-toggle="collapse" class="dropdown-item js-btn-CV"
+                       data-target=".navbar-collapse"> <strong>Download CV</strong></a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
 
 <div id="profile-cover" class="cover shallow-bg">
     <div id="profile-namecard" class="profile-wrapper wrapper-light">
