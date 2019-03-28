@@ -1,0 +1,16 @@
+.btn-content {
+    position: fixed;
+    top: 5em;
+    right: 0px;
+    text-decoration: none;
+    color: #35DACA;
+    background-color: rgba(235, 235, 235, 0.8);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 1em;
+    display: none
+}
+
+.btn-content:hover {
+    background-color: rgba(135, 135, 135, 0.5)
+}

@@ -2,6 +2,7 @@
 {% block title %}{{ article.title }}{% endblock %}
 
 {% block extra_head %}
+<link rel="stylesheet" href="/theme/css/btn-content.css">
 {% if 'jquery' in article.include %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 {% endif %}
@@ -19,11 +20,10 @@
 {% block content %}
 <main role="main" class="article container">
     <article>
-
         <header>
             <div class="btn-group">
-                    <button id ="mytoc" style="position: fixed; right:2px;" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Contents
+                    <button id ="mytoc" style="position: fixed; right:2px;" type="button" class="btn-content dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
                     </button>
                     <div class="dropdown-menu" aria-labelledby="mytoc">
                         <div id='toc' style="min-width:300px; max-width:450px;min-height:200px;max-height:450px; overflow: scroll; white-space:nowrap;"> 

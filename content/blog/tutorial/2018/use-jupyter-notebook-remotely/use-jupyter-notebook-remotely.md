@@ -30,6 +30,12 @@ ssh -i path/to/public-key -N -f -L localhost:8888:localhost:8889 username@your_r
 # change `your_remote_host_name` to your address of your working station
 # Example: 
 ssh -i ~/.ssh/.quang\@ -N -f -L localhost:8888:localhost:8889 ubuntu@10.0.6.236
+
+# I made a function in bash-profile
+fw remote_port local_port
+
+# Example
+fw 8889 8888
 ```
 
 Now open web browser (google chrome, firefox, ...) and type:
