@@ -85,9 +85,9 @@ publish:  ## Generate output ready for publish
 	git add .
 	git commit -m "Some notes added to pelican-blog"
 	git push -u origin master
-	rm -rf ../quangdtsc.github.io/*
-	mv $(OUTPUTDIR)/* ../quangdtsc.github.io/
-	cd ../quangdtsc.github.io/ && pwd && git add . && git commit -m "Some notes added to quangdtsc.github.io" && git push -u origin master
+	rm -rf ../quanguet.github.io/*
+	mv $(OUTPUTDIR)/* ../quanguet.github.io/
+	cd ../quanguet.github.io/ && pwd && git add . && git commit -m "Some notes added to quanguet.github.io" && git push -u origin master
 
 .PHONY: bootstrap
 bootstrap:  ## Create the dev environment
